@@ -6,14 +6,14 @@ body {
 
 h1 {
     color: #4682b4;
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
     margin-bottom: 30px;
 }
 
 h2 {
     color: #DB7093;
-    font-size: 25px;
+    font-size: 27px;
     margin-bottom: 30px;
 }
 
@@ -25,7 +25,9 @@ h2 {
 }
 
 ul{
-    border: 1px solid #C71585;
+    border: 2px solid #C71585;
+    padding: 10px;
+    margin: 0 auto;
 }
 
 li::marker {
