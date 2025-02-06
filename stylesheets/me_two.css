@@ -29,6 +29,7 @@ ul{
     padding: 10px;
     margin: 0 auto;
     list-style-position: inside;
+    padding-right: 10px;
 }
 
 li::marker {
