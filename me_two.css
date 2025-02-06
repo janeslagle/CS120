@@ -1,6 +1,14 @@
 @charset "utf-8"
 /* CSS Document */
 
-li::marker {
+li {
     color: #C71585;
+}
+
+h1 {
+    color: #4682b4;
+}
+
+h2 {
+    color: #DB7093;
 }
