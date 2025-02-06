@@ -6,8 +6,11 @@ li {
 
 h1 {
     color: #4682b4;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 h2 {
     color: #DB7093;
+    margin-bottom: 30px;
 }
