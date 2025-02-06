@@ -25,9 +25,10 @@ h2 {
 }
 
 ul{
-    border: 2px solid #C71585;
+    border: 1.8px solid #C71585;
     padding: 10px;
     margin: 0 auto;
+    list-style-position: inside;
 }
 
 li::marker {
