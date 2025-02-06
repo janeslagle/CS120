@@ -1,5 +1,9 @@
 /* CSS Stylesheet for me_two.html */
 
+h1, h2, p, ul, li, table, tr, th, td {
+    font-family: 'Nunito', sans-serif;
+}
+
 h1 {
     color: #4682b4;
     font-size: 38px;
