@@ -34,6 +34,7 @@ ul{
     margin: 0 auto;
     list-style-position: inside;
     width: 40%;
+    background-color: #FFF5F7;
 }
 
 li::marker {
@@ -41,8 +42,8 @@ li::marker {
 }
 
 li {
+    background-color: transparent;
     font-size: 15px;
-    background-color: #FFF5F7;
 }
 
 table {
