@@ -124,6 +124,7 @@ input[type="submit"] {
     background-color: #C71585;
     color: #FFFBFB;
     font-size: 16px;
+    margin-bottom: 30px;
 }
 
 input[type="submit"]:hover {
