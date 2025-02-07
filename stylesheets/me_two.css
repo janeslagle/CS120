@@ -42,7 +42,7 @@ table {
     border-spacing: 5px;
 }
 
-tr:nth-child(even) {
+tr:nth-child(odd) {
     background-color: #FFF8DC
 }
 
