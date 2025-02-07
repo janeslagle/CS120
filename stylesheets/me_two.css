@@ -60,7 +60,7 @@ tr:nth-child(odd):not(:first-child) {
 }
 
 tr {
-    border: 1px solid #8B4513;
+    border: 1.2px solid #8B4513;
 }
 
 th {
@@ -68,13 +68,13 @@ th {
     text-align: center;
     vertical-align: middle;
     padding: 3px;
-    border: 1px solid #8B4513;
+    border: 1.2px solid #8B4513;
 }
 
 td {
     text-align: center;
     vertical-align: middle;
     padding: 3px;
-    border: 1px solid #8B4513;
+    border: 1.2px solid #8B4513;
     font-size: small;
 }
