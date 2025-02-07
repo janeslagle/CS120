@@ -110,6 +110,7 @@ label {
     text-align: right;
 }
 
-.form {
+form {
     display: flex;
+    flex-direction: column;
 }   
