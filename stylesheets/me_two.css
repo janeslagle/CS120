@@ -119,6 +119,7 @@ form {
     flex-direction: column;
     align-items: center;
     width: 100px;
+    gap: 15px;
 }   
 
 input[type="submit"] {
