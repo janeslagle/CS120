@@ -86,3 +86,8 @@ td img {
     margin: 0 auto;
 }
 
+.td_styled_text {
+    font-style: italic;
+    font-weight: bold;
+}
+
