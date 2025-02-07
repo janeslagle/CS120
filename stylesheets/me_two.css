@@ -94,9 +94,8 @@ td img {
 
 .fixed_icons {
     position: fixed;
-    bottom: 0px;
-    right: 35px;
     top: 100px;
+    right: 35px;
 }
 
 .fixed_icons img {
