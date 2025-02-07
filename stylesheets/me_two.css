@@ -118,10 +118,11 @@ form label {
     text-align: right;
     font-size: 13px;
     margin-right: 8px;
+    align-items: flex-start;
 }
 
 form input, select {
-    width: 150px;
+    width: 145px;
 }
 
 input[type="submit"] {
