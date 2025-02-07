@@ -117,3 +117,8 @@ form {
     flex-direction: column;
     align-items: center;
 }   
+
+input[type="submit] {
+    background-color: #C71585;
+    color: #FFFBFB;
+}
