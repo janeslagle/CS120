@@ -111,7 +111,7 @@ form {
     flex-direction: column;   
     width: 300px;
     height: auto;
-    margin: 0 auto;           
+    margin: 30px auto;           
 }   
 
 form label {
