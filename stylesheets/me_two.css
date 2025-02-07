@@ -121,4 +121,5 @@ form {
 input[type="submit] {
     background-color: #C71585;
     color: #FFFBFB;
+    font-size: 16px;
 }
