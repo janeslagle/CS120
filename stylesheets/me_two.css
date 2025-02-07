@@ -18,7 +18,7 @@ h2 {
 }
 
 p {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .center {
@@ -40,9 +40,13 @@ li::marker {
     color: #DB7093;
 }
 
+li {
+    font-size: 15px;
+}
+
 table {
     width: 70%;
-    border: 2.5px solid #8B4513;
+    border: 2px solid #8B4513;
     border-spacing: 5px;
     border-collapse: collapse;
 }
@@ -52,7 +56,7 @@ tr:nth-child(odd) {
 }
 
 tr {
-    border: 1.5px solid #8B4513;
+    border: 1px solid #8B4513;
 }
 
 th {
@@ -60,12 +64,12 @@ th {
     text-align: center;
     vertical-align: middle;
     padding: 3px;
-    border: 1.5px solid #8B4513;
+    border: 1px solid #8B4513;
 }
 
 td {
     text-align: center;
     vertical-align: middle;
     padding: 3px;
-    border: 1.5px solid #8B4513;
+    border: 1px solid #8B4513;
 }
