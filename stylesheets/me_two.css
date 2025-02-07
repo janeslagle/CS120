@@ -135,7 +135,6 @@ input[type="submit"] {
     padding: 5px 10px;
     cursor: pointer;
     text-align: center;
-    width: 200px;
 }
 
 input[type="submit"]:hover {
