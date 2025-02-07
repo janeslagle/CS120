@@ -38,7 +38,7 @@ li::marker {
 
 table {
     width: 70%;
-    border: 3px solid #8B4513;
+    border: 2.5px solid #8B4513;
     border-spacing: 5px;
     border-collapse: collapse;
 }
