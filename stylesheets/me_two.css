@@ -97,3 +97,8 @@ td img {
     right: 35px;
     top: 100px;
 }
+
+.fixed_icons img {
+    width: 25px;
+    height: auto;
+}
