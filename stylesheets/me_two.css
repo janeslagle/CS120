@@ -109,7 +109,7 @@ td img {
 form {
     display: flex;
     flex-direction: column;   
-    width: auto;
+    width: 300px;
     height: auto;
     margin: 0 auto;           
 }   
