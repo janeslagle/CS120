@@ -126,6 +126,6 @@ input[type="submit] {
     font-size: 16px;
 }
 
-input[tytpe="submit]:hover {
+input[type="submit]:hover {
     background-color: #000000;
 }
