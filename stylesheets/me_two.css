@@ -134,3 +134,7 @@ div {
     margin-bottom: 10px;
     text-align: center;
 }
+
+select {
+    width: 100%;
+}
