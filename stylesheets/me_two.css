@@ -44,14 +44,18 @@ table {
     border-collpase: collapse;
 }
 
-table th {
+tr:nth-child(even) {
+    background-color: #FFF8DC
+}
+
+th {
     color: #8B4513;
     text-align: center;
     vertical-align: middle;
     padding: 3px;
 }
 
-table td {
+td {
     text-align: center;
     vertical-align: middle;
     padding: 3px
