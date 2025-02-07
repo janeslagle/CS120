@@ -136,6 +136,8 @@ input[type="submit"] {
     cursor: pointer;      /* turns cursor into hand when hover over button to click it */
     text-align: center;
     width: 70px;
+    margin-top: 20px;
+    margin-left: 30px;
 }
 
 input[type="submit"]:hover {
@@ -146,7 +148,5 @@ form div {
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-left: 30px;
+    margin-bottom: 15px;
 }
