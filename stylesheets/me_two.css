@@ -138,5 +138,6 @@ input[type="submit"]:hover {
 
 form div {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
