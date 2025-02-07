@@ -97,7 +97,7 @@ td img {
     top: 100px;
     right: 35px;
     display: flex;
-    column-gap: 10.5px;
+    column-gap: 10px;
     justify-content: space-between;
 }
 
