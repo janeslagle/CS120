@@ -131,7 +131,3 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #C71585;
 }
-
-select {
-    width: 100%;
-}
