@@ -106,20 +106,24 @@ td img {
     height: auto;
 }
 
-label {
+form {
+    display: flex;
+    flex-direction: column;     /* stacks form items vertically */
+    width: auto;
+    align-items: flex-start;
+    margin: 30px auto;
+}   
+
+form label {
     text-align: right;
     font-size: 14px;
     margin-right: 8px;
+    width: 100px;
 }
 
-form {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-}   
+form input, select {
+    width: 200px;
+}
 
 input[type="submit"] {
     background-color: #DB7093;
@@ -131,6 +135,7 @@ input[type="submit"] {
     padding: 5px 10px;
     cursor: pointer;
     text-align: center;
+    width: 200px;
 }
 
 input[type="submit"]:hover {
@@ -139,7 +144,7 @@ input[type="submit"]:hover {
 
 form div {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    width: 100%;
+    justify-content: center;
     margin-bottom: 15px;
 }
