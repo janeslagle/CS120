@@ -133,8 +133,9 @@ input[type="submit"] {
     border: none;
     border-radius: 10px;
     padding: 5px 10px;
-    cursor: pointer;
+    cursor: pointer;      /* turns cursor into hand when hover over button to click it */
     text-align: center;
+    width: 20px;
 }
 
 input[type="submit"]:hover {
