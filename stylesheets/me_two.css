@@ -30,6 +30,7 @@ ul{
     margin: 0 auto;
     list-style-position: inside;
     padding-right: 10px;
+    box-sizing: border-box;
 }
 
 li::marker {
