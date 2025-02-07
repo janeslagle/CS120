@@ -111,14 +111,14 @@ form {
     flex-direction: column;   
     width: auto;
     height: auto;
-    margin: 0px auto;           
+    margin: 0px auto;    
+    align-items: flex-start;
 }   
 
 form label {
     text-align: right;
     font-size: 13px;
     margin-right: 8px;
-    align-items: flex-start;
 }
 
 form input, select {
