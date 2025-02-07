@@ -120,7 +120,7 @@ form {
     gap: 15px;
 }   
 
-input[type="button"] {
+input[type="submit"] {
     background-color: #DB7093;
     color: #FFFBFB;
     font-size: 15px;
@@ -132,7 +132,7 @@ input[type="button"] {
     text-align: center;
 }
 
-input[type="button"]:hover {
+input[type="submit"]:hover {
     background-color: #C71585;
 }
 
