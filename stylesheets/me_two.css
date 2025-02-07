@@ -121,7 +121,7 @@ form label {
 }
 
 form input, select {
-    width: 175px;
+    width: 150px;
 }
 
 input[type="submit"] {
