@@ -44,6 +44,8 @@ table {
 
 table th {
     color: #8B4513;
+    text-align: center;
+    vertical-align: middle;
     padding: 3px;
 }
 
