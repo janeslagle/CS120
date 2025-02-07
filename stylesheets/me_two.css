@@ -29,8 +29,7 @@ ul{
     padding: 10px;
     margin: 0 auto;
     list-style-position: inside;
-    padding-right: 10px;
-    box-sizing: border-box;
+    width: 50%;
 }
 
 li::marker {
@@ -39,9 +38,8 @@ li::marker {
 
 table {
     width: 70%;
-    border: 5px solid #8B4513;
+    border: 3px solid #8B4513;
     border-spacing: 5px;
-    border-collpase: collapse;
 }
 
 tr:nth-child(even) {
