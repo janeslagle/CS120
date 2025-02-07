@@ -36,11 +36,19 @@ li::marker {
     color: #DB7093;
 }
 
+table {
+    width: 70%;
+    border: 1.5px solid #8B4513;
+    border-spacing: 5px;
+}
+
 th {
     color: #8B4513;
+    padding: 3px;
 }
 
 td {
     text-align: center;
     vertical-align: middle;
+    padding: 3px
 }
