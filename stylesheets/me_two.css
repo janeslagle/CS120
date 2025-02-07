@@ -91,3 +91,9 @@ td img {
     font-weight: bold;
 }
 
+.fixed_icons {
+    position: fixed;
+    bottom: 0px;
+    right: 35px;
+    top: 100px;
+}
