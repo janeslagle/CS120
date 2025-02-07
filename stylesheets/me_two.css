@@ -97,11 +97,11 @@ td img {
     top: 100px;
     right: 35px;
     display: flex;
-    column-gap: 20px;
+    column-gap: 10px;
     justify-content: space-between;
 }
 
 .fixed_icons img {
-    width: 10px;
+    width: 15px;
     height: auto;
 }
