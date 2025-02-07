@@ -40,6 +40,7 @@ table {
     width: 70%;
     border: 1.5px solid #8B4513;
     border-spacing: 5px;
+    border-collpase: collapse;
 }
 
 table th {
