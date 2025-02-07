@@ -119,6 +119,7 @@ form label {
     text-align: right;
     font-size: 13px;
     margin-right: 8px;
+    width: 100px;
 }
 
 form input, select {
