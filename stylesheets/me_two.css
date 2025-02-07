@@ -80,3 +80,9 @@ td {
     border: 1.2px solid #8B4513;
     font-size: small;
 }
+
+td img {
+    width: 85;
+    margin: 0 auto;
+}
+
