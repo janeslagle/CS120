@@ -157,7 +157,7 @@ form div {
 }
 
 .fav_food_img {
-    background-image: url('images/about_me_food.png');
+    background-image: url('../images/about_me_food.png');
     width: 225px;
     height: 225px;
 }
