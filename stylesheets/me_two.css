@@ -162,6 +162,10 @@ form div {
     height: 225px;
 }
 
+.fav_food_txt {
+    width: 500px;
+}
+
 #indented_paragraph {
     text-indent:35px;
 }
