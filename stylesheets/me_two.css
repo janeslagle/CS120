@@ -151,6 +151,12 @@ form div {
     margin-top: 5px;
 }
 
+.fav_food_divs {
+    display: flex;
+    align-items: vertically;
+    gap: 15px;
+}
+
 .fav_food_img {
     background-image: url('images/about_me_food.png');
     width: 225;
