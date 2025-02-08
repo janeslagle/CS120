@@ -153,15 +153,13 @@ form div {
 
 .fav_food_divs {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     width: 100%;
 }
 
 .fav_food_img {
     background-image: url('images/about_me_food.png');
-    width: 225;
-    height: 225;
+    width: 225px;
+    height: 225px;
 }
 
 #indented_paragraph {
