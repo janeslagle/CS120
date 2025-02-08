@@ -153,8 +153,9 @@ form div {
 
 .fav_food_divs {
     display: flex;
-    align-items: vertically;
-    gap: 15px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .fav_food_img {
