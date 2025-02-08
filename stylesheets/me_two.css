@@ -165,7 +165,8 @@ form div {
 }
 
 .fav_food_txt {
-    width: 500px;
+    width: 600px;
+    margin-top: 30px;
 }
 
 #indented_paragraph {
