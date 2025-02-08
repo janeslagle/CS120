@@ -162,3 +162,7 @@ form div {
     width: 225;
     height: 225;
 }
+
+#indented_paragraph {
+    text-indent:35px;
+}
