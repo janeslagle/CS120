@@ -9,8 +9,42 @@
 <body>
     <h1>Problem 6</h1>
 
-    <script>
+    // (a) Create div on page with id of answer
+    <div>id = "answer</div>
 
+    <script>
+        // (b) Create func count() that takes 2 params: (1) array of nums (2) value + returns count of num items in array less than value of param
+        function count(num_arr, val) {
+            less_than_count = 0;
+
+            for (i = 0; i < num_arr.length; i++) {
+                if (val > num_arr[i]) {
+                    less_than_count += 1;
+                }
+            }
+
+            return less_than_count;
+        }
+
+        // (c) Create func testCount() that calls + tests count()
+        function testCount() {
+            // hardcode array + val
+            num_arr = [3, 55, 30, 28, 9, 12];
+            val = 10;
+
+            let result = count(num_arr, val);
+
+            // Display result in div created in part (a)
+            document.write("Array: " + num_arr);
+            document.write("<br/
+            document.getElementById("answer").innerHTML = "Count of the number of items in the array that are less than the value of the parameter.
+            
+            
+            
+        }
+
+        // Call testCount() from script
+        testCount();
     </script> 
 </body>
 </html>
