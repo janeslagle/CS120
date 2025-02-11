@@ -1,1 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>JS-1 Prob 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
+<body>
+    <h1>Problem 3</h1>
+
+    <script>
+        // Prompt user to enter value of temp in Fahrenheit
+        let fahrenTemp = prompt("Please enter the temperature in Fahrenheit");
+
+        // Convert the Fahrenheit temp to Celsius
+        let fahrenToCelsius = (fahrenTemp - 32) * (5/9);
+
+        // Display result in popup
+        alert("fahrenTemp " + "Fahrenheit degrees is " + fahrenToCelsius + " degrees in Celsius");
+
+        // Ask user for temperature in Celsius
+        let celsiusTemp = prompt("Please enter the temperature in Celsius");
+        
+        // Convert the Fahrenheit temp to Celsius
+        let celsiusToFahren = (celsiusTemp * (9/5)) + 32;
+
+        // Display result in popup
+        alert("celsiusTemp " + "Celsius degrees is " + celsiusToFahren + " degrees in Fahrenheit");
+    </script> 
+</body>
+</html>
