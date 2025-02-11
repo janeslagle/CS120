@@ -16,19 +16,19 @@
 
         // Display all odd numbers + also sum of all numbers on page using only one loop 
         document.write("All odd numbers in inputted range " + lowerRange + "-" + upperRange + ": ");
-        document.write("\n");
+        document.write('<br/>');
 
         let rangeSum = 0;  
         for (let i = lowerRange; i <= upperRange; i++) {
             if (i % 2 != 0) {
                 document.write(i);
-                document.write("\n");
+                document.write('<br/>');
             }
             
             rangeSum += i;
         }
 
-        document.write("\n");
+        document.write('<br/>');
         document.write("Sum of all numbers in inputted range " + lowerRange + "-" + upperRange + ": " + rangeSum);
     </script> 
 </body>
