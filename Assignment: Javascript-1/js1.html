@@ -15,7 +15,7 @@
         let lastName = prompt("Please enter your last name:");
 
         // Display given full name in a popup alert
-        alert("Your name is " firstName + " " + lastName);
+        alert("Your name is " + firstName + " " + lastName);
 
         // Ask user for number of children they have
         let numChildren = prompt("Please enter the number of children you have:");
@@ -26,10 +26,11 @@
       
         if (numChildren == 0) {
             numChildrenSent = "You have no children";
-        else if (numChildren == 1) {
+        } else if (numChildren == 1) {
             numChildrenSent = "You have 1 child";
-        else {
+        } else {
             numChildrenSent = "You have " + numChildren + " children";
+        }
 
         document.write(numChildrenSent);
     </script> 
