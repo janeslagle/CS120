@@ -10,28 +10,23 @@
     <h1>Problem 1</h1>
 
     <script>
-        // Prompt user for their 1st, last name in two separate prompt() calls
-        let firstName = prompt("Please enter your first name:");
-        let lastName = prompt("Please enter your last name:");
+        // Prompt user to enter value of temp in Fahrenheit
+        let fahrenTemp = prompt("Please enter the temperature in Fahrenheit");
 
-        // Display given full name in a popup alert
-        alert("Your name is " firstName + " " + lastName);
+        // Convert the Fahrenheit temp to Celsius
+        let fahrenToCelsius = (fahrenTemp - 32) * (5/9);
 
-        // Ask user for number of children they have
-        let numChildren = prompt("Please enter the number of children you have:");
+        // Display result in popup
+        alert("fahrenTemp " + "Fahrenheit degrees is " + fahrenToCelsius + " degrees in Celsius");
 
-        // Display number of children on page --> use document.write()
-        // Have grammatically correct sentences, so 3 different cases for if numChildren is 0, 1, else
-        let numChildrenSent = "";
-      
-        if (numChildren == 0) {
-            numChildrenSent = "You have no children";
-        else if (numChildren == 1) {
-            numChildrenSent = "You have 1 child";
-        else {
-            numChildrenSent = "You have " + numChildren + " children";
+        // Ask user for temperature in Celsius
+        let celsiusTemp = prompt("Please enter the temperature in Celsius");
+        
+        // Convert the Fahrenheit temp to Celsius
+        let celsiusToFahren = (celsiusTemp * (9/5)) + 32;
 
-        document.write(numChildrenSent);
+        // Display result in popup
+        alert("celsiusTemp " + "Celsius degrees is " + celsiusToFahren + " degrees in Fahrenheit");
     </script> 
 </body>
 </html>
