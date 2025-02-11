@@ -10,23 +10,16 @@
     <h1>Problem 3</h1>
 
     <script>
-        // Prompt user to enter value of temp in Fahrenheit
-        let fahrenTemp = prompt("Please enter the temperature in Fahrenheit");
+        // Get 2 numbers using prompt()
+        let num1 = parseFloat(("Please enter a first number:"));
+        let num2 = parseFloat(("Please enter a second number:"));
 
-        // Convert the Fahrenheit temp to Celsius
-        let fahrenToCelsius = (fahrenTemp - 32) * (5/9);
-
-        // Display result in popup
-        alert("fahrenTemp " + "Fahrenheit degrees is " + fahrenToCelsius + " degrees in Celsius");
-
-        // Ask user for temperature in Celsius
-        let celsiusTemp = prompt("Please enter the temperature in Celsius");
-        
-        // Convert the Fahrenheit temp to Celsius
-        let celsiusToFahren = (celsiusTemp * (9/5)) + 32;
-
-        // Display result in popup
-        alert("celsiusTemp " + "Celsius degrees is " + celsiusToFahren + " degrees in Fahrenheit");
+        // Display the numbers in order of smallest to largest to the console
+        if (num1 > num2) {
+            console.log(num1, num2);
+        } else {
+            console.log(num2, num1);
+        }
     </script> 
 </body>
 </html>
