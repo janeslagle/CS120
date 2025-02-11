@@ -11,16 +11,16 @@
 
     <script>
         // Get 2 numbers from user using prompt()
-        let lowerRange = prompt("Please enter a lower bound for your range:");
-        let upperRange = prompt("Please enter an upper bound for your range:");
+        let lowerRange = parseFloat(prompt("Please enter a lower bound for your range:"));
+        let upperRange =parseFloat(prompt("Please enter an upper bound for your range:"));
 
         // Display all odd numbers + also sum of all numbers on page using only one loop
         let rangeSum = 0;   
 
         document.write("All odd numbers in inputted range " + lowerRange + "-" + upperRange + ":");
         for (let i = lowerRange; i < upperRange; i++) {
-            (if i % 2 != 0) {
-                document.write(i);
+            if (i % 2 != 0) {
+                document.write(i + ", ");
             }
             
             rangeSum += i;
