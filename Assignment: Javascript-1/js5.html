@@ -10,15 +10,23 @@
     <h1>Problem 5</h1>
 
     <script>
-        // Create function timesTable() that takes numer as input paramter and displays on page the times table corresponding to that number up to 12
+        // Create function timesTable() that takes num as input paramter and displays on page the times table corresponding to that num up to 12
         function timesTable(num) {
             for (i = 1; i <= 12; i++) {
                 let product = (num * i);
                 document.write(num + " x " + i + " = " + product);
-                document.write("<br>");
+                document.write("<br/>");
             }
         }
 
+        // Call function 3 times with params 3, 7, 11, putting a line between the 1st and 2nd func calls
+        timesTable(3);
+        document.write("<hr>");
+
+        timesTable(7);
+        document.write("<hr>");
+
+        timesTable(11);
     </script> 
 </body>
 </html>
