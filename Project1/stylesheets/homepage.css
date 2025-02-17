@@ -37,8 +37,10 @@ body {
 /* Band name in the upper left */
 .band-name {
     position: absolute;
+    font-fami
     top: 20px;
     left: 20px;
+    font-family: 'Rubik Mono One', sans-serif;
     font-size: 24px;
     color: white;
 }
