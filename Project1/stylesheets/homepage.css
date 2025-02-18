@@ -52,7 +52,7 @@ ul {
     left: 20px;
     font-family: "Bungee", serif;
     font-size: 32px;
-    color: white;
+    color:  #F8F8FF;
 }
 
 .band-name .highlight {
@@ -86,7 +86,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #008000;
+  color: #B0C4DE;
 }
 
 /* Main content styling */
