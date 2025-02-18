@@ -1,7 +1,9 @@
-/* CSS Stylesheet for homepage.html */
-
+/* Combined body styles */
 body {
     font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Full-screen background */
@@ -26,72 +28,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* Main content styling */
-main {
-    padding: 70px;
-    text-align: center;
-    background-color: #2C2C2C;
-    color: #F5F5F5;
-    padding-bottom: 140px; 
-}
-
-.book-now-btn {
-    background-color: #4682B4; 
-    color: #F5F5F5;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 15px 20px; 
-    border: none;
-    border-radius: 35px; 
-    cursor: pointer;
-}
-
-.book-now-btn:hover {
-    background-color: #3b6e99;
-}
-
-/* CSS Stylesheet for fixed page elements = header + footer */
-
-body {
-    font-family: "Work Sans", sans-serif;
-}
-
-h1 {
-    padding-left: 30px;
-    color: #F8F8FF;
-    padding-bottom: 2px;
-}
-
-ul {
-    padding-left: 758px;
-    font-weight: bold;
-    padding-top: 20px;
-}
-
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.band-name {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    align-items: center; 
-    font-family: "Bungee", serif;
-    font-size: 32px;
-    color: #F5F5F5;
-}
-
-.band-name .highlight {
-  background-color: #4682B4;
-  border-radius: 8px; 
-  padding: 0 2px;
-}
-
-/* Navigation bar */
+/* Header */
 header {
     position: fixed;
     top: 0;
@@ -101,12 +38,33 @@ header {
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
+    z-index: 999; /* Ensure header is on top */
 }
 
+/* Band name styling */
+.band-name {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: "Bungee", serif;
+    font-size: 32px;
+    color: #F5F5F5;
+}
+
+.band-name .highlight {
+    background-color: #4682B4;
+    border-radius: 8px;
+    padding: 0 2px;
+}
+
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
     gap: 22px;
+    padding-left: 758px;
+    font-weight: bold;
+    padding-top: 20px;
 }
 
 nav ul li a {
@@ -116,41 +74,66 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #99CCFF;
+    color: #99CCFF;
 }
 
+/* Main content styling */
+main {
+    padding: 70px;
+    text-align: center;
+    background-color: #2C2C2C;
+    color: #F5F5F5;
+    padding-bottom: 140px;
+}
+
+.book-now-btn {
+    background-color: #4682B4;
+    color: #F5F5F5;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.book-now-btn:hover {
+    background-color: #3b6e99;
+}
+
+/* Footer */
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 65px; /* Adjust height to match your header */
-  background-color: #2C2C2C;
-  color: #F5F5F5;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #2C2C2C;
+    color: #F5F5F5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 5px;
 }
 
 .social-links img {
-  height: 20px; 
-  width: 20px;
-  object-fit: contain;
-  curosr: pointer;
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+    cursor: pointer;
 }
 
 .social-links img:hover {
-  color: #0076ed;
+    color: #0076ed;
 }
 
 .footer-text {
-  font-size: 11px;
+    font-size: 11px;
 }
