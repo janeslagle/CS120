@@ -5,12 +5,8 @@ body {
 }
 
 h1 {
-    padding-left: 25px;
+    padding-left: 30px;
     padding-top: 10px;
-}
-
-li {
-    color: #F0F8FF;
 }
 
 ul {
@@ -89,7 +85,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    text-color: #F0F8FF;
 }
 
 /* Main content styling */
