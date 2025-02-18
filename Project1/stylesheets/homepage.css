@@ -96,6 +96,7 @@ nav ul li a:hover {
 main {
     padding: 50px;
     text-align: center;
+    background-color: black;
 }
 
 .footer {
