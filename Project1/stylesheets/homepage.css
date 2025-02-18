@@ -131,7 +131,7 @@ nav ul li a:hover {
 }
 
 .socials img:hover {
-  filter: invert(70%);
+  filter: invert(10%);
 }
 
 .footer_txt {
