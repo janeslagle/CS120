@@ -78,13 +78,12 @@ nav ul li a:hover {
     background-size: cover;
 }
 
-/* Main content styling */
 main {
     padding: 70px;
+    padding-bottom: 135px; 
     text-align: center;
     background-color: #2C2C2C;
     color: #F5F5F5;
-    padding-bottom: 135px; 
 }
 
 .footer {
@@ -123,7 +122,7 @@ main {
   font-size: 11px;
 }
 
-.book-now-btn {
+.book_button {
     background-color: #4682B4; 
     color: #F5F5F5;
     font-size: 18.5px;
@@ -134,6 +133,6 @@ main {
     cursor: pointer;
 }
 
-.book-now-btn:hover {
+.book_button:hover {
     background-color: #3b6e99;
 }
