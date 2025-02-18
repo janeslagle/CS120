@@ -120,10 +120,8 @@ main {
 }
 
 .social-links img {
-  width: 20px; 
-  height: auto;
-  height: auto;
-  transition: transform 0.2s ease-in-out;
+  height: 20px; 
+  width: auto;
 }
 
 .social-links img:hover {
