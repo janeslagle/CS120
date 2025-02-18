@@ -26,10 +26,23 @@ h1 {
   padding: 0 2px;
 }
 
-ul {
+nav ul {
     padding-left: 758px;
     font-weight: bold;
     padding-top: 20px;
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+
+nav ul li a {
+    color: #F5F5F5;
+    font-size: 13.5px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #99CCFF;
 }
 
 /* Reset styles */
@@ -72,22 +85,6 @@ header {
     background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
     padding: 10px 20px;
     z-index: 10; /* Ensure it stays on top of the hero section */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 22px;
-}
-
-nav ul li a {
-    color: #F5F5F5;
-    text-decoration: none;
-    font-size: 13.5px;
-}
-
-nav ul li a:hover {
-  color: #99CCFF;
 }
 
 /* Main content styling */
