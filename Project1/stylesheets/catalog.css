@@ -4,16 +4,57 @@ body {
     font-family: "Work Sans", sans-serif;
 }
 
+header {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    height: 13%;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    z-index: 1;          /* If don't have then can't see header over background image */
+    align-items: center;
+}
+
 h1 {
     padding-left: 30px;
     color: #F8F8FF;
     padding-bottom: 2px;
 }
 
-ul {
-    padding-left: 758px;
+.band_name {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    align-items: center; 
+    font-family: "Bungee", serif;
+    font-size: 32px;
+    color: #F5F5F5;
+}
+
+.band_name .highlight {
+  background-color: #4682B4;
+  border-radius: 8px; 
+  padding: 0 2px;
+}
+
+nav ul {
+    padding-left: 840px;
     font-weight: bold;
     padding-top: 20px;
+    list-style: none;
+    display: flex;
+    gap: 41.5px;
+}
+
+nav ul li a {
+    color: #F5F5F5;
+    font-size: 13.5px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #99CCFF;
 }
 
 /* Reset styles */
@@ -23,88 +64,50 @@ ul {
     box-sizing: border-box;
 }
 
-/* Full-screen background */
-.hero {
+.bground_image {
     position: relative;
-    width: 100%;
-    height: 105vh; /* Full viewport height */
-    background: url('../images/turn_it_up_home_image.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px; /* Prevent overlap with fixed header */
+    width: 100%;         /* Make it go across entire screen */
+    height: 105vh; 
+    background: url('../images/turn_it_up_home_image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-/* Overlay for better text contrast */
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-/* Band name in the upper left */
-.band-name {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    align-items: center; /* Centers items vertically */
-    font-family: "Bungee", serif;
-    font-size: 32px;
-    color: #F5F5F5;
-}
-
-.band-name .highlight {
-  background-color: #4682B4;
-  border-radius: 8px; 
-  padding: 0 2px;
-}
-
-/* Navigation bar */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 13%;
-    align-items: center; /* Centers items vertically */
-    background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
-    padding: 10px 20px;
-    z-index: 10; /* Ensure it stays on top of the hero section */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 22px;
-}
-
-nav ul li a {
-    color: #F5F5F5;
-    text-decoration: none;
-    font-size: 13.5px;
-}
-
-nav ul li a:hover {
-  color: #99CCFF;
-}
-
-/* Main content styling */
-main {
+.book_now_section {
     padding: 70px;
+    padding-bottom: 135px; 
     text-align: center;
     background-color: #2C2C2C;
     color: #F5F5F5;
-    padding-bottom: 135px; 
+}
+
+.book_button {
+    background-color: #2C2C2C; 
+    color: #F5F5F5;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 8px 27px; 
+    border: 3px solid #F5F5F5;
+    border-radius: 35px; 
+    cursor: pointer;
+}
+
+.book_button:hover {
+    background-color: #99CCFF;
+    border: 3px solid #99CCFF;
+    color: #2C2C2C;
 }
 
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 65px; /* Adjust height to match your header */
+  height: 65px;
   background-color: #2C2C2C;
   color: #F5F5F5;
   text-align: center;
@@ -114,39 +117,23 @@ main {
   align-items: center;
 }
 
-.social-links {
+.socials {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin-bottom: 5px;
 }
 
-.social-links img {
+.socials img {
   height: 20px; 
   width: 20px;
   object-fit: contain;
-  curosr: pointer;
 }
 
-.social-links img:hover {
-  color: #0076ed;
+.socials img:hover {
+  filter: invert(40%);
 }
 
-.footer-text {
+.footer_txt {
   font-size: 11px;
-}
-
-.book-now-btn {
-    background-color: #4682B4; 
-    color: #F5F5F5;
-    font-size: 18.5px;
-    font-weight: bold;
-    padding: 15px 20px; 
-    border: none;
-    border-radius: 35px; 
-    cursor: pointer;
-}
-
-.book-now-btn:hover {
-    background-color: #3b6e99;
 }
