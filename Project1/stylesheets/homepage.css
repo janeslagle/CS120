@@ -106,7 +106,7 @@ main {
   width: 100%;
   height: 65px; /* Adjust height to match your header */
   background-color: #2C2C2C;
-  color: white;
+  color: #F5F5F5;
   text-align: center;
   display: flex;
   flex-direction: column;
