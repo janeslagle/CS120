@@ -10,6 +10,22 @@ h1 {
     padding-bottom: 2px;
 }
 
+.band_name {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    align-items: center; 
+    font-family: "Bungee", serif;
+    font-size: 32px;
+    color: #F5F5F5;
+}
+
+.band_name .highlight {
+  background-color: #4682B4;
+  border-radius: 8px; 
+  padding: 0 2px;
+}
+
 ul {
     padding-left: 758px;
     font-weight: bold;
@@ -43,23 +59,6 @@ ul {
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
-}
-
-/* Band name in the upper left */
-.band-name {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    align-items: center; /* Centers items vertically */
-    font-family: "Bungee", serif;
-    font-size: 32px;
-    color: #F5F5F5;
-}
-
-.band-name .highlight {
-  background-color: #4682B4;
-  border-radius: 8px; 
-  padding: 0 2px;
 }
 
 /* Navigation bar */
