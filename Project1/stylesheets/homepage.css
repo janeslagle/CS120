@@ -54,6 +54,10 @@ ul {
     color: white;
 }
 
+.band-name .highlight {
+  background-color: #4682B4;
+}
+
 /* Navigation bar */
 header {
     position: fixed;
