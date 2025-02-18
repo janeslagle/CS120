@@ -72,7 +72,7 @@ nav ul li a:hover {
     text-align: center;
     width: 100%;         /* Make it go across entire screen */
     height: 105vh; 
-    background: url('../images/band_contact_photo.png');
+    background: url('../images/contact_photo_band.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
