@@ -5,14 +5,14 @@ body {
 }
 
 h1 {
-    padding-left: 32px;
+    padding-left: 30px;
     color: #F8F8FF;
-    padding-top: 1px;
+    padding-top: 0.5px;
 }
 
 ul {
-    padding-left: 745px;
-    padding-top: 25px;
+    padding-left: 750px;
+    padding-top: 23px;
     font-weight: bold;
 }
 
