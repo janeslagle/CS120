@@ -136,14 +136,13 @@ main {
 }
 
 .book-now-btn {
-    background-color: #4682B4; /* Button color */
-    color: white; /* Text color */
+    background-color: #99CCFF; /* Button color */
+    color: #F5F5F5; /* Text color */
     font-size: 18px; /* Text size */
     padding: 15px 30px; /* Padding for button size */
     border: none; /* Remove default border */
     border-radius: 30px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 .book-now-btn:hover {
