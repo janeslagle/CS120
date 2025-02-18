@@ -141,10 +141,10 @@ main {
     color: #F5F5F5;
     font-size: 18px;
     font-weight: bold;
-    padding: 10px 20px; /* Padding for button size */
+    padding: 15px 25px; 
     border: none;
     border-radius: 15px; 
-    cursor: pointer; /* Pointer cursor on hover */
+    cursor: pointer;
 }
 
 .book-now-btn:hover {
