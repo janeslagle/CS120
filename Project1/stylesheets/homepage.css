@@ -8,11 +8,13 @@ body {
 h1 {
     padding-left: 30px;
     color: #F8F8FF;
+    padding-bottom: 2px;
 }
 
 ul {
-    padding-left: 750px;
+    padding-left: 755px;
     font-weight: bold;
+    padding-top: 20px;
 }
 
 /* Reset styles */
