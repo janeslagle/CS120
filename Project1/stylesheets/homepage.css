@@ -13,7 +13,7 @@ header {
     align-items: center;
     background: rgba(0, 0, 0, 0.5); 
     padding: 10px 20px;
-    z-index: 3;
+    z-index: 3;  /* If don't have then can't see header over background image */
 }
 
 h1 {
