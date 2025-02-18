@@ -9,6 +9,10 @@ h1 {
     padding-top: 15px;
 }
 
+li {
+    color: #F0F8FF;
+}
+
 ul {
     padding-left: 900px;
     padding-top: 7.5px;
