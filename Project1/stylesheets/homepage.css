@@ -51,7 +51,7 @@ ul {
     left: 20px;
     font-family: "Bungee", serif;
     font-size: 32px;
-    color: #FF6347;
+    color: #708090;
 }
 
 .band-name .highlight {
@@ -79,7 +79,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #FF6347;
+    color: #708090;
     text-decoration: none;
     font-size: 13px;
 }
