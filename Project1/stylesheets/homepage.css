@@ -93,3 +93,35 @@ main {
     padding: 50px;
     text-align: center;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 10px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between icons */
+  margin-bottom: 5px;
+}
+
+.social-links img {
+  width: 30px; /* Adjust icon size */
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-links img:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
