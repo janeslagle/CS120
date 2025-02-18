@@ -130,6 +130,10 @@ nav ul li a:hover {
   object-fit: contain;
 }
 
+.socials img:hover {
+  filter: invert(40%);
+}
+
 .footer_txt {
   font-size: 11px;
 }
