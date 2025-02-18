@@ -7,12 +7,12 @@ body {
 h1 {
     padding-left: 35px;
     color: #F8F8FF;
-    padding-top: 6px;
+    padding-top: 3px;
 }
 
 ul {
     padding-left: 750px;
-    padding-top: 7.5px;
+    padding-top: 10px;
 }
 
 /* Reset styles */
