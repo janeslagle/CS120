@@ -32,7 +32,6 @@ ul {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
     padding-top: 80px; /* Prevent overlap with fixed header */
 }
 
@@ -52,7 +51,7 @@ ul {
     left: 20px;
     font-family: "Bungee", serif;
     font-size: 32px;
-    color: #778899;
+    color: #FF6347;
 }
 
 .band-name .highlight {
@@ -80,7 +79,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #778899;
+    color: #FF6347;
     text-decoration: none;
     font-size: 13px;
 }
