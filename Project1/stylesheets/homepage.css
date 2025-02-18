@@ -118,8 +118,8 @@ main {
 }
 
 .social-links img {
-  width: 10px; 
-  height: 10px;
+  width: 25px; 
+  height: auto;
   height: auto;
   transition: transform 0.2s ease-in-out;
 }
