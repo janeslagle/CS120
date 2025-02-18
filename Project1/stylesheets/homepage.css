@@ -125,6 +125,7 @@ main {
   height: 20px; 
   width: 20px;
   object-fit: contain;
+  curosr: pointer;
 }
 
 .social-links img:hover {
@@ -139,6 +140,7 @@ main {
     background-color: #99CCFF; /* Button color */
     color: #F5F5F5; /* Text color */
     font-size: 18px; /* Text size */
+    font-weight: bold;
     padding: 15px 30px; /* Padding for button size */
     border: none; /* Remove default border */
     border-radius: 30px; /* Rounded corners */
@@ -146,6 +148,6 @@ main {
 }
 
 .book-now-btn:hover {
-    background-color: #5A9BD5; /* Slightly lighter shade on hover */
+    background-color: #0076ed;
 }
 
