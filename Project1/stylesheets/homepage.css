@@ -44,7 +44,7 @@ h1 {
     position: absolute;
     top: 20px;
     left: 20px;
-    font-family: 'Rubik Mono One', sans-serif;
+    font-family: 'Notable', sans-serif;
     font-size: 24px;
     color: white;
 }
@@ -64,7 +64,6 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
