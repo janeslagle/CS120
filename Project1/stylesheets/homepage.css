@@ -39,7 +39,7 @@ h1 {
 }
 
 nav ul {
-    padding-left: 850px;
+    padding-left: 875px;
     font-weight: bold;
     padding-top: 20px;
     list-style: none;
@@ -98,7 +98,9 @@ nav ul li a:hover {
 }
 
 .book_button:hover {
-    background-color: #3B6E99;
+    background-color: #4682B4;
+    border: 3px solid #4682B4;
+    color: #E9967A;
 }
 
 .footer {
