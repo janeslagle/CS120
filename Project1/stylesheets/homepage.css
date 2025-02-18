@@ -137,13 +137,13 @@ main {
 }
 
 .book-now-btn {
-    background-color: #4682B4; /* Button color */
-    color: #F5F5F5; /* Text color */
-    font-size: 18px; /* Text size */
+    background-color: #4682B4; 
+    color: #F5F5F5;
+    font-size: 20px;
     font-weight: bold;
-    padding: 15px 30px; /* Padding for button size */
-    border: none; /* Remove default border */
-    border-radius: 30px; /* Rounded corners */
+    padding: 15px 25px; /* Padding for button size */
+    border: #3c709b;
+    border-radius: 25px; 
     cursor: pointer; /* Pointer cursor on hover */
 }
 
