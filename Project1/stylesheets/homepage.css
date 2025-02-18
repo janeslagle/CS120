@@ -49,13 +49,15 @@ ul {
     position: absolute;
     top: 20px;
     left: 20px;
-    font-family: "Rubik Mono One", serif;
+    font-family: "Bungee", serif;
     font-size: 32px;
     color: white;
 }
 
 .band-name .highlight {
   background-color: #4682B4;
+  border-radius: 10px; 
+  padding: 0 5px;
 }
 
 /* Navigation bar */
