@@ -149,14 +149,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: transparent;
 }
 
-/* Create custom dropdown arrow for select menu */
-.book_form_field select {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23A1A1A1"><path d="M7 10l5 5 5-5H7z"/></svg>');
-    background-position: right 10px center;
-    background-size: 16px;
-    background-repeat: no-repeat;
-}
-
 textarea {
     width: 100%; 
     white-space: pre-wrap;    /* Make each line continue on to next line when all space used up on current one */
