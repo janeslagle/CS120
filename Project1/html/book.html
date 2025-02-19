@@ -47,6 +47,18 @@
         input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
 }
+
+        .add_details_lines input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #F5F5F5;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.05px solid #A1A1A1; 
+    outline: none;
+    margin-bottom: 10px; /* Space between each line */
+}
     </style>
 </head>
 
@@ -125,10 +137,16 @@
         <label for="num_guests">number of guests</label>
         <input type="text" id="num_guests" name="num_guests" required>
     </div>
+            
 
     <div class="form_group">
-        <label for="add_details">additional details (special requests, notes, etc.)</label>
-        <textarea id="add_details" name="add_details" rows="4"></textarea>
+         <label for="add_details">additional details (special requests, notes, etc.)</label>
+    <div class="add_details_lines">
+        <input type="text" id="add_details_1" name="add_details_1">
+        <input type="text" id="add_details_2" name="add_details_2">
+        <input type="text" id="add_details_3" name="add_details_3">
+        <input type="text" id="add_details_4" name="add_details_4">
+    </div>
     </div>
 
     <button type="submit" class="book_button">book now</button>
