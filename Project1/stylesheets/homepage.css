@@ -1,5 +1,36 @@
 /* CSS Stylesheet for homepage.html */
 
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    header {
+        height: auto;  /* Allow header to expand naturally for smaller screens */
+        padding: 15px; /* Adjust padding to give more room */
+    }
+
+    .band_name {
+        font-size: 24px; /* Make the band name smaller on mobile */
+        position: relative;
+        left: 20px; /* Move it more to the left */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Stack the navigation items vertically */
+        justify-content: center;
+        align-items: center;  /* Center the navigation items */
+        padding-left: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Add space between menu items */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Adjust font size for better readability */
+    }
+}
+
+
 /* Do this for every element on page */
 * {
     margin: 0;               /* Take away all default margins + paddings for entire page */
