@@ -89,6 +89,35 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.catalog_table {
+    width: 80%; 
+    margin: 0 auto;
+    background-color: #2C2C2C; 
+    color: #F5F5F5;            
+    border-collapse: collapse;
+}
+
+.catalog_table tr {
+    border-top: 0.05px solid #797979;
+    border-bottom: 0.05px solid #797979; 
+}
+
+.catalog_table td {
+    padding: 25px;          
+    text-align: center;        
+}
+
+.song { 
+    font-style: italic; 
+    font-size: 13.5px;
+}
+
+.artist {
+    font-weight: bold;
+    font-size: 13.5px;
+    color: #A1A1A1;
+    }
+
 /* Everything for footer on page */
 .footer {
   position: fixed;
