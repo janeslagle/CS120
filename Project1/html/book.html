@@ -8,114 +8,6 @@
     <link rel="stylesheet" href="../stylesheets/book.css">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-
-    <style>
-        
-.booking_form {
-    max-width: 100%;
-    margin: 30px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-        .form_group {
-    width: 65%; /* Ensures both label and input align within this width */
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column; /* Stacks label and input */
-    align-items: flex-start; /* Aligns both to the left */
-}
-
-.form_group label {
-    color: #A1A1A1;
-    font-size: 16px;
-    margin-bottom: 1.5px;
-}
-
-.form_group input {
-    width: 100%; /* Ensures input stretches to align with label */
-    padding: 10px;
-    font-size: 16px;
-    color: #F5F5F5;
-    background-color: transparent;
-    border: none;
-    border-bottom: 0.05px solid #A1A1A1;
-    outline: none;
-}
-
-        input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-}
-
-.add_details_lines {
-    width: 100%;
-}
-
-.add_details_lines input {
-    width: 100%; /* Matches other input fields */
-    padding: 10px;
-    font-size: 16px;
-    color: #F5F5F5;
-    background-color: transparent;
-    border: none;
-    border-bottom: 0.05px solid #A1A1A1; 
-    outline: none;
-    margin-bottom: 10px; /* Adds space between each line */
-    box-sizing: border-box;
-}
-
-        textarea {
-    width: 100%; /* Ensures it stretches fully */
-    padding: 10px;
-    font-size: 16px;
-    color: #F5F5F5;
-    background-color: transparent;
-    border: none;
-    border-bottom: 0.05px solid #A1A1A1;
-    outline: none;
-    resize: none; /* Prevents users from resizing */
-    line-height: 30px; /* Adjust to match spacing of individual input lines */
-    height: 90px; /* Set a fixed height to match three lines */
-    overflow: hidden; /* Prevents scrolling */
-    white-space: pre-wrap; /* Ensures text wraps properly */
-}
-
-/* Make sure when users type, the text does not overflow */
-textarea:focus {
-    border-bottom: 0.05px solid #FFF; /* Slightly brighter bottom border on focus */
-}
-
-
-        .form_group select {
-    width: 100%; /* Match the width of input fields */
-    padding: 10px;
-    font-size: 16px;
-    color: #F5F5F5;
-    background-color: transparent; /* Matches input background */
-    border: none;
-    border-bottom: 0.05px solid #A1A1A1;
-    outline: none;
-    appearance: none; /* Removes default dropdown styling */
-    cursor: pointer;
-}
-
-/* Add a dropdown indicator (down arrow) */
-.form_group select {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23A1A1A1"><path d="M7 10l5 5 5-5H7z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 16px;
-}
-
-/* Style the dropdown options */
-.form_group select option {
-    color: #000; /* Make sure options are readable */
-    background-color: #fff; /* Light background for contrast */
-}
-
-
-    </style>
 </head>
 
 <body>
@@ -153,79 +45,73 @@ textarea:focus {
             </p>
         </div>
 
-        <form class="booking_form" action="">
-    <div class="form_group">
-        <label for="first_name">first name</label>
-        <input type="text" id="first_name" name="first_name" required>
-    </div>
+        <form class="book_form" action="">
+            <div class="book_form_field">
+                <label for="first_name">first name</label>
+                <input type="text" id="first_name" required>
+            </div>
 
-    <div class="form_group">
-        <label for="last_name">last name</label>
-        <input type="text" id="last_name" name="last_name" required>
-    </div>
+            <div class="book_form_field">
+                <label for="last_name">last name</label>
+                <input type="text" id="last_name" required>
+            </div>
 
-    <div class="form_group">
-        <label for="email">email</label>
-        <input type="email" id="email" name="email" required>
-    </div>
+            <div class="book_form_field">
+                <label for="email">email</label>
+                <input type="email" id="email" required>
+            </div>
 
-    <div class="form_group">
-        <label for="phone">phone number</label>
-        <input type="tel" id="phone" name="phone" required>
-    </div>
+            <div class="book_form_field">
+                <label for="phone">phone number</label>
+                <input type="tel" id="phone" required>
+            </div>
 
-    <div class="form_group">
-        <label for="event_date">event date</label>
-        <input type="date" id="event_date" name="event_date" required>
-    </div>
-
-    
-            <div class="form_group">
-    <label for="event_type">event type</label>
-    <select id="event_type" name="event_type" required>
-        <option value="" disabled selected></option>
-        <option value="wedding">Wedding</option>
-        <option value="corporate">Corporate</option>
-        <option value="bday_party">Birthday Party</option>
-        <option value="private_party">Private Party</option>
-        <option value="other">Other: please specify in additional details below</option>
-    </select>
-</div>
+            <div class="book_form_field">
+                <label for="event_date">event date</label>
+                <input type="date" id="event_date" required>
+            </div>
 
     
-            <div class="form_group">
-    <label for="event_length">performance length</label>
-    <select id="event_length" name="event_length" required>
-        <option value="" disabled selected></option>
-        <option value="wedding">1 hour</option>
-        <option value="corporate">2 hours</option>
-        <option value="private_party">3 hours</option>
-        <option value="other">Other: please specify in additional details below</option>
-    </select>
-</div>
+            <div class="book_form_field">
+                <label for="event_type">event type</label>
+                <select id="event_type" required>
+                    <option value="" disabled selected></option>
+                    <option value="wedding">Wedding</option>
+                    <option value="corporate">Corporate</option>
+                    <option value="bday_party">Birthday Party</option>
+                    <option value="private_party">Private Party</option>
+                    <option value="other">Other: please specify in additional details below</option>
+                </select>
+            </div>
 
+            <div class="book_form_field">
+                <label for="performance_length">performance length</label>
+                <select id="performance_length" required>
+                    <option value="" disabled selected></option>
+                    <option value="one_hour">1 hour</option>
+                    <option value="two_hours">2 hours</option>
+                    <option value="three_hours">3 hours</option>
+                    <option value="other">Other: please specify in additional details below</option>
+                </select>
+            </div>
 
-    <div class="form_group">
-        <label for="venue_address">venue address</label>
-        <input type="text" id="venue_address" name="venue_address" required>
-    </div>
+            <div class="book_form_field">
+                <label for="venue_address">venue address</label>
+                <input type="text" id="venue_address" required>
+            </div>
 
-    <div class="form_group">
-        <label for="num_guests">number of guests</label>
-        <input type="text" id="num_guests" name="num_guests" required>
-    </div>
+            <div class="book_form_field">
+                <label for="num_guests">number of guests</label>
+                <input type="text" id="num_guests" required>
+            </div>
             
-
-  <div class="form_group">
-    <label for="add_details_1">additional details (special requests, notes, etc.)</label>
-      <textarea id="additional_details" name="additional_details" rows="3" required></textarea>
-
-</div>
-
-
-    <button type="submit" class="book_button">book now</button>
-</form>
-
+            <div class="book_form_field">
+                <label for="add_details">additional details (special requests, notes, etc.)</label>
+                <textarea id="add_details" rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="book_button">book now</button>
+        </form>
     </section>
 
     <footer class="footer">
