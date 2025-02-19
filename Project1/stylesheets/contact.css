@@ -87,13 +87,23 @@ nav ul li a:hover {
 }
 
 .email_link {
-    color: #F5F5F5;
+    color: #DCDCDC;
     text-decoration: underline;
 }
 
 .email_link:hover {
     color: #99CCFF;
     text-decoration: underline;
+}
+
+.phone_number_link {
+    color: #DCDCDC;
+    text-decoration: underline;
+}
+
+.phone_number_link:hover {
+    color: #DCDCDC;
+    text-decoration: underline; 
 }
 
 .footer {
