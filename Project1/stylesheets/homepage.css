@@ -26,7 +26,7 @@ body {
 }
 
 /* Mobile Styles (When screen is less than or equal to 768px) */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .desktop_nav {
         display: none; /* Hide desktop navigation on mobile */
     }
