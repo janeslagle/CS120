@@ -48,8 +48,8 @@
     filter: invert(1);
 }
 
-        .add_details_lines input {
-    width: 65%;
+.add_details_lines input {
+    width: 100%; /* Matches other input fields */
     padding: 10px;
     font-size: 16px;
     color: #F5F5F5;
@@ -57,9 +57,9 @@
     border: none;
     border-bottom: 0.05px solid #A1A1A1; 
     outline: none;
-    margin-bottom: 10px; /* Space between each line */
-    white-space: nowrap; 
+    margin-bottom: 10px; /* Adds space between each line */
 }
+
     </style>
 </head>
 
@@ -135,14 +135,15 @@
     </div>
             
 
-    <div class="form_group">
-         <label for="add_details">additional details (number hours want perform, special requests, notes, etc.)</label>
+  <div class="form_group">
+    <label for="add_details_1">additional details (number of hours, special requests, notes, etc.)</label>
     <div class="add_details_lines">
-        <input type="text" id="add_details_1" name="add_details_1">
-        <input type="text" id="add_details_2" name="add_details_2">
-        <input type="text" id="add_details_3" name="add_details_3">
+        <input type="text" id="add_details_1" name="add_details_1" required>
+        <input type="text" id="add_details_2" name="add_details_2" required>
+        <input type="text" id="add_details_3" name="add_details_3" required>
     </div>
-    </div>
+</div>
+
 
     <button type="submit" class="book_button">book now</button>
 </form>
