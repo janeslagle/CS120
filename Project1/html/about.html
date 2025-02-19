@@ -28,6 +28,32 @@
             line-height: 1.4; /* Improves readability */
             text-align: center;
         }
+
+        .photo_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between images */
+    margin-top: 40px; /* Spacing from the text above */
+    text-align: center; /* Center captions */
+    width: 100%;
+    max-width: 800px; /* Optional: Limits the grid width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo_item img {
+    width: 100%; /* Make all images responsive */
+    height: 300px; /* Fixed height to maintain consistency */
+    object-fit: cover; /* Ensures images scale properly */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.photo_caption {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #DCDCDC;
+}
+
     </style>
 </head>
 
@@ -56,6 +82,26 @@
                 Turn It Up! formed when singer Alex Turner met drummer Matt Helders and guitarist Jamie Cook at an open mic. Driven by their shared passion for music and a desire to create art, they joined forces, later bringing in Jamie's lifelong friend, bassist Nick O'Malley, to complete the lineup. Fueled by their own diverse music taste, they chose to channel their love for music into an electrifying cover band. Rather than simply playing songs, they reimagine them, infusing each track with their signature blend of soulful rawness, individuality, and high energy. Every song they cover feels both familiar and refreshingly new. For Turn It Up!, music isn't just something they play, it's something they live, share, and connect through. With every performance, they ignite a passion for live music that makes anyone who listens to them want to do exactly what their name suggests - turn it up!
             </p>
         </div>
+
+        <!-- New Grid Section for Photos -->
+    <div class="photo_grid">
+        <div class="photo_item">
+            <img src="../images/lead_singer_band.png" alt="Alex Turner">
+            <p class="photo_caption">Alex Turner - Vocals & Guitar</p>
+        </div>
+        <div class="photo_item">
+            <img src="../images/drummer_band.png" alt="Matt Helders">
+            <p class="photo_caption">Matt Helders - Drums</p>
+        </div>
+        <div class="photo_item">
+            <img src="../images/guitarist_band.png" alt="Jamie Cook">
+            <p class="photo_caption">Jamie Cook - Guitar</p>
+        </div>
+        <div class="photo_item">
+            <img src="../images/bassist_band.png" alt="Nick O'Malley">
+            <p class="photo_caption">Nick O'Malley - Bass</p>
+        </div>
+    </div>
     </section>
 
     <footer class="footer">
