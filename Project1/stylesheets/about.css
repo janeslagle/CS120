@@ -65,6 +65,20 @@ nav ul li a:hover {
   color: #99CCFF;
 }
 
+.bground_image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;         /* Make it go across entire screen */
+    height: 105vh; 
+    background: url('../images/entire_band.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 /* Everything for footer on page */
 .footer {
   position: fixed;
