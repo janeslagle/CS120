@@ -146,7 +146,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     outline: none;
     cursor: pointer;
     background-color: transparent;
-    appearance: auto;
+    appearance: none;        /* Put in custom drop down arrow to better match the scrolling arrow in additional details field */
+    background-image: url('../images/custom_drop_down_menu_arrow.png'); 
+    background-repeat: no-repeat;
+    background-position: right 10px center;
 }
 
 .book_form_field select option {
