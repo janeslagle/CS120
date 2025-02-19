@@ -80,47 +80,13 @@ nav ul li a:hover {
 }
 
 /* Everything for middle section on page */
-.about_section {
+.catalog_section {
     padding: 20px;
     padding-bottom: 125px; 
     text-align: center;
     background-color: #2C2C2C;
     color: #F5F5F5;
 }
-        
-        .about_text {
-            color: #DCDCDC;
-            font-size: 17px;
-            text-align: center;
-            line-height: 1.4;
-            max-width: 560px; 
-            margin: 0 auto; 
-            padding: 20px; 
-        }
-
-        .photos_grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;   /* 1fr means the 2 columns have in grid here are same length */
-            gap: 10px 20px;                   /* Horizontal spacing + vertical spacing btw photos */
-            margin-top: 40px;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            max-width: 800px;
-        }
-        
-        .photos img {
-            height: 250px;
-            width: 100%;
-            object-fit: cover;  /* Scales the photos */
-        }
-        
-        .photos_captions {
-            font-size: 13.5px;
-            margin-top: 5px;
-            color: #DCDCDC;
-        }
 
 /* Everything for footer on page */
 .footer {
