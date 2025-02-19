@@ -1,9 +1,17 @@
 /* CSS Stylesheet for homepage.html */
 
+/* Do this for every element on page */
+* {
+    margin: 0;               /* Take away all default margins + paddings for entire page */
+    padding: 0;
+    box-sizing: border-box;  /* Figure out width, height with padding + borders */
+}
+
 body {
     font-family: "Work Sans", sans-serif;
 }
 
+/* Everything for header */
 header {
     position: fixed;
     background: rgba(0, 0, 0, 0.5); 
@@ -57,13 +65,6 @@ nav ul li a:hover {
   color: #99CCFF;
 }
 
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .bground_image {
     position: relative;
     display: flex;
@@ -78,6 +79,7 @@ nav ul li a:hover {
     background-size: cover;
 }
 
+/* Everything for middle section on page */
 .book_now_section {
     padding: 70px;
     padding-bottom: 135px; 
@@ -103,6 +105,7 @@ nav ul li a:hover {
     color: #2C2C2C;
 }
 
+/* Everything for footer on page */
 .footer {
   position: fixed;
   bottom: 0;
