@@ -88,6 +88,26 @@ nav ul li a:hover {
     color: #F5F5F5;
 }
 
+/* Table styles */
+.catalog_table {
+    width: 100%;               /* Make table full width */
+    background-color: #2C2C2C; /* Same background as section */
+    color: #F5F5F5;            /* White text */
+    border-collapse: collapse; /* Remove space between table cells */
+    margin-top: 25px;          /* Space between table and paragraph */
+}
+
+/* Table cell styles */
+.catalog_table td {
+    padding: 10px;               /* Add padding for the content */
+    text-align: center;          /* Center the text in the cells */
+}
+
+/* Add thin line between rows */
+.catalog_table tr {
+    border-bottom: 1px solid #F5F5F5; /* Thin white line between rows */
+}
+
 /* Everything for footer on page */
 .footer {
   position: fixed;
