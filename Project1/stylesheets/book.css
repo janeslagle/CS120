@@ -147,7 +147,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
     background-color: transparent;
     appearance: none;        /* Put in custom drop down arrow to better match the scrolling arrow in additional details field */
-    background-image: url('../images/custom_drop_down_menu_arrow.png'); 
+    background-image: url('../images/custom_down_arrow.png'); 
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 11px;
