@@ -105,7 +105,8 @@ nav ul li a:hover {
 
 /* Add thin line between rows */
 .catalog_table tr {
-    border-bottom: 1px solid #F5F5F5; /* Thin white line between rows */
+    border-top: 0.5px solid #CFCFCF; /* Thin white line above each row */
+    border-bottom: 0.5px solid #CFCFCF; /* Thin white line between rows */
 }
 
 /* Everything for footer on page */
