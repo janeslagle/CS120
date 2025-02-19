@@ -11,6 +11,76 @@ body {
     font-family: "Work Sans", sans-serif;
 }
 
+/* Default styles (for desktop) */
+.hamburger, .mobile_nav {
+    display: none;  /* Hide hamburger and mobile nav initially */
+}
+
+.desktop_nav ul {
+    padding-left: 840px;
+    font-weight: bold;
+    padding-top: 20px;
+    list-style: none;
+    display: flex;
+    gap: 41.5px;
+}
+
+/* Mobile Styles (When screen is less than or equal to 768px) */
+@media (max-width: 768px) {
+    .desktop_nav {
+        display: none; /* Hide desktop navigation on mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on mobile */
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+    }
+
+    .mobile_nav {
+        display: none; /* Hide mobile menu initially */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        background-color: black;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    .mobile_nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .mobile_nav li {
+        padding: 10px;
+        border-bottom: 1px solid white;
+    }
+
+    .mobile_nav a {
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+    .mobile_nav a:hover {
+        background: #99CCFF;
+    }
+
+    /* Show mobile menu when active class is added */
+    .mobile_nav.active {
+        display: block;
+    }
+}
+
+
 /* Everything for header */
 header {
     position: fixed;
