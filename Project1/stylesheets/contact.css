@@ -11,6 +11,7 @@ body {
     font-family: "Work Sans", sans-serif;
 }
 
+/* Everything for header */
 header {
     position: fixed;
     background: rgba(0, 0, 0, 0.5); 
@@ -78,9 +79,10 @@ nav ul li a:hover {
     background-size: cover;
 }
 
+/* Everything for middle section on page */
 .contact_info_section {
     padding: 20px;
-    padding-bottom: 120px; 
+    padding-bottom: 115px; 
     text-align: center;
     background-color: #2C2C2C;
     color: #F5F5F5;
@@ -108,6 +110,7 @@ nav ul li a:hover {
     text-decoration: underline; 
 }
 
+/* Everything for footer on page */
 .footer {
   position: fixed;
   bottom: 0;
