@@ -1,9 +1,17 @@
 /* CSS Stylesheet for about.html */
 
+/* Do this for every element on page */
+* {
+    margin: 0;               /* Take away all default margins + paddings for entire page */
+    padding: 0;
+    box-sizing: border-box;  /* Figure out width, height with padding + borders */
+}
+
 body {
     font-family: "Work Sans", sans-serif;
 }
 
+/* Everything for header */
 header {
     position: fixed;
     background: rgba(0, 0, 0, 0.5); 
@@ -57,52 +65,7 @@ nav ul li a:hover {
   color: #99CCFF;
 }
 
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.bground_image {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;         /* Make it go across entire screen */
-    height: 105vh; 
-    background: url('../images/turn_it_up_home_image.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.book_now_section {
-    padding: 70px;
-    padding-bottom: 135px; 
-    text-align: center;
-    background-color: #2C2C2C;
-    color: #F5F5F5;
-}
-
-.book_button {
-    background-color: #2C2C2C; 
-    color: #F5F5F5;
-    font-size: 17px;
-    font-weight: bold;
-    padding: 8px 27px; 
-    border: 3px solid #F5F5F5;
-    border-radius: 35px; 
-    cursor: pointer;
-}
-
-.book_button:hover {
-    background-color: #99CCFF;
-    border: 3px solid #99CCFF;
-    color: #2C2C2C;
-}
-
+/* Everything for footer on page */
 .footer {
   position: fixed;
   bottom: 0;
