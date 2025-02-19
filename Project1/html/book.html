@@ -60,6 +60,34 @@
     margin-bottom: 10px; /* Adds space between each line */
 }
 
+        .form_group select {
+    width: 100%; /* Match the width of input fields */
+    padding: 10px;
+    font-size: 16px;
+    color: #F5F5F5;
+    background-color: transparent; /* Matches input background */
+    border: none;
+    border-bottom: 0.05px solid #A1A1A1;
+    outline: none;
+    appearance: none; /* Removes default dropdown styling */
+    cursor: pointer;
+}
+
+/* Add a dropdown indicator (down arrow) */
+.form_group select {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23A1A1A1"><path d="M7 10l5 5 5-5H7z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+/* Style the dropdown options */
+.form_group select option {
+    color: #000; /* Make sure options are readable */
+    background-color: #fff; /* Light background for contrast */
+}
+
+
     </style>
 </head>
 
@@ -118,6 +146,19 @@
         <label for="phone">phone number</label>
         <input type="tel" id="phone" name="phone" required>
     </div>
+
+            <div class="form_group">
+    <label for="event_type">event type</label>
+    <select id="event_type" name="event_type" required>
+        <option value="" disabled selected>event length</option>
+        <option value="wedding">Wedding</option>
+        <option value="corporate">Corporate Event</option>
+        <option value="private_party">Private Party</option>
+        <option value="festival">Festival</option>
+        <option value="other">Other</option>
+    </select>
+</div>
+
 
     <div class="form_group">
         <label for="event_date">event date</label>
