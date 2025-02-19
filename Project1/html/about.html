@@ -28,6 +28,27 @@
             line-height: 1.4; /* Improves readability */
             text-align: center;
         }
+
+            /* Grid layout for images */
+    .photo_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 20px; /* Space between items */
+        max-width: 800px; /* Limit width */
+        margin: 40px auto; /* Center the grid */
+        text-align: center; /* Center text under images */
+    }
+
+    .photo_item img {
+        width: 100%; /* Make images responsive */
+        border-radius: 10px; /* Optional: Rounded corners */
+    }
+
+    .photo_caption {
+        margin-top: 8px;
+        font-size: 16px;
+        color: #DCDCDC;
+    }
     </style>
 </head>
 
@@ -55,6 +76,28 @@
             </p>
         </div>
     </section>
+
+    <section class="photo_grid">
+    <div class="photo_item">
+        <img src="../images/lead_singer_band.png">
+        <p class="photo_caption">Alex Turner - Vocals & Guitar</p>
+    </div>
+
+    <div class="photo_item">
+        <img src="../images/band_member2.jpg" alt="Band Member 2">
+        <p class="photo_caption">Matt Helders - Drums</p>
+    </div>
+
+    <div class="photo_item">
+        <img src="../images/band_member3.jpg" alt="Band Member 3">
+        <p class="photo_caption">Jamie Cook - Guitar</p>
+    </div>
+
+    <div class="photo_item">
+        <img src="../images/band_member4.jpg" alt="Band Member 4">
+        <p class="photo_caption">Nick O'Malley - Bass</p>
+    </div>
+</section>
 
     <footer class="footer">
         <div class="socials">
