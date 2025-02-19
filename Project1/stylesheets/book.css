@@ -144,7 +144,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border: none;
     border-bottom: 0.05px solid #A1A1A1;
     outline: none;
-    appearance: none;                   /* Get rid of default dropdown styling */
     cursor: pointer;
     background-color: transparent;
 }
