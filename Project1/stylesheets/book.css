@@ -150,7 +150,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-image: url('../images/custom_down_arrow.png'); 
     background-repeat: no-repeat;
     background-position: right 10px center;
-    background-size: 5px;
+    background-size: 7px;
 }
 
 .book_form_field select option {
