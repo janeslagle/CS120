@@ -1,9 +1,17 @@
 /* CSS Stylesheet for catalog.html */
 
+/* Do this for every element on page */
+* {
+    margin: 0;               /* Take away all default margins + paddings for entire page */
+    padding: 0;
+    box-sizing: border-box;  /* Figure out width, height with padding + borders */
+}
+
 body {
     font-family: "Work Sans", sans-serif;
 }
 
+/* Everything for header */
 header {
     position: fixed;
     background: rgba(0, 0, 0, 0.5); 
@@ -57,13 +65,6 @@ nav ul li a:hover {
   color: #99CCFF;
 }
 
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .bground_image {
     position: relative;
     display: flex;
@@ -72,37 +73,56 @@ nav ul li a:hover {
     text-align: center;
     width: 100%;         /* Make it go across entire screen */
     height: 105vh; 
-    background: url('../images/catalog_photo.png');
+    background: url('../images/entire_band.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.book_now_section {
-    padding: 70px;
-    padding-bottom: 135px; 
+/* Everything for middle section on page */
+.about_section {
+    padding: 20px;
+    padding-bottom: 125px; 
     text-align: center;
     background-color: #2C2C2C;
     color: #F5F5F5;
 }
+        
+        .about_text {
+            color: #DCDCDC;
+            font-size: 17px;
+            text-align: center;
+            line-height: 1.4;
+            max-width: 560px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
 
-.book_button {
-    background-color: #2C2C2C; 
-    color: #F5F5F5;
-    font-size: 17px;
-    font-weight: bold;
-    padding: 8px 27px; 
-    border: 3px solid #F5F5F5;
-    border-radius: 35px; 
-    cursor: pointer;
-}
+        .photos_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;   /* 1fr means the 2 columns have in grid here are same length */
+            gap: 10px 20px;                   /* Horizontal spacing + vertical spacing btw photos */
+            margin-top: 40px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            max-width: 800px;
+        }
+        
+        .photos img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;  /* Scales the photos */
+        }
+        
+        .photos_captions {
+            font-size: 13.5px;
+            margin-top: 5px;
+            color: #DCDCDC;
+        }
 
-.book_button:hover {
-    background-color: #99CCFF;
-    border: 3px solid #99CCFF;
-    color: #2C2C2C;
-}
-
+/* Everything for footer on page */
 .footer {
   position: fixed;
   bottom: 0;
