@@ -29,27 +29,38 @@
             text-align: center;
         }
 
-            /* Grid layout for images */
-    .photo_grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Two equal columns */
-        gap: 20px; /* Space between items */
-        margin: 40px auto; /* Center the grid */
-        text-align: center; /* Center text under images */
-        background-color: #2C2C2C;
-        width: 100%;
-    }
+        /* Full-Width Background */
+.photo_section {
+    background-color: #2C2C2C; /* Background color */
+    padding: 50px 0; /* Adds spacing around the section */
+    width: 100%; /* Ensures it spans the entire width */
+}
 
-    .photo_item img {
-        width: 100%; /* Make images responsive */
-        border-radius: 10px; /* Optional: Rounded corners */
-    }
+/* Grid Layout */
+.photo_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Space between images */
+    max-width: 800px; /* Limits width of content */
+    margin: 0 auto; /* Centers the grid */
+    text-align: center; /* Centers captions */
+}
 
-    .photo_caption {
-        margin-top: 8px;
-        font-size: 16px;
-        color: #DCDCDC;
-    }
+/* Ensuring all images are the same size */
+.photo_item img {
+    width: 100%; /* Ensures it fills the container */
+    height: 300px; /* Fixed height for uniformity */
+    object-fit: cover; /* Crops while maintaining aspect ratio */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+/* Caption Styling */
+.photo_caption {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #DCDCDC; /* Light text color */
+}
+
     </style>
 </head>
 
