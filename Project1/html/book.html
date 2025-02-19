@@ -65,6 +65,28 @@
     box-sizing: border-box;
 }
 
+        textarea {
+    width: 100%; /* Ensures it stretches fully */
+    padding: 10px;
+    font-size: 16px;
+    color: #F5F5F5;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.05px solid #A1A1A1;
+    outline: none;
+    resize: none; /* Prevents users from resizing */
+    line-height: 30px; /* Adjust to match spacing of individual input lines */
+    height: 90px; /* Set a fixed height to match three lines */
+    overflow: hidden; /* Prevents scrolling */
+    white-space: pre-wrap; /* Ensures text wraps properly */
+}
+
+/* Make sure when users type, the text does not overflow */
+textarea:focus {
+    border-bottom: 0.05px solid #FFF; /* Slightly brighter bottom border on focus */
+}
+
+
         .form_group select {
     width: 100%; /* Match the width of input fields */
     padding: 10px;
@@ -197,11 +219,8 @@
 
   <div class="form_group">
     <label for="add_details_1">additional details (special requests, notes, etc.)</label>
-    <div class="add_details_lines">
-        <input type="text" id="add_details_1" name="add_details_1">
-        <input type="text" id="add_details_2" name="add_details_2">
-        <input type="text" id="add_details_3" name="add_details_3">
-    </div>
+      <textarea id="additional_details" name="additional_details" rows="3" required></textarea>
+
 </div>
 
 
