@@ -1,6 +1,6 @@
 /* CSS Stylesheet for homepage.html */
 
-/* Do this for every element on page */
+/* Reset margins and paddings for all elements */
 * {
     margin: 0;               /* Take away all default margins + paddings for entire page */
     padding: 0;
@@ -20,63 +20,63 @@ header {
     top: 0;
     left: 0;
     padding: 10px 20px;
-    z-index: 1;          /* If don't have then can't see header over background image */
+    z-index: 1; /* If not included, can't see header over background image */
+    display: flex; /* Make header items align horizontally */
+    justify-content: space-between; /* Space out items in header */
     align-items: center;
 }
 
-h1 {
-    padding-left: 30px;
-    color: #F8F8FF;
-    padding-bottom: 2px;
-}
-
 .band_name {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    align-items: center; 
     font-family: "Bungee", serif;
     font-size: 32px;
     color: #F5F5F5;
 }
 
 .band_name .highlight {
-  background-color: #4682B4;
-  border-radius: 8px; 
-  padding: 0 2px;
+    background-color: #4682B4;
+    border-radius: 8px; 
+    padding: 0 2px;
+}
+
+/* Navigation menu */
+nav {
+    flex-grow: 1; /* Take up remaining space */
 }
 
 nav ul {
-    padding-left: 840px;
-    font-weight: bold;
-    padding-top: 20px;
     list-style: none;
     display: flex;
-    gap: 41.5px;
+    justify-content: flex-end; /* Align items to the right on desktop */
+    gap: 20px; /* Space out items */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 5px;
 }
 
 nav ul li a {
     color: #F5F5F5;
     font-size: 13.5px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
-  color: #99CCFF;
+    color: #99CCFF;
 }
 
+/* Background image for the home section */
 .bground_image {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100%;         /* Make it go across entire screen */
-    height: 105vh; 
-    background: url('../images/turn_it_up_home_image.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    width: 100%; /* Make it go across the screen */
+    height: 105vh; /* Full height, adjust as needed */
+    background: url('../images/turn_it_up_home_image.jpg') no-repeat center center/cover;
 }
 
 /* Everything for middle section on page */
@@ -105,38 +105,104 @@ nav ul li a:hover {
     color: #2C2C2C;
 }
 
-/* Everything for footer on page */
+/* Footer styles */
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 65px;
-  background-color: #2C2C2C;
-  color: #F5F5F5;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    background-color: #2C2C2C;
+    color: #F5F5F5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .socials {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 5px;
 }
 
 .socials img {
-  height: 20px; 
-  width: 20px;
-  object-fit: contain;
+    height: 20px; 
+    width: 20px;
+    object-fit: contain;
 }
 
 .socials img:hover {
-  filter: invert(40%);
+    filter: invert(40%);
 }
 
 .footer_txt {
-  font-size: 11px;
+    font-size: 11px;
+}
+
+/* Media Queries for mobile responsiveness */
+
+/* For smaller screens, make sure nav items are centered or wrapped */
+@media screen and (max-width: 768px) {
+    /* Adjust the header layout for small screens */
+    header {
+        flex-direction: column; /* Stack items vertically on mobile */
+        height: auto; /* Let the height adjust based on content */
+        align-items: center;
+    }
+
+    /* Adjust the font size and positioning for the band name */
+    .band_name {
+        font-size: 28px; /* Make band name a bit smaller on mobile */
+    }
+
+    /* Ensure the background image fits well on mobile */
+    .bground_image {
+        height: 60vh; /* Adjust height for smaller screens */
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Adjust the navigation menu to ensure it doesn't overflow */
+    nav ul {
+        flex-direction: column; /* Stack the navigation items on top of each other */
+        align-items: center; /* Center the items on mobile */
+        justify-content: center;
+        gap: 10px; /* Reduced gap between items */
+    }
+
+    nav ul li a {
+        font-size: 12px; /* Slightly smaller font on mobile */
+    }
+
+    /* Adjust the book now section */
+    .book_now_section {
+        padding: 40px; /* Adjust padding for better mobile view */
+    }
+
+    .book_button {
+        font-size: 15px; /* Slightly smaller button font */
+        padding: 6px 20px; /* Adjust padding for button */
+    }
+}
+
+/* For extra small devices (smaller than 480px) */
+@media screen and (max-width: 480px) {
+    .band_name {
+        font-size: 24px; /* Make band name even smaller */
+    }
+
+    nav ul li a {
+        font-size: 11px; /* Further reduce font size */
+    }
+
+    .book_button {
+        font-size: 14px; /* Adjust button font size */
+        padding: 5px 18px; /* Adjust button padding */
+    }
+
+    .footer_txt {
+        font-size: 10px; /* Adjust footer text size */
+    }
 }
