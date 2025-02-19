@@ -1,34 +1,36 @@
 /* CSS Stylesheet for homepage.html */
 
 /* Mobile adjustments */
-@media (max-width: 768px) {
+/* Mobile adjustments */
+@media (max-width: 480px) {
     header {
-        height: auto;  /* Allow header to expand naturally for smaller screens */
-        padding: 15px; /* Adjust padding to give more room */
+        height: auto;  /* Allow header to expand naturally */
+        padding: 15px; /* Adjust padding for mobile */
     }
 
     .band_name {
         font-size: 24px; /* Make the band name smaller on mobile */
         position: relative;
-        left: 20px; /* Move it more to the left */
+        left: 20px; /* Move the band name to the left */
     }
 
     nav ul {
         display: flex;
-        flex-direction: column; /* Stack the navigation items vertically */
-        justify-content: center;
-        align-items: center;  /* Center the navigation items */
-        padding-left: 0;
+        justify-content: center; /* Center the navigation */
+        gap: 15px; /* Adjust the spacing between the nav items */
+        padding-left: 0; /* Remove any padding on the left */
     }
 
     nav ul li {
-        margin: 10px 0; /* Add space between menu items */
+        /* Ensure nav items are spaced out properly */
     }
 
     nav ul li a {
-        font-size: 16px; /* Adjust font size for better readability */
+        font-size: 14px; /* Smaller font size for mobile */
+        color: #F5F5F5; /* Make sure text color remains the same */
     }
 }
+
 
 
 /* Do this for every element on page */
