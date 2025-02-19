@@ -152,6 +152,12 @@
         <input type="tel" id="phone" name="phone" required>
     </div>
 
+    <div class="form_group">
+        <label for="event_date">event date</label>
+        <input type="date" id="event_date" name="event_date" required>
+    </div>
+
+    
             <div class="form_group">
     <label for="event_type">event type</label>
     <select id="event_type" name="event_type" required>
@@ -164,11 +170,19 @@
     </select>
 </div>
 
+    
+            <div class="form_group">
+    <label for="event_type">event length</label>
+    <select id="event_type" name="event_type" required>
+        <option value="" disabled selected>event length</option>
+        <option value="wedding">Wedding</option>
+        <option value="corporate">Corporate Event</option>
+        <option value="private_party">Private Party</option>
+        <option value="festival">Festival</option>
+        <option value="other">Other</option>
+    </select>
+</div>
 
-    <div class="form_group">
-        <label for="event_date">event date</label>
-        <input type="date" id="event_date" name="event_date" required>
-    </div>
 
     <div class="form_group">
         <label for="venue_address">venue address</label>
