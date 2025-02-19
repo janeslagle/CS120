@@ -65,15 +65,6 @@ nav ul li a:hover {
   color: #99CCFF;
 }
 
-/* Everything for middle section on page */
-.about_section {
-    padding: 100px;
-    padding-bottom: 115px; 
-    text-align: center;
-    background-color: #2C2C2C;
-    color: #F5F5F5;
-}
-
 /* Everything for footer on page */
 .footer {
   position: fixed;
