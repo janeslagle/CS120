@@ -92,6 +92,7 @@ nav ul li a:hover {
 }
 
 .email_link:hover {
+    font-size: 15px;
     color: #99CCFF;
     text-decoration: underline;
 }
@@ -102,6 +103,7 @@ nav ul li a:hover {
 }
 
 .phone_number_link:hover {
+    font-size: 15px;
     color: #99CCFF;
     text-decoration: underline; 
 }
