@@ -151,6 +151,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .book_form_field select option {
     color: #2C2C2C;
+    background-color: #DCDCDC;
 }
 
 textarea {
