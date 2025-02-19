@@ -11,17 +11,6 @@ body {
     font-family: "Work Sans", sans-serif;
 }
 
-@media (min-width: 480px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    nav ul {
-        justify-content: flex-end;
-    }
-}
-
 /* Everything for header */
 header {
     position: fixed;
