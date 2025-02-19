@@ -149,6 +149,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: transparent;
 }
 
+.book_form_field select option {
+    color: #2C2C2C;
+}
+
 textarea {
     width: 100%; 
     white-space: pre-wrap;    /* Make each line continue on to next line when all space used up on current one */
