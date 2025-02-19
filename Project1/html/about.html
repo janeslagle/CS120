@@ -21,38 +21,36 @@
         
         .about_text {
             color: #DCDCDC;
-            max-width: 560px; /* Limits how wide the text can go */
-            margin: 0 auto; /* Centers it horizontally */
-            padding: 20px; /* Adds some space around it */
-            font-size: 17px; /* Adjust text size */
-            line-height: 1.4; /* Improves readability */
+            font-size: 17px;
             text-align: center;
+            line-height: 1.4;
+            max-width: 560px; 
+            margin: 0 auto; 
+            padding: 20px; 
         }
 
-        .photo_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 10px 20px;          /* Horizontal spacing + vertical spacing btw photos */
-    margin-top: 40px;      
-    text-align: center; /* Center captions */
-    width: 100%;
-    max-width: 800px; /* Optional: Limits the grid width */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.photo_item img {
-    width: 100%; /* Make all images responsive */
-    height: 250px; /* Fixed height to maintain consistency */
-    object-fit: cover; /* Ensures images scale properly */
-}
-
-.photo_caption {
-    margin-top: 5px;
-    font-size: 13.5px;
-    color: #DCDCDC;
-}
-
+        .photos_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;   /* 1fr means the 2 columns have in grid here are same length */
+            gap: 10px 20px;                   /* Horizontal spacing + vertical spacing btw photos */
+            margin-top: 40px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        
+        .photos img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;  /* Scales the photos */
+        }
+        
+        .photos_captions {
+            font-size: 13.5px;
+            margin-top: 5px;
+            color: #DCDCDC;
+        }
     </style>
 </head>
 
@@ -76,31 +74,34 @@
 
     <section class="about_section">
         <p style="font-weight: bold; font-size: 39px; margin-bottom: 25px; margin-top: 25px;">ABOUT</p>
+        
         <div class="about_text">
             <p>
                 Turn It Up! formed when singer Alex Turner met drummer Matt Helders and guitarist Jamie Cook at an open mic. Driven by their shared passion for music and a desire to create art, they joined forces, later bringing in Jamie's lifelong friend, bassist Nick O'Malley, to complete the lineup. Fueled by their own diverse music taste, they chose to channel their love for music into an electrifying cover band. Rather than simply playing songs, they reimagine them, infusing each track with their signature blend of soulful rawness, individuality, and high energy. Every song they cover feels both familiar and refreshingly new. For Turn It Up!, music isn't just something they play, it's something they live, share, and connect through. With every performance, they ignite a passion for live music that makes anyone who listens to them want to do exactly what their name suggests - turn it up!
             </p>
         </div>
 
-        <!-- New Grid Section for Photos -->
-    <div class="photo_grid">
-        <div class="photo_item">
-            <img src="../images/lead_singer_band.png">
-            <p class="photo_caption"><strong>Alex Turner</strong>, <i>Vocals</i></p>
+        <div class="photos_grid">
+            <div class="photos">
+                <img src="../images/lead_singer_band.png">
+                <p class="photos_captions"><strong>Alex Turner</strong>, <i>Vocals</i></p>
+            </div>
+            
+            <div class="photos">
+                <img src="../images/guitarist_band.png">
+                <p class="photos_captions"><strong>Jamie Cook</strong>, <i>Guitar</i></p>
+            </div>
+        
+            <div class="photos">
+                <img src="../images/band_bassist.png">
+                <p class="photos_captions"><strong>Nick O'Malley</strong>, <i>Bass</i></p>
+            </div>
+         
+            <div class="photos">
+                <img src="../images/drummer_band.png">
+                <p class="photos_captions"><strong>Matt Helders</strong>, <i>Drums</i></p>
+            </div>
         </div>
-        <div class="photo_item">
-            <img src="../images/guitarist_band.png">
-            <p class="photo_caption"><strong>Jamie Cook</strong>, <i>Guitar</i></p>
-        </div>
-        <div class="photo_item">
-            <img src="../images/band_bassist.png">
-            <p class="photo_caption"><strong>Nick O'Malley</strong>, <i>Bass</i></p>
-        </div>
-         <div class="photo_item">
-            <img src="../images/drummer_band.png">
-            <p class="photo_caption"><strong>Matt Helders</strong>, <i>Drums</i></p>
-        </div>
-    </div>
     </section>
 
     <footer class="footer">
