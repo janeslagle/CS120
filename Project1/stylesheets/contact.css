@@ -1,5 +1,12 @@
 /* CSS Stylesheet for contact.html */
 
+/* Do this for every element on page */
+* {
+    margin: 0;               /* Take away all default margins + paddings for entire page */
+    padding: 0;
+    box-sizing: border-box;  /* Figure out width, height with padding + borders */
+}
+
 body {
     font-family: "Work Sans", sans-serif;
 }
@@ -55,13 +62,6 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #99CCFF;
-}
-
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 .bground_image {
