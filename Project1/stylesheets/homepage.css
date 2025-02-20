@@ -21,7 +21,7 @@
     nav ul {
         display: flex;
         justify-content: center; /* Center the navigation */
-        gap: 15px; /* Adjust the spacing between the nav items */
+        gap: 10px; /* Adjust the spacing between the nav items */
         padding-left: 0; /* Remove any padding on the left */
         margin-top: 10px;
     }
