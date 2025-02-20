@@ -22,7 +22,7 @@
         display: flex;
         justify-content: center; /* Center the navigation */
         gap: 15px; /* Adjust the spacing between the nav items */
-        padding-left: 0; /* Remove any padding on the left */
+        padding-left: 0px; /* Remove any padding on the left */
         margin-top: 10px;
     }
 
