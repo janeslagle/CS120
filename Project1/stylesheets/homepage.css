@@ -35,13 +35,14 @@
     }
     
 .bground_image {
-    height: 100vh;
-    width: 100vw;
+    height: 80vh; /* Adjusted to reduce height */
+    width: 100vw; /* Ensures full width of the screen */
     
-    background-size: contain; /* Keeps the full image visible */
-    background-position: center; /* Centers it */
+    background-size: cover; /* Ensures the image covers the screen */
+    background-position: center center; /* Keeps the center aligned */
     background-repeat: no-repeat;
 }
+
 
 }
 
