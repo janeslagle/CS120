@@ -1,47 +1,36 @@
 /* CSS Stylesheet for homepage.html */
 
-/* Mobile adjustments */
+/* Adjust the header so that it shows up on mobile */
 @media (max-width: 480px) {
     header {
-        width: 100%;
-        height: auto;
-        padding: 5px 15px; 
         display: flex;  
         flex-direction: column;  
         align-items: flex-start; 
+        width: 100%;
+        height: auto;
+        padding: 5px 15px; 
     }
 
     .band_name {
-        font-size: 20px; /* Make the band name smaller on mobile */
+        font-size: 20px; 
         position: absolute;
-        padding-left: 0px; 
-        top: 0px;
+        padding-left: 0px;       /* Move it closer to left edge */
+        top: 0px;                /* Try to move it closer to top */
         bottom: 20px;
     }
 
     nav ul {
-        padding-left: 0px; /* Remove any padding on the left */
-        padding-right: 840px;
+        justify-content: center; /* Make it centered under the band name */
+        padding-left: 0px;       /* Move left */
+        padding-right: 840px;    /* Without this, nav bar stuck off screen so this moves it left onto mobile screen */
         display: flex;
-        justify-content: center; /* Center the navigation */
-        gap: 10px; /* Adjust the spacing between the nav items */
+        gap: 10px; 
         margin-top: 40px;
         width: 100%;
     }
 
     nav ul li a {
-        font-size: 14px; /* Smaller font size for mobile */
-        color: #F5F5F5; /* Make sure text color remains the same */
-    }
-
-    
-.bground_image {
-            background-size: contain;  /* Ensures the image fits within the container */
-        background-position: center center; /* Keeps the image centered */
-        width: 90%; /* Reduce the width of the container for mobile */
-        margin-left: auto;  /* Center the image */
-        margin-right: auto; /* Center the image */
-        height: auto; /* Adjust height to maintain aspect ratio */
+        font-size: 14px;        /* Otherwise font too big */
     }
 }
 
