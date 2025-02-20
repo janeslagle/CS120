@@ -2,7 +2,7 @@
 
 /* Mobile adjustments */
 /* Mobile adjustments */
-@media (max-width: 2000px) {
+@media (max-width: 480px) {
     header {
         height: auto;  /* Allow header to expand naturally */
         padding: 15px; /* Adjust padding for mobile */
@@ -24,7 +24,7 @@
         display: flex;
         justify-content: center; /* Center the navigation */
         gap: 10px; /* Adjust the spacing between the nav items */
-        margin-top: 10px;
+        margin-top: 35px;
         width: 100%;
     }
 
