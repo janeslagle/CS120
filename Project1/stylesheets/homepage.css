@@ -26,10 +26,6 @@
         margin-top: 10px;
     }
 
-    nav ul li {
-        /* Ensure nav items are spaced out properly */
-    }
-
     nav ul li a {
         font-size: 14px; /* Smaller font size for mobile */
         color: #F5F5F5; /* Make sure text color remains the same */
