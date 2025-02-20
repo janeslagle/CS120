@@ -13,7 +13,7 @@
 
     .band_name {
         font-size: 20px; /* Make the band name smaller on mobile */
-        position: relative;
+        position: absolute;
         padding-left: 0px; 
         margin-bottom: 20px;
         padding-bottom: 15px;
