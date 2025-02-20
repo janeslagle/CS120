@@ -2,7 +2,7 @@
 
 /* Mobile adjustments */
 /* Mobile adjustments */
-@media (max-width: 950px) {
+@media (max-width: 480px) {
     header {
         height: auto;  /* Allow header to expand naturally */
         width: 100%;
