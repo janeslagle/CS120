@@ -35,8 +35,8 @@
     }
     
 .bground_image {
-        height: 80vh; /* Set the height as desired */
-        width: 100vw; /* Ensures the background spans the entire screen width */
+        height: auto;
+        width: 100%;
         
         background-size: cover; /* Ensures the image covers the container */
         background-position: center center; /* Keeps the image centered */
