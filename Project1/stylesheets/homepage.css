@@ -35,8 +35,8 @@
     }
     
 .bground_image {
-    height: 80vh; /* Adjusted to reduce height */
-    width: 100vw; /* Ensures full width of the screen */
+    height: 60vh; /* Adjusted to reduce height */
+    width: 50vw; /* Ensures full width of the screen */
     
     background-size: cover; /* Ensures the image covers the screen */
     background-position: center center; /* Keeps the center aligned */
