@@ -34,6 +34,8 @@
         color: #F5F5F5; /* Make sure text color remains the same */
     }
 
+    
+.bground_image {
             background-size: contain;  /* Ensures the image fits within the container */
         background-position: center center; /* Keeps the image centered */
         width: 90%; /* Reduce the width of the container for mobile */
