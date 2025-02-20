@@ -35,9 +35,6 @@
     }
     
 .bground_image {
-        width: 100%;
-        height: auto;
-        
         background-size: contain; /* Ensures the image covers the container */
         background-position: center center; /* Keeps the image centered */
         background-repeat: no-repeat;
