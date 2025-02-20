@@ -1,10 +1,10 @@
 /* CSS Stylesheet for about.html */
 
 /* Mobile adjustments */
-/* Mobile adjustments */
-@media (max-width: 700px) {
+@media (max-width: 480px) {
     header {
-        height: auto;  /* Allow header to expand naturally */
+        width: 100%;
+        height: auto;
         padding: 15px; /* Adjust padding for mobile */
         display: flex;  /* Use flexbox for better layout control */
         flex-direction: column;  /* Stack items vertically */
@@ -15,7 +15,7 @@
         font-size: 20px; /* Make the band name smaller on mobile */
         position: relative;
         padding-left: 0px; /* Move the band name to the left */
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     nav ul {
@@ -24,7 +24,7 @@
         display: flex;
         justify-content: center; /* Center the navigation */
         gap: 10px; /* Adjust the spacing between the nav items */
-        margin-top: 40px;
+        margin-top: 30px;
         width: 100%;
     }
 
