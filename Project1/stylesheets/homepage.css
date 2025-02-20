@@ -5,6 +5,7 @@
 @media (max-width: 950px) {
     header {
         height: auto;  /* Allow header to expand naturally */
+        width: 100%;
         padding: 15px; /* Adjust padding for mobile */
         display: flex;  /* Use flexbox for better layout control */
         flex-direction: column;  /* Stack items vertically */
