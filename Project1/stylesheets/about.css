@@ -12,22 +12,20 @@
     }
 
     .band_name {
-        font-size: 22px; /* Make the band name smaller on mobile */
+        font-size: 20px; /* Make the band name smaller on mobile */
         position: relative;
-        left: 5px; /* Move the band name to the left */
-        top: 10px;
+        padding-left: 0px; /* Move the band name to the left */
+        margin-bottom: 20px;
     }
 
     nav ul {
+        padding-left: 0px; /* Remove any padding on the left */
+        padding-right: 840px;
         display: flex;
         justify-content: center; /* Center the navigation */
-        gap: 15px; /* Adjust the spacing between the nav items */
-        padding-left: 0px; /* Remove any padding on the left */
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        /* Ensure nav items are spaced out properly */
+        gap: 10px; /* Adjust the spacing between the nav items */
+        margin-top: 40px;
+        width: 100%;
     }
 
     nav ul li a {
