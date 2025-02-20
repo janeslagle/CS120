@@ -20,6 +20,7 @@
 
     nav ul {
         padding-left: 0px; /* Remove any padding on the left */
+        padding-right: 840px;
         display: flex;
         justify-content: center; /* Center the navigation */
         gap: 10px; /* Adjust the spacing between the nav items */
