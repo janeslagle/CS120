@@ -22,6 +22,7 @@
         justify-content: center; /* Center the navigation */
         gap: 15px; /* Adjust the spacing between the nav items */
         padding-left: 0; /* Remove any padding on the left */
+        margin-top: 10px;
     }
 
     nav ul li {
@@ -83,7 +84,7 @@ h1 {
 }
 
 nav ul {
-    padding-left: 0px;
+    padding-left: 840px;
     font-weight: bold;
     padding-top: 20px;
     list-style: none;
