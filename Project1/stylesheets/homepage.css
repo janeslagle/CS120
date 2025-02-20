@@ -33,6 +33,14 @@
         font-size: 14px; /* Smaller font size for mobile */
         color: #F5F5F5; /* Make sure text color remains the same */
     }
+
+            background-size: contain;  /* Ensures the image fits within the container */
+        background-position: center center; /* Keeps the image centered */
+        width: 90%; /* Reduce the width of the container for mobile */
+        margin-left: auto;  /* Center the image */
+        margin-right: auto; /* Center the image */
+        height: auto; /* Adjust height to maintain aspect ratio */
+    }
 }
 
 /* Do this for every element on page */
