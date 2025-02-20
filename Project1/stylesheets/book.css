@@ -1,46 +1,36 @@
 /* CSS Stylesheet for catalog.html */
 
-/* Mobile adjustments */
+/* Adjust the header so that it shows up on mobile */
 @media (max-width: 480px) {
     header {
-        width: 100%;
-        height: auto;
-        padding: 5px 15px; 
         display: flex;  
         flex-direction: column;  
         align-items: flex-start; 
+        width: 100%;
+        height: auto;
+        padding: 5px 15px; 
     }
 
     .band_name {
-        font-size: 20px; /* Make the band name smaller on mobile */
+        font-size: 20px; 
         position: absolute;
-        padding-left: 0px; 
-        margin-bottom: 20px;
-        padding-bottom: 15px;
+        padding-left: 0px;       /* Move it closer to left edge */
+        top: 0px;                /* Try to move it closer to top */
+        bottom: 20px;
     }
 
     nav ul {
-        padding-left: 0px; /* Remove any padding on the left */
-        padding-right: 840px;
+        justify-content: center; /* Make it centered under the band name */
+        padding-left: 0px;       /* Move left */
+        padding-right: 840px;    /* Without this, nav bar stuck off screen so this moves it left onto mobile screen */
         display: flex;
-        justify-content: center; /* Center the navigation */
-        gap: 10px; /* Adjust the spacing between the nav items */
+        gap: 10px; 
         margin-top: 40px;
         width: 100%;
     }
 
     nav ul li a {
-        font-size: 14px; /* Smaller font size for mobile */
-        color: #F5F5F5; /* Make sure text color remains the same */
-    }
-    
-    .bground_image {
-        height: auto; /* Allow natural height but still be large */
-        min-height: 100vh; /* Ensure it covers at least the full screen */
-        width: 100vw; /* Ensure full width */
-        
-        background-size: 100% auto; /* Fit width, allow height to adjust */
-        background-position: center top; /* Keeps it aligned */
+        font-size: 14px;        /* Otherwise font too big */
     }
 }
 
