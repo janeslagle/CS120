@@ -14,15 +14,15 @@
     .band_name {
         font-size: 20px; /* Make the band name smaller on mobile */
         position: relative;
-        padding-left: 0; /* Move the band name to the left */
+        padding-left: 0px; /* Move the band name to the left */
         padding-bottom: 15px;
     }
 
     nav ul {
+        padding-left: 0px; /* Remove any padding on the left */
         display: flex;
         justify-content: center; /* Center the navigation */
         gap: 10px; /* Adjust the spacing between the nav items */
-        padding-left: 0px; /* Remove any padding on the left */
         margin-top: 10px;
     }
 
