@@ -6,6 +6,9 @@
     header {
         height: auto;  /* Allow header to expand naturally */
         padding: 15px; /* Adjust padding for mobile */
+        display: flex;  /* Use flexbox for better layout control */
+        flex-direction: column;  /* Stack items vertically */
+        align-items: flex-start;  /* Align items to the left */
     }
 
     .band_name {
