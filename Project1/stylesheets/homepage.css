@@ -33,12 +33,6 @@
         font-size: 14px; /* Smaller font size for mobile */
         color: #F5F5F5; /* Make sure text color remains the same */
     }
-    
-.bground_image {
-object-fit: scale-down; max-width: 100%; height: auto;
-    }
-
-
 }
 
 /* Do this for every element on page */
