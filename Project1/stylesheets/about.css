@@ -24,7 +24,7 @@
         display: flex;
         justify-content: center; /* Center the navigation */
         gap: 10px; /* Adjust the spacing between the nav items */
-        margin-top: 30px;
+        margin-top: 40px;
         width: 100%;
     }
 
