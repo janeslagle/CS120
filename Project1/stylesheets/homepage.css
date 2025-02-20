@@ -15,7 +15,7 @@
         font-size: 20px; /* Make the band name smaller on mobile */
         position: absolute;
         padding-left: 0px; 
-        top: 5px;
+        top: 0px;
     }
 
     nav ul {
