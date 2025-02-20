@@ -17,6 +17,7 @@
         position: relative;
         padding-left: 0px; /* Move the band name to the left */
         margin-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     nav ul {
