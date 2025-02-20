@@ -2,7 +2,7 @@
 
 /* Mobile adjustments */
 /* Mobile adjustments */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     header {
         height: auto;  /* Allow header to expand naturally */
         padding: 15px; /* Adjust padding for mobile */
@@ -12,10 +12,10 @@
     }
 
     .band_name {
-        font-size: 22px; /* Make the band name smaller on mobile */
+        font-size: 20px; /* Make the band name smaller on mobile */
         position: relative;
-        left: 5px; /* Move the band name to the left */
-        bottom: 10px;
+        padding-left: 0; /* Move the band name to the left */
+        padding-bottom: 15px;
     }
 
     nav ul {
