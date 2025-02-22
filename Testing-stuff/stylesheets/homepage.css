@@ -1,0 +1,176 @@
+/* CSS Stylesheet for homepage.html */
+
+/* Adjust the header so that it shows up on mobile */
+@media (max-width: 480px) {
+    header {
+        display: flex;  
+        flex-direction: column;  
+        align-items: flex-start; 
+        width: 100%;
+        height: auto;
+        padding: 5px 15px; 
+    }
+
+    .band_name {
+        font-size: 20px; 
+        position: absolute;
+        padding-left: 0px;       /* Move it closer to left edge */
+        top: 0px;                /* Try to move it closer to top */
+        bottom: 20px;
+    }
+
+    nav ul {
+        justify-content: center; /* Make it centered under the band name */
+        padding-left: 0px;       /* Move left */
+        padding-right: 840px;    /* Without this, nav bar stuck off screen so this moves it left onto mobile screen */
+        display: flex;
+        gap: 10px; 
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 14px;        /* Otherwise font too big */
+    }
+}
+
+/* Do this for every element on page */
+* {
+    margin: 0;               /* Take away all default margins + paddings for entire page */
+    padding: 0;
+    box-sizing: border-box;  /* Figure out width, height with padding + borders */
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+/* Everything for header */
+header {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    height: 13%;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    z-index: 1;          /* If don't have then can't see header over background image */
+    align-items: center;
+}
+
+h1 {
+    padding-left: 30px;
+    color: #F8F8FF;
+    padding-bottom: 2px;
+}
+
+.band_name {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    align-items: center; 
+    font-family: "Bungee", serif;
+    font-size: 32px;
+    color: #F5F5F5;
+}
+
+.band_name .highlight {
+  background-color: #4682B4;
+  border-radius: 8px; 
+  padding: 0 2px;
+}
+
+nav ul {
+    padding-left: 840px;
+    font-weight: bold;
+    padding-top: 20px;
+    list-style: none;
+    display: flex;
+    gap: 41.5px;
+}
+
+nav ul li a {
+    color: #F5F5F5;
+    font-size: 13.5px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #99CCFF;
+}
+
+.bground_image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;         /* Make it go across entire screen */
+    height: 105vh; 
+    background: url('../images/turn_it_up_home_image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Everything for middle section on page */
+.book_now_section {
+    padding: 70px;
+    padding-bottom: 135px; 
+    text-align: center;
+    background-color: #2C2C2C;
+    color: #F5F5F5;
+}
+
+.book_button {
+    background-color: #2C2C2C; 
+    color: #F5F5F5;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 8px 27px; 
+    border: 3px solid #F5F5F5;
+    border-radius: 35px; 
+    cursor: pointer;
+}
+
+.book_button:hover {
+    background-color: #99CCFF;
+    border: 3px solid #99CCFF;
+    color: #2C2C2C;
+}
+
+/* Everything for footer on page */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  background-color: #2C2C2C;
+  color: #F5F5F5;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.socials img {
+  height: 20px; 
+  width: 20px;
+  object-fit: contain;
+}
+
+.socials img:hover {
+  filter: invert(40%);
+}
+
+.footer_txt {
+  font-size: 11px;
+}
