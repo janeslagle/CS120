@@ -23,10 +23,10 @@
     
             // Using ONLY string or array methods,  display the names as a numbered list
             // Methods of the array object that iterate through the array --> map method
-            let names_list_elements = names_arr.map((name, i) => '<li>${i + 1}. ${name}<li>').join("");
+            let names_list_elements = names_arr.map((name, i) => `<li>${i + 1}. ${name}</li`<join("");
     
-            // Now put the items into <ol> (numbered list) elements
-            document.getElementById("names_list").innerHTML = names_list_elements;
+            // Now actually put the items into an <ol> (numbered list)
+            document.getElementById("names_list").innerHTML = `<ol>${names_list_elements}</ol>`;
         }
 
         create_num_list();
