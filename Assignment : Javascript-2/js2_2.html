@@ -13,35 +13,36 @@
     <div id="num_words"></div>
 
     <script>
-        // Use prompt() to get sentence from user
-        let user_sentence = prompt("Please enter a sentence:");
+        function get_num_words() {
+            // Use prompt() to get sentence from user
+            let user_sentence = prompt("Please enter a sentence:");
 
-        // Check if user even entered anything 
-        if (user_sentence) {
-            // Use split to create an arr in which each element of arr is word in sentence (assume space btw words) 
-            // Split on whitespace
-            let sentence_words = user_sentence.split(" "); 
+            // Check if user even entered anything 
+            if (user_sentence) {
+                // Use split to create an arr in which each element of arr is word in sentence (assume space btw words) 
+                // Split on whitespace
+                let sentence_words = user_sentence.split(" "); 
 
-            // Remove punctuation from each word so that input like "!" isn't counted as 1 word
-            // Then once remove any punctuation it will be an empty string so need remove those after so they're still not counted
-            let actual_words = sentence_words
-                .map(word => word.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, '')) 
-                .filter(word => word.length > 0);
+                // Remove punctuation from each word so that input like "!" isn't counted as 1 word
+                // Then once remove any punctuation it will be an empty string so need remove those after so they're still not counted
+                let actual_words = sentence_words
+                    .map(word => word.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, '')) 
+                    .filter(word => word.length > 0);
 
-            // Use length prop. of arr to determine num words in sent
-            let num_words = actual_words.length;
+                // Use length prop. of arr to determine num words in sent
+                let num_words = actual_words.length;
 
-            // Display num words
-            if (num_words === 0) {
-                alert("You didn't enter any valid words!");
-            } else if (num_words === 1) {
-                alert("Your sentence has 1 word in it!");
+                // Display num words
+                if (num_words === 0) {
+                    alert("You didn't enter any valid words!");
+                } else if (num_words === 1) {
+                    alert("Your sentence has 1 word in it!");
+                } else {
+                    alert(`Your sentence has ${num_words} words in it!`);
+                }
             } else {
-                alert(`Your sentence has ${num_words} words in it!`);
+                alert("No sentence was entered!");
             }
-        } else {
-            alert("No sentence was entered!");
-        }
     </script> 
 </body>
 </html>
