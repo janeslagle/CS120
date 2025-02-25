@@ -15,7 +15,7 @@
     <script>
         // (b) Create func count() that takes 2 params: (1) array of nums (2) value + returns count of num items in array less than value of param
         function count(num_arr, val) {
-            less_than_count = 0;
+            let less_than_count = 0;
 
             for (i = 0; i < num_arr.length; i++) {
                 if (val > num_arr[i]) {
@@ -29,8 +29,8 @@
         // (c) Create func testCount() that calls + tests count()
         function testCount() {
             // hardcode array + val
-            num_arr = [3, 55, 30, 28, 9, 12];
-            val = 10;
+            let num_arr = [3, 55, 30, 28, 9, 12];
+            let val = 10;
 
             let answer = count(num_arr, val);
 
