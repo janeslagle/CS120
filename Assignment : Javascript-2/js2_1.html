@@ -1,1 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>JS-2 Prob 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
+<body>
+    <h1>Problem 1</h1>
+
+    <script>
+        // Prompt user for their 1st, last name in two separate prompt() calls
+        let firstName = prompt("Please enter your first name:");
+        let lastName = prompt("Please enter your last name:");
+
+        // Display given full name in a popup alert
+        alert("Your name is " + firstName + " " + lastName);
+
+        // Ask user for number of children they have
+        let numChildren = prompt("Please enter the number of children you have:");
+
+        // Display number of children on page --> use document.write()
+        // Have grammatically correct sentences, so 3 different cases for if numChildren is 0, 1, else
+        let numChildrenSent = "";
+      
+        if (numChildren == 0) {
+            numChildrenSent = "You have no children";
+        } else if (numChildren == 1) {
+            numChildrenSent = "You have 1 child";
+        } else {
+            numChildrenSent = "You have " + numChildren + " children";
+        }
+
+        document.write(numChildrenSent);
+    </script> 
+</body>
+</html>
