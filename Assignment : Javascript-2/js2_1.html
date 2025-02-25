@@ -34,8 +34,8 @@
 
             let answer = count(num_arr, val);
 
-            // Display result in div created in part (a)
-            document.getElementById("answer").innerHTML = "Count of number of items in array " + num_arr + " less than value " + val + ": " + answer;  
+            // Display result in div created in part (a) 
+            document.getElementById("answer").innerHTML = `Array [${num_arr.join(", ")}] has ${answer} items less than ${val}`;
         }
 
         // Call testCount() from script
