@@ -9,30 +9,37 @@
 <body>
     <h1>Problem 1</h1>
 
+    <!-- // (a) Create div on page with id of answer -->
+    <div id="answer"></div>
+
     <script>
-        // Prompt user for their 1st, last name in two separate prompt() calls
-        let firstName = prompt("Please enter your first name:");
-        let lastName = prompt("Please enter your last name:");
+        // (b) Create func count() that takes 2 params: (1) array of nums (2) value + returns count of num items in array less than value of param
+        function count(num_arr, val) {
+            less_than_count = 0;
 
-        // Display given full name in a popup alert
-        alert("Your name is " + firstName + " " + lastName);
+            for (i = 0; i < num_arr.length; i++) {
+                if (val > num_arr[i]) {
+                    less_than_count += 1;
+                }
+            }
 
-        // Ask user for number of children they have
-        let numChildren = prompt("Please enter the number of children you have:");
-
-        // Display number of children on page --> use document.write()
-        // Have grammatically correct sentences, so 3 different cases for if numChildren is 0, 1, else
-        let numChildrenSent = "";
-      
-        if (numChildren == 0) {
-            numChildrenSent = "You have no children";
-        } else if (numChildren == 1) {
-            numChildrenSent = "You have 1 child";
-        } else {
-            numChildrenSent = "You have " + numChildren + " children";
+            return less_than_count;
         }
 
-        document.write(numChildrenSent);
+        // (c) Create 2nd func testCount() that calls + tests count()
+        function testCount() {
+            // hardcode array + val
+            num_arr = [3, 55, 30, 28, 9, 12];
+            val = 10;
+
+            let answer = count(num_arr, val);
+
+            // Call count, display result in div created in part (a)
+            document.getElementById("answer").innerHTML = "Count of number of items in array " + num_arr + " less than value " + val + ": " + answer;  
+        }
+
+        // Call testCount() from script
+        testCount();
     </script> 
 </body>
 </html>
