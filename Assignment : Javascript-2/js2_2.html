@@ -17,6 +17,9 @@
         // Split on whitespace
         let sentence_words = user_sentence.split(" "); 
 
+        // Take all of the punctuation out of the sentence so that input like "!" doesn't count as a word
+        sentence_words.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, '');
+
         // Use length prop. of arr to determine num words in sent
         let num_words = sentence_words.length;
 
