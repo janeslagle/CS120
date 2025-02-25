@@ -13,19 +13,23 @@
     <div id="names_list"></div>
 
     <script>
-        // Create a string with several names separated by a comma
-        let names = "Pat, Chris, Marlon, Ferncroft, Assunta";
+        function create_num_list() {
+            // Create a string with several names separated by a comma
+            let names = "Pat, Chris, Marlon, Ferncroft, Assunta";
+    
+            // First turn the string into an array
+            // All names are separated by comma followed by a space so split on that to get each separate item want in the array
+            let names_arr = names.split(", "); 
+    
+            // Using ONLY string or array methods,  display the names as a numbered list
+            // Methods of the array object that iterate through the array --> map method
+            let names_list_elements = names_arr.map((name, i) => '<li>${i + 1}. ${name}<li>').join("");
+    
+            // Now put the items into <ol> (numbered list) elements
+            document.getElementById("names_list").innerHTML = names_list_elements;
+        }
 
-        // First turn the string into an array
-        // All names are separated by comma followed by a space so split on that to get each separate item want in the array
-        let names_arr = names.split(", "); 
-
-        // Using ONLY string or array methods,  display the names as a numbered list
-        // Methods of the array object that iterate through the array --> map method
-        let names_list_elements = names_arr.map((name, i) => '<li>${i + 1}. ${name}<li>').join("");
-
-        // Now put the items into <ol> (numbered list) elements
-        document.getElementById("names_list").innerHTML = names_list_elements;
+        create_num_list();
     </script> 
 </body>
 </html>
