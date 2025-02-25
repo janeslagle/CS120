@@ -20,8 +20,10 @@
             let sentence_words = user_sentence.split(" "); 
 
             // Remove punctuation from each word so that input like "!" isn't counted as 1 word
+            // Then once remove any punctuation it will be an empty string so need remove those after so they're still not counted
             let actual_words = sentence_words
                 .map(word => word.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, '')) 
+                .filter(word => word.length > 0);
 
             // Use length prop. of arr to determine num words in sent
             let num_words = actual_words.length;
