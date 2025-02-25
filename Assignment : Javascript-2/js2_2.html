@@ -21,7 +21,11 @@
         let num_words = sentence_words.length;
 
         // Display num words
-        alert("Your sentence has " + num_words + " words in it!");
+        if (num_words === 1) {
+            alert("Your sentence has " + num_words + " word in it!");
+        } else {
+            alert("Your sentence has " + num_words + " words in it!");
+        }
     </script> 
 </body>
 </html>
