@@ -112,11 +112,25 @@
 
             // 3rd then keep track that this state is being added to the div
             bordered_div.appendChild(state_adding);
+
+            // (1) When "Add State" is clicked and a state is moved to the div, that state should disappear from the <select> list
+            // So loop through all of the options in list and see if the one are currently adding is in the list
+            // If it is: remove it
+            for (let option of state_list.options) {
+                if (option.value === selected_state) {
+                    option.remove();
+                    break;
+                }
+            }
         }
 
         // Requirement 6: (6) Clear state button --> empties the div
         function clear_states() {
             document.getElementById("bordered_div").innerHTML = "";
+
+            //(2) When "Clear States" is clicked, the select list should be restored
+            // Do so by recalling the function that populates the select!
+            list_states();
         }
 
         // Need event listeners for adding + clearing states
