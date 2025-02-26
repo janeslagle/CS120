@@ -1,36 +1,37 @@
 <!doctype html>
 <html>
 <head>
-    <title>JS-2 Prob 3</title>
+    <title>JS-2 Prob 5</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-    <h1>Problem 3</h1>
+    <h1>Problem 5</h1>
 
-    <!-- // (a) Create div on page with id of names_list = to display the numbered list -->
-    <div id="names_list"></div>
+    <!-- // Create a form with an input box to get a user's name -->
+    <!-- // Rework speak() event handler s.t. doesn't have greeting param, use clicked button text to get greeting prefix -->
+    <!-- // Assign event handler within window.onload -->
+    <form>
+        <label for="user_name">Name:</label>
+        <input type="text" id="user_name">
+        <button type="button" id="hello_button">Hello</button>
+        <button type="button" id="goodbye_button">Goodbye</button>
+        <button type="button" id="greetings_button">Greetings</button>
+    </form>
 
     <script>
-        function create_num_list() {
-            // Create a string with several names separated by a comma
-            let names = "Pat, Chris, Marlon, Ferncroft, Assunta";
-    
-            // First turn the string into an array
-            // All names are separated by comma followed by a space so split on that to get each separate item want in the array
-            let names_arr = names.split(", "); 
-    
-            // Using ONLY string or array methods,  display the names as a numbered list
-            // Methods of the array object that iterate through the array --> map method
-            // Translate each element in arr into a list item with <li> tag + then join all together at end
-            let names_list_elements = names_arr.map((name, i) => `<li>${name}</li>`).join("");
-    
-            // Now actually put the items into an <ol> (numbered list)
-            document.getElementById("names_list").innerHTML = `<ol>${names_list_elements}</ol>`;
+        function speak(event) {
+            let message = document.getElementById("user_name").value;
+            let button_prefix = event.target.innerText;
+            alert(button_prefix + " " + message);
         }
 
-        create_num_list();
+        window.onload = function() {
+            document.getElementById("hello_button").addEventListener("click", speak);
+            document.getElementById("goodbye_button").addEventListener("click", speak);
+            document.getElementById("greetings_button").addEventListener("click", speak);
+        }
     </script> 
 </body>
 </html>
