@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
-        #bordered_div {
+/*         #bordered_div {
             border: 0.5px solid #000000;
             width: 300px;  
             height: 150px; 
@@ -16,16 +16,16 @@
             padding: 10px; 
             overflow-y: auto; 
         }
-
-        #bordered_div p {
+ */
+/*         #bordered_div p {
             margin: 0.05px 0; 
         }
 
         #state_list, #add_state_id {
             vertical-align: middle;
-        }
+        } */
 
-        #state_list {
+/*         #state_list {
             width: 300px;  
         }
         
@@ -40,7 +40,37 @@
             vertical-align: middle;  
             margin-left: 10px;
             padding: 5px 10px;
+        } */
+             <style>
+        #bordered_div {
+            border: 0.5px solid #000000;
+            width: 300px;  /* Set width for the box */
+            height: 150px; /* Set height for the box */
+            overflow-y: auto; /* Make the div scrollable if the content overflows */
+            padding: 10px; /* Add some padding inside the div */
         }
+
+                 /* Center the Add State button with the select list */
+        #state_list, #add_state_id {
+            display: inline-block; /* Make both elements inline */
+            vertical-align: middle; /* Align vertically in the middle */
+        }
+
+        /* Styling to align Clear States button with the middle of the div */
+        #clear_states_id {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px; /* Space between div and button */
+        }
+
+        /* Container to align select list, button, and div */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center all items horizontally */
+            gap: 10px; /* Add some space between elements */
+        }
+    </style>
     </style>
 </head>
 
