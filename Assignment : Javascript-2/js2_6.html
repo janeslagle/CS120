@@ -47,7 +47,7 @@
             display: inline-block;
             padding: 5px 10px;
             font-size: 16px;
-            margin-top: 0; /* Ensure there is no top margin */
+            margin-top: 10px; /* Add space above the button */
             vertical-align: middle; /* Ensure both elements are aligned vertically */
         }
 
@@ -60,8 +60,8 @@
         /* Container for the bordered div and the clear states button below it */
         .container {
             display: flex;
-            align-items: center; /* Center content vertically */
-            gap: 10px; /* Space between bordered div and clear button */
+            flex-direction: column;  /* Stack items vertically */
+            align-items: center; /* Center content horizontally */
             margin-top: 10px;
         }
     </style>
@@ -79,7 +79,7 @@
         <button id="add_state_id">Add State</button>
     </div>
 
-    <!-- Container for the bordered div and the clear states button placed next to it -->
+    <!-- Container for the bordered div and the clear states button placed underneath it -->
     <div class="container">
         <!-- Div to show added states -->
         <div id="bordered_div"></div>
