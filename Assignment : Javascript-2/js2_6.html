@@ -16,7 +16,7 @@
     <h1>Problem 6</h1>
 
     <!-- // 1st requirement (1): Select element as list: set its size attrib. -->
-    <select id="state_list" size="10></select>
+    <select id="state_list" size="10"></select>
 
      <!-- // 3rd requirement (3): Adjacent to the select list is a button labeled add state -->
     <button id="add_state_id">Add State</button>
@@ -54,21 +54,33 @@
 
         // Requirement 5: (5) click add state button --> selected state in list now shows up in div
         function add_state() {
+            // Get the selected state out
             let selected_state = document.getElementById("state_list").value;
-            let list_states = document.getElementById("state_list");
-            list_states.innerHTML += `<div>${state_list}</div>`;
-        }
 
+            // Get the div where the above selected state will go
+            let list_states = document.getElementById("state_list");
+
+            // Add state as p element in div by:
+            // 1st create the p element itself
+            let state_adding = document.createElement("p");
+
+            // 2nd set the state to be whatever state it is (set it's text)
+            let state_adding.text = selected_state;
+
+            // 3rd then keep track that this state is being added to the div
+            bordered_div.appendChild(state_adding);
+        }
+        
          // Requirement 6: (6) Clear state button --> empties the div
         function clear_states() {
-            document.getElementById("state_list").innerHTML = "";
+            document.getElementById("bordered_div").innerHTML = "";
         }
 
         // Need event listeners for adding + clearing states
         add_state_id.addEventListener("click", add_state);
         clear_state_id.addEventListener("click", clear_states);
     
-        addStateBtn.addEventListener("click", addState);
+        addStateBtn.addEventListener("click", add_state);
 
 
         list_states();
