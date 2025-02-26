@@ -42,13 +42,13 @@
 
                 // Set option value + display text for the item creating
                 option.value = state;
-                option.text = state;
+                option.textContent = state;
 
                 // Set 1st item as default using index looping through
                 if (i === 0) option.selected = true;
 
                 // Append option to select (state_list)
-                state_list.appendChild(option);
+                document.getElementById("state_list").appendChild(option);
             });
         }
 
