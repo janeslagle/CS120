@@ -4,14 +4,25 @@
     <title>JS-2 Prob 4</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .form_style {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px auto;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Problem 4</h1>
 
     <!-- // Create a form with an input box to get a user's name -->
-    <form>
-        
+    <form class="form_style">
+        <label for="user_name">Name:</label>
+        <input type="text" id="user_name">
     </form>
 
     <script>
