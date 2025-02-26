@@ -9,30 +9,29 @@
         /* Styling for the bordered div (making it a box) */
         #bordered_div {
             border: 0.5px solid #000000;
-            width: 300px;  /* Set width for the box */
-            height: 150px; /* Set height for the box */
+            width: 70px;  /* Set width for the box */
+            height: 1500px; /* Set height for the box */
             overflow-y: auto; /* Make the div scrollable if the content overflows */
             padding: 10px; /* Add some padding inside the div */
         }
 
-        /* Center the Add State button with the select list */
-        #state_list, #add_state_id {
-            vertical-align: middle; /* Align vertically in the middle */
+        /* Container to align select list and add state button horizontally */
+        .select-container {
+            display: flex;
+            align-items: center; /* Align items vertically in the center */
+            gap: 10px; /* Space between the select and button */
         }
 
-        /* Styling to align Clear States button with the middle of the div */
+        /* Styling for the select element and add state button */
+        #state_list, #add_state_id {
+            vertical-align: middle; /* Ensure both elements are aligned vertically */
+        }
+
+        /* Styling for the clear states button */
         #clear_states_id {
             display: inline-block;
             vertical-align: middle;
             margin-left: 10px; /* Space between div and button */
-        }
-
-        /* Container to align select list, button, and div */
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center all items horizontally */
-            gap: 10px; /* Add some space between elements */
         }
 
         /* Make the button look a bit nicer */
@@ -46,19 +45,20 @@
 <body>
     <h1>Problem 6</h1>
 
-    <div class="container">
+    <!-- Container for the select list and add state button placed horizontally -->
+    <div class="select-container">
         <!-- Select element for states -->
         <select id="state_list" size="10"></select>
 
         <!-- Button to add selected state -->
         <button id="add_state_id">Add State</button>
-
-        <!-- Div to show added states -->
-        <div id="bordered_div"></div>
-
-        <!-- Button to clear added states -->
-        <button id="clear_states_id">Clear States</button>
     </div>
+
+    <!-- Div to show added states -->
+    <div id="bordered_div"></div>
+
+    <!-- Button to clear added states -->
+    <button id="clear_states_id">Clear States</button>
 
     <script>
         // Array of states
@@ -115,4 +115,3 @@
     </script>
 </body>
 </html>
-
