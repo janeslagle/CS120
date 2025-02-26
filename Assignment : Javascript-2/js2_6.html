@@ -57,15 +57,12 @@
             // Get the selected state out
             let selected_state = document.getElementById("state_list").value;
 
-            // Get the div where the above selected state will go
-            let list_states = document.getElementById("state_list");
-
             // Add state as p element in div by:
             // 1st create the p element itself
             let state_adding = document.createElement("p");
 
             // 2nd set the state to be whatever state it is (set it's text)
-            let state_adding.text = selected_state;
+            let state_adding.textContent = selected_state;
 
             // 3rd then keep track that this state is being added to the div
             bordered_div.appendChild(state_adding);
@@ -79,9 +76,6 @@
         // Need event listeners for adding + clearing states
         add_state_id.addEventListener("click", add_state);
         clear_state_id.addEventListener("click", clear_states);
-    
-        addStateBtn.addEventListener("click", add_state);
-
 
         list_states();
     </script> 
