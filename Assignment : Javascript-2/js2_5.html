@@ -20,9 +20,9 @@
 
     <script>
         // Rework speak() event handler s.t. doesn't have greeting param, use clicked button text to get greeting prefix
-        function speak(event) {
+        function speak(button_event) {
             let message = document.getElementById("user_name").value;
-            let button_prefix = event.target.innerText;
+            let button_prefix = button_event.target.innerText;
             alert(button_prefix + " " + message);
         }
 
