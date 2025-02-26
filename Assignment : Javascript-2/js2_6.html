@@ -57,7 +57,13 @@
         .container {
             display: flex;
             flex-direction: column;  /* Stack items vertically */
+            align-items: flex-start; /* Align to the left side, not centered */
             margin-top: 10px;
+        }
+
+        /* Optional: Ensuring the body doesn't center the content */
+        body {
+            display: block; /* Remove any body-level flex centering */
         }
     </style>
 </head>
