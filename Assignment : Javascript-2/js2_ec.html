@@ -103,15 +103,16 @@
             let selected_state = document.getElementById("state_list").value;
             let bordered_div = document.getElementById("bordered_div");
 
-            // Add state as p element in div by:
-            // 1st create the p element itself
-            let state_adding = document.createElement("p");
+            // Create ordered list that will list all of the states adding in
+            ol = document.createElement('ol');
+            bordered_div.appendChild(ol);
+            let state_adding = document.createElement("li");
 
             // 2nd set the state to be whatever state it is (set it's text)
             state_adding.textContent = selected_state;
 
             // 3rd then keep track that this state is being added to the div
-            bordered_div.appendChild(state_adding);
+            ol.appendChild(state_adding);
 
             // (1) When "Add State" is clicked and a state is moved to the div, that state should disappear from the <select> list
             // So loop through all of the options in list and see if the one are currently adding is in the list
