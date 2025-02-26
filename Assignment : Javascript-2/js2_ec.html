@@ -103,9 +103,13 @@
             let selected_state = document.getElementById("state_list").value;
             let bordered_div = document.getElementById("bordered_div");
 
-            // Create ordered list that will list all of the states adding in
-            ol = document.createElement('ol');
-            bordered_div.appendChild(ol);
+            // Create ordered list that will list all of the states adding in, make the state option an li element
+            let ol = document.createElement('ol');
+            if (!ol) {
+                ol = document.createElement('ol');
+            bordered_div.appendChild(ol); 
+            }
+            
             let state_adding = document.createElement("li");
 
             // 2nd set the state to be whatever state it is (set it's text)
