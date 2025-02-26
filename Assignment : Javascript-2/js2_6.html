@@ -12,9 +12,17 @@
             width: 300px;  /* Set width for the box */
             height: 150px; /* Set height for the box */
             overflow-y: auto; /* Make the div scrollable if the content overflows */
-            display: inline-block; /* Allow button to align beside it */
-            vertical-align: middle; /* Vertically center it with the button */
-            margin-top: 35px;
+            padding: 10px; /* Add some padding inside the div */
+            display: flex;  /* Use flex to control the layout of items inside */
+            flex-direction: column; /* Align items vertically */
+            justify-content: flex-start; /* Align items at the top */
+            margin-top: 45px;
+        }
+
+        /* Styling for each p element inside the bordered div */
+        #bordered_div p {
+            margin: 2px 0; /* Reduce the space between each state */
+            padding: 2px 0; /* Optional, to further adjust padding within the p element */
         }
 
         /* Container to align select list and add state button horizontally */
@@ -35,10 +43,13 @@
         }
 
         /* Styling for the clear states button */
-   #clear_states_id {
+        #clear_states_id {
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: middle;  /* Vertically align the button with the div */
             margin-left: 10px; /* Space between div and button */
+            padding: 5px 10px;
+            font-size: 16px;
+            margin-top: 10px; /* Add some space at the top of the button */
         }
 
         /* Make the button look a bit nicer */
@@ -55,14 +66,14 @@
     <!-- Container for the select list and add state button placed horizontally -->
     <div class="select-container">
         <!-- Select element for states -->
-        <select id="state_list" size="10">Pick a state:</select>
+        <select id="state_list" size="10"></select>
 
         <!-- Button to add selected state -->
         <button id="add_state_id">Add State</button>
     </div>
 
     <!-- Div to show added states with the clear button placed next to it -->
-    <div style="display: flex; align-items: center;">
+    <div style="display: flex; align-items: flex-end; margin-top: 10px;">
         <div id="bordered_div"></div>
 
         <!-- Button to clear added states -->
