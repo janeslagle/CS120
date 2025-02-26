@@ -46,7 +46,6 @@
         /* Styling for the clear states button */
         #clear_states_id {
             vertical-align: middle; /* Ensure both elements are aligned vertically */
-            margin-top: 10px; /* Add space above the button */
         }
 
         /* Make the button look a bit nicer */
@@ -61,6 +60,15 @@
             flex-direction: column;  /* Stack items vertically */
             margin-top: 10px;
             align-items: flex-start; /* Align items to the left */
+        }
+
+        /* Styling for the clear states button container */
+        .clear-button-container {
+            width: 100%;  /* Take full width of the container */
+            display: flex; /* Use flex to align the button */
+            justify-content: flex-end; /* Align the button to the right */
+            align-items: center; /* Center it vertically */
+            margin-top: 10px; /* Add some space between the div and the button */
         }
 
         /* Optional: Ensuring the body doesn't center the content */
@@ -87,8 +95,10 @@
         <!-- Div to show added states -->
         <div id="bordered_div"></div>
 
-        <!-- Button to clear added states -->
-        <button id="clear_states_id">Clear States</button>
+        <!-- Button container to clear added states -->
+        <div class="clear-button-container">
+            <button id="clear_states_id">Clear States</button>
+        </div>
     </div>
 
     <script>
