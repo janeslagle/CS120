@@ -51,75 +51,73 @@
 <body>
     <h1>Problem 6</h1>
 
-    <!-- Container for the select list and add state button placed horizontally -->
     <div class="select_div">
-        <!-- Select element for states -->
+        <!-- // 1st requirement (1): Select element as list: set its size attrib. -->
         <select id="state_list" size="10"></select>
 
-        <!-- Button to add selected state -->
+         <!-- // 3rd requirement (3): Adjacent to the select list is a button labeled add state -->
         <button id="add_state_id">Add State</button>
     </div>
 
-    <!-- Div to show added states with the clear button placed next to it -->
     <div style="display: flex; align-items: center;">
+        <!-- // 4th requirement (4): Below list is div w/ border + button labelled clear states -->
         <div id="bordered_div"></div>
-
-        <!-- Button to clear added states -->
         <button id="clear_states_id">Clear States</button>
     </div>
 
     <script>
-        // Array of states
+        // 2nd requirement (2): Create array of at least 10 states --> do 13 states
         let states = [
-            "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", 
-            "Washington", "Massachusetts", "Illinois"
+            "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Conneticut", "Delaware", "Florida", "Georgia", "Hawaii", "Washington",
+            "Massachussets", "Illinois"
         ];
 
-        // Function to populate the select element with states
+        // (2) Use JS to create option elements using an arr of the states. Have 1st item selected by default
+        // Loop through all states and create option element out of them
         function list_states() {
-            // Get the select element
-            let state_list = document.getElementById("state_list");
-
-            // Loop through the states array and create an option element for each state
+            // Loop through each state with its index
             states.forEach((state, i) => {
+                // Create option element for the state looping through
                 let option = document.createElement("option");
+
+                // Set option value + display text for the item creating
                 option.value = state;
                 option.textContent = state;
 
-                // Set the first state as selected by default
-                if (i === 0) {
-                    option.selected = true;
-                }
+                // Set 1st item as default using index looping through
+                if (i === 0) option.selected = true;
 
-                // Append the option to the select element
-                state_list.appendChild(option);
+                // Append option to select (state_list)
+                document.getElementById("state_list").appendChild(option);
             });
         }
 
-        // Function to add the selected state to the div
+        // Requirement 5: (5) click add state button --> selected state in list now shows up in div
         function add_state() {
+            // Get the selected state out
             let selected_state = document.getElementById("state_list").value;
-            let bordered_div = document.getElementById("bordered_div");
 
-            // Create a new p element and set its text to the selected state
+            // Add state as p element in div by:
+            // 1st create the p element itself
             let state_adding = document.createElement("p");
-            state_adding.textContent = selected_state;
 
-            // Append the new p element to the bordered_div
-            bordered_div.appendChild(state_adding);
+            // 2nd set the state to be whatever state it is (set it's text)
+            let state_adding.textContent = selected_state;
+
+            // 3rd then keep track that this state is being added to the div
+            document.getElementById("bordered_div").appendChild(state_adding);
         }
-
-        // Function to clear all added states from the div
+        
+         // Requirement 6: (6) Clear state button --> empties the div
         function clear_states() {
             document.getElementById("bordered_div").innerHTML = "";
         }
 
-        // Add event listeners for the "Add State" and "Clear States" buttons
+        // Need event listeners for adding + clearing states
         document.getElementById("add_state_id").addEventListener("click", add_state);
         document.getElementById("clear_states_id").addEventListener("click", clear_states);
 
-        // Initialize the state list on page load
         list_states();
-    </script>
+    </script> 
 </body>
 </html>
