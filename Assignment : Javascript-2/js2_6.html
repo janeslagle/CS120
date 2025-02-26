@@ -16,13 +16,11 @@
             display: flex;  /* Use flex to control the layout of items inside */
             flex-direction: column; /* Align items vertically */
             justify-content: flex-start; /* Align items at the top */
-            align-items: flex-start; /* Center the button inside the bordered div */
-            margin-top: 45px;
         }
 
         /* Styling for each p element inside the bordered div */
         #bordered_div p {
-            margin: 0.05px 0; /* Reduce the space between each state */
+            margin: 2px 0; /* Reduce the space between each state */
             padding: 2px 0; /* Optional, to further adjust padding within the p element */
         }
 
@@ -45,35 +43,18 @@
 
         /* Styling for the clear states button */
         #clear_states_id {
-            vertical-align: middle; /* Ensure both elements are aligned vertically */
+            display: inline-block;
+            vertical-align: middle;  /* Vertically align the button with the div */
+            margin-left: 10px; /* Space between div and button */
+            padding: 5px 10px;
+            font-size: 16px;
+            margin-top: 10px; /* Add some space at the top of the button */
         }
 
         /* Make the button look a bit nicer */
         button {
             padding: 5px 10px;
             font-size: 16px;
-        }
-
-        /* Container for the bordered div and the clear states button below it */
-        .container {
-            display: flex;
-            flex-direction: column;  /* Stack items vertically */
-            margin-top: 10px;
-            align-items: flex-start; /* Align items to the left */
-        }
-
-        /* Styling for the clear states button container */
-        .clear-button-container {
-            width: 100%;  /* Take full width of the container */
-            display: flex; /* Use flex to align the button */
-            justify-content: flex-end; /* Align the button to the right */
-            align-items: center; /* Center it vertically */
-            margin-top: 10px; /* Add some space between the div and the button */
-        }
-
-        /* Optional: Ensuring the body doesn't center the content */
-        body {
-            display: block; /* Remove any body-level flex centering */
         }
     </style>
 </head>
@@ -90,15 +71,12 @@
         <button id="add_state_id">Add State</button>
     </div>
 
-    <!-- Container for the bordered div and the clear states button placed underneath it -->
-    <div class="container">
-        <!-- Div to show added states -->
+    <!-- Div to show added states with the clear button placed next to it -->
+    <div style="display: flex; align-items: flex-end; margin-top: 10px;">
         <div id="bordered_div"></div>
 
-        <!-- Button container to clear added states -->
-        <div class="clear-button-container">
-            <button id="clear_states_id">Clear States</button>
-        </div>
+        <!-- Button to clear added states -->
+        <button id="clear_states_id">Clear States</button>
     </div>
 
     <script>
@@ -156,3 +134,4 @@
     </script>
 </body>
 </html>
+
