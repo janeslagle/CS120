@@ -30,12 +30,12 @@
             display: flex;
             align-items: center; /* Align items vertically in the center */
             gap: 10px; /* Space between the select and button */
+            justify-content: center; /* Center the content horizontally */
         }
 
         /* Styling for the select element and add state button */
         #state_list, #add_state_id {
             vertical-align: middle; /* Ensure both elements are aligned vertically */
-            align-items: center; /* Center the button horizontally */
         }
 
         /* Set the width of the select element */
@@ -62,9 +62,14 @@
             margin-top: 10px;
         }
 
-        /* Optional: Ensuring the body doesn't center the content */
+        /* Ensuring the body centers all the content */
         body {
-            display: block; /* Remove any body-level flex centering */
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Take full height of the viewport */
+            margin: 0; /* Remove default margin */
+            flex-direction: column; /* Stack items vertically */
         }
     </style>
 </head>
