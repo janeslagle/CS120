@@ -13,15 +13,8 @@
             height: 150px; /* Set height for the box */
             overflow-y: auto; /* Make the div scrollable if the content overflows */
             padding: 10px; /* Add some padding inside the div */
-            display: flex;  /* Use flex to control the layout of items inside */
-            flex-direction: column; /* Align items vertically */
-            justify-content: flex-start; /* Align items at the top */
-        }
-
-        /* Styling for each p element inside the bordered div */
-        #bordered_div p {
-            margin: 2px 0; /* Reduce the space between each state */
-            padding: 2px 0; /* Optional, to further adjust padding within the p element */
+            display: inline-block; /* Allow button to align beside it */
+            vertical-align: middle; /* Vertically center it with the button */
         }
 
         /* Container to align select list and add state button horizontally */
@@ -48,7 +41,6 @@
             margin-left: 10px; /* Space between div and button */
             padding: 5px 10px;
             font-size: 16px;
-            margin-top: 10px; /* Add some space at the top of the button */
         }
 
         /* Make the button look a bit nicer */
@@ -72,7 +64,7 @@
     </div>
 
     <!-- Div to show added states with the clear button placed next to it -->
-    <div style="display: flex; align-items: flex-end; margin-top: 10px;">
+    <div style="display: flex; align-items: center;">
         <div id="bordered_div"></div>
 
         <!-- Button to clear added states -->
@@ -134,4 +126,3 @@
     </script>
 </body>
 </html>
-
