@@ -104,12 +104,13 @@
             let bordered_div = document.getElementById("bordered_div");
 
             // Create ordered list that will list all of the states adding in, make the state option an li element
-            let ol = document.createElement('ol');
+              let ol = bordered_div.querySelector('ol');
+    
             if (!ol) {
                 ol = document.createElement('ol');
-            bordered_div.appendChild(ol); 
+                bordered_div.appendChild(ol); // Append the ordered list to the div
             }
-            
+
             let state_adding = document.createElement("li");
 
             // 2nd set the state to be whatever state it is (set it's text)
