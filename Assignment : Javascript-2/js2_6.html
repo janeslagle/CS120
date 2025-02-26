@@ -4,34 +4,74 @@
     <title>JS-2 Prob 6</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <style>
+        #bordered_div {
+            border: 0.5px solid #000000;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Problem 6</h1>
 
-    <!-- // Create a form with an input box to get a user's name -->
-    <form>
-        <label for="user_name">Name:</label>
-        <input type="text" id="user_name">
-        <button type="button" id="hello_button">Hello</button>
-        <button type="button" id="goodbye_button">Goodbye</button>
-        <button type="button" id="greetings_button">Greetings</button>
-    </form>
+    <!-- // 1st requirement (1): Select element as list: set its size attrib. -->
+    <select id="state_list" size="10></select>
+
+     <!-- // 3rd requirement (3): Adjacent to the select list is a button labeled add state -->
+    <button id="add_state_id">Add State</button>
+
+    <!-- // 4th requirement (4): Below list is div w/ border + button labelled clear states -->
+    <div id="bordered_div"></div>
+    <button id="clear_states_id">Clear States</button>
 
     <script>
-        // Rework speak() event handler s.t. doesn't have greeting param, use clicked button text to get greeting prefix
-        function speak(button_event) {
-            let message = document.getElementById("user_name").value;
-            let button_prefix = button_event.target.innerText;
-            alert(button_prefix + " " + message);
+        // 2nd requirement (2): Create array of at least 10 states --> do 13 states
+        let states = [
+        "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Conneticut", "Delaware", "Florida", "Georgia", "Hawaii", "Washington",
+        "Massachussets", "Illinois"
+        ];
+
+        // (2) Use JS to create option elements using an arr of the states. Have 1st item selected by default
+        // Loop through all states and create option element out of them
+        function list_states() {
+            // Loop through each state with its index
+            states.forEach((state, i) => {
+                // Create option element for the state looping through
+                let option = document.createElement("option");
+
+                // Set option value + display text for the item creating
+                option.value = state;
+                option.text = state;
+
+                // Set 1st item as default using index looping through
+                if (i === 0) option.selected = true;
+
+                // Append option to select (state_list)
+                state_list.appendChild(option);
+            });
         }
 
-        // Assign event handler within window.onload
-        window.onload = function() {
-            document.getElementById("hello_button").addEventListener("click", speak);
-            document.getElementById("goodbye_button").addEventListener("click", speak);
-            document.getElementById("greetings_button").addEventListener("click", speak);
+        // Requirement 5: (5) click add state button --> selected state in list now shows up in div
+        function add_state() {
+            let selected_state = document.getElementById("state_list").value;
+            let list_states = document.getElementById("state_list");
+            list_states.innerHTML += `<div>${state_list}</div>`;
         }
+
+         // Requirement 6: (6) Clear state button --> empties the div
+        function clear_states() {
+            document.getElementById("state_list").innerHTML = "";
+        }
+
+        // Need event listeners for adding + clearing states
+        add_state_id.addEventListener("click", add_state);
+        clear_state_id.addEventListener("click", clear_states);
+    
+        addStateBtn.addEventListener("click", addState);
+
+
+        list_states();
     </script> 
 </body>
 </html>
