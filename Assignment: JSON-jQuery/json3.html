@@ -13,23 +13,25 @@
     <!-- Create select drop down for the genres out of the json file -->
     <label for="genre_dropdown">Please choose a genre:</label>
     <select id="genre_dropdown">
-        <option value="all_genres">All Genres</option>
+        <option value="all_genres">All Genres</option>    <!-- Make all genres listed out be the default value in drop down -->
     </select>
 
     <!-- Create the filter button -->
     <button id="filter_button" style="margin-left: 15px;">Filter</button>
 
     <!-- Display the filtered songs from clicking the button w/in a div on the page -->
+    <br>
     <h3 style=margin-top: 35px;"><strong>Filtered Songs:</strong></h3>
     <div id="filtered_genre_songs"></div>
     
     <script>
-        function capitalizeWords(str) {
-            return str.split(" ") // Split the string into words
-              .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
-              .join(" "); // Join the words back together
-}
-
+        // Function to capitalize the 1st letter in each genre
+        function capitalize_genres(genre_str) {
+            return genre_str.split(" ")  // Split the genre string on space for cases where genre is "hip hop", etc.
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1)) 
+                .join(" ");              // Join the splitted words back together for cases when the genre is 2 different words
+        }
+        
         // Need get all genres from json file out so that can display them on page
         $.get("songs.json", function(data) {
             let songs = data;
@@ -38,25 +40,27 @@
 
             // Fill out the genre dropdown using the genres just got out of file
             // Do by looping through all the genres just got and adding them to the drop down select one by one
+            // Capitalize the first letters in each genre for the list
             song_genres.forEach(genre => {
-                let capitalizedGenre = capitalizeWords(genre);
-                $('#genre_dropdown').append(`<option value="${genre}">${capitalizedGenre}</option>`);
+                let capitalized_genre = capitalize_genres(genre);
+                $('#genre_dropdown').append(`<option value="${genre}">${capitalized_genre}</option>`);
             });  
 
-            // Filter button event
-                $('#filter_button').click(function() {
-                    let selectedGenre = $('#genre_dropdown').val();
-                    let filteredOutput = "";
+            // When filter button is pressed: display the titles of songs that match the selected genre - within a div on the page
+            $('#filter_button').click(function() {
+                let selected_genre = $('#genre_dropdown').val();  
+                let filtered_songs = "";
 
-                    // Filter songs by genre
-                    songs.forEach(song => {
-                        if (selectedGenre === "all_genres" || song.genre.includes(selectedGenre)) {
-                            filteredOutput += `<p>${song.title}</p>`;
-                        }
-                    });
+                // Now loop through all the songs have + display the ones whose genre matches the selected genre
+                songs.forEach(song => {
+                    if (selected_genre === "all_genres" || song.genre.includes(selected_genre)) {
+                        // Only want display the song titles, nothing else
+                        filtered_songs += `<p>${song.title}</p>`;
+                    }
+                });
 
-                    // Display results
-                    $('#filtered_genre_songs').html(filteredOutput || "<p>No songs found.</p>");
+                // Display results within their div = filtered_genre_songs div
+                $('#filtered_genre_songs').html(filteredOutput || "<p>Sorry, no songs found with selected genre.</p>");
                 });
         });      
     </script>
