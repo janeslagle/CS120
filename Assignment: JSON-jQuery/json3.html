@@ -11,7 +11,12 @@
     <h1>JSON/JQuery Part 3</h1>
     
     <script>
-        
+        // Need get all genres from json file out so that can display them on page
+        $.get("songs.json", function(data) {
+            let songs = data;
+            let genres = new Set();
+            songs.forEach(song => song.genre.forEach(g => genres.add(g)));
+        }      
     </script>
 </body>
 </html>
