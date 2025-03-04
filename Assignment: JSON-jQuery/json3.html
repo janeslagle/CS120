@@ -9,13 +9,34 @@
 
 <body>
     <h1>JSON/JQuery Part 3</h1>
+
+    <!-- Create select drop down for the genres out of the json file -->
+    <label for="genre_dropdown">Please choose a genre:</label>
+    <select id="gendre_dropdown">
+        <option value="all">All Genres</option>
+    </select>
+
+    <!-- Create the filter button -->
+    <button id="filter_button">Filter by Selected Genre</button>
+
+    <!-- Display the filtered songs from clicking the button w/in a div on the page -->
+    <p><strong>Songs Filtered by Genre:</strong></p>
+    <div id="filtered_genre_songs"></div>
     
     <script>
         // Need get all genres from json file out so that can display them on page
         $.get("songs.json", function(data) {
             let songs = data;
-            let genres = new Set();
-            songs.forEach(song => song.genre.forEach(g => genres.add(g)));
+            let song_genres = new Set();
+            songs.forEach(song => song.genre.forEach(g => song_genres.add(g)));
+
+            // Fill out the genre dropdown using the genres just got out of file
+            // Do by looping through all the genres just got and adding them to the drop down select one by one
+            song_genres.forEach(genre => {
+                $('#genre_dropdown').append(`<option value="${genre}">${genre}</option>`);
+            });
+                
+            
         }      
     </script>
 </body>
