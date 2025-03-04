@@ -20,11 +20,10 @@
             // Give the songs some styling
             songs.forEach(song => {
                 songs_output += `
-                    <p><strong>${song.title}</strong></p>
+                    <h3><strong>${song.title}</strong></h3>
                     <p><strong>Artist:</strong> ${song.artist}</p>
                     <p><strong>Genre:</strong> ${song.genre.join(", ")}</p>
                     <p><strong>Released:</strong> ${song.year_released}</p>
-                    <hr>
                 `;
             });
 
