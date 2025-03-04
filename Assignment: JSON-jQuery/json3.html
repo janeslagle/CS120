@@ -35,6 +35,22 @@
             song_genres.forEach(genre => {
                 $('#genre_dropdown').append(`<option value="${genre}">${genre}</option>`);
             });  
+
+            // Filter button event
+                $('#filter-btn').click(function() {
+                    let selectedGenre = $('#genre-select').val();
+                    let filteredOutput = "";
+
+                    // Filter songs by genre
+                    songs.forEach(song => {
+                        if (selectedGenre === "all" || song.genre.includes(selectedGenre)) {
+                            filteredOutput += `<p>${song.title}</p>`;
+                        }
+                    });
+
+                    // Display results
+                    $('#filtered-songs').html(filteredOutput || "<p>No songs found.</p>");
+                });
         }      
     </script>
 </body>
