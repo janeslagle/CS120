@@ -8,7 +8,7 @@
 
 <body>
     <h1>JSON/JQuery Part 1</h1>
-    <p id="json-list"></p>
+    <pre id="json-list"></pre>
 
     <script>
         // Place JSON object at top of file - it should be assigned to a variable
@@ -64,7 +64,7 @@
         ];
 
         // Convert the JSON object to a string and display the resulting text string
-        let json_str = JSON.stringify(json_songs, null, 2);
+        let json_str = JSON.stringify(json_songs);
         document.getElementById("json-list").innerText = json_str;
     </script>
 </body>
