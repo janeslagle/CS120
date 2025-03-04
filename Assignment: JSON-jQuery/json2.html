@@ -8,6 +8,27 @@
 
 <body>
     <h1>JSON/JQuery Part 2</h1>
-  
+    <div id="songs-list"></div>
+
+    <script>
+        // Read songs.json data using $.get + store it in variable
+        $.get("songs.json", function(data) {
+            let songs = data;
+            let songs_output = "";
+
+            // Give the songs some styling
+            songs_output.forEach(song => {
+                songs_output += 
+                    <p><strong>${song.title}</strong></p>
+                    <p>Artist: ${song.artist}</p>
+                    <p>Genre: ${song.genre.join(", ")}</p>
+                    <p>Released: ${song.year}</p>;
+            })
+
+            // Dipslay json data on page w/in <div> section using innerHTML property
+            document.getElementById('songs-list').innerHTML = songs_output;
+        }
+
+    </script>
 </body>
 </html>
