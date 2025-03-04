@@ -33,7 +33,8 @@
             // Fill out the genre dropdown using the genres just got out of file
             // Do by looping through all the genres just got and adding them to the drop down select one by one
             song_genres.forEach(genre => {
-                $('#genre_dropdown').append(`<option value="${genre}">${genre}</option>`);
+                let capitalizedGenre = genre.charAt(0).toUpperCase() + genre.slice(1); 
+                $('#genre_dropdown').append(`<option value="${genre}">${capitalizedGenre}</option>`);
             });  
 
             // Filter button event
