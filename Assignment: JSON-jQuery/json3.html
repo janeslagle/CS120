@@ -13,14 +13,14 @@
     <!-- Create select drop down for the genres out of the json file -->
     <label for="genre_dropdown">Please choose a genre:</label>
     <select id="genre_dropdown">
-        <option value="all">Genres</option>
+        <option value="all_genres">All Genres</option>
     </select>
 
     <!-- Create the filter button -->
-    <button id="filter_button">Filter by Selected Genre</button>
+    <button id="filter_button" style="margin-left: 10px;">Filter</button>
 
     <!-- Display the filtered songs from clicking the button w/in a div on the page -->
-    <p><strong>Songs Filtered by Genre:</strong></p>
+    <h3><strong>Filtered Songs:</strong></h3>
     <div id="filtered_genre_songs"></div>
     
     <script>
