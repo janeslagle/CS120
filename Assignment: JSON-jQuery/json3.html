@@ -43,7 +43,7 @@
 
                     // Filter songs by genre
                     songs.forEach(song => {
-                        if (selectedGenre === "all" || song.genre.includes(selectedGenre)) {
+                        if (selectedGenre === "all_genres" || song.genre.includes(selectedGenre)) {
                             filteredOutput += `<p>${song.title}</p>`;
                         }
                     });
