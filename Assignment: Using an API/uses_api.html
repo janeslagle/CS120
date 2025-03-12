@@ -1,22 +1,21 @@
 <!doctype html>
 <html>
 <head>
-    <title>API Call</title>
+    <title>Using an API</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
- <h1>Stock Price Tracker</h1>
-    <p><strong>Company:</strong> Apple Inc. (AAPL)</p>
-    <p><strong>Current Price:</strong> <span id="price"></span></p>
-    <p><strong>High Price:</strong> <span id="high"></span></p>
-    <p><strong>Low Price:</strong> <span id="low"></span></p>
-    <p><strong>Volume:</strong> <span id="volume"></span></p>
-    <p><strong>Date:</strong> <span id="date"></span></p>
-
+    <h1>Stock Price Tracker from MarketStack</h1>
+    <p><strong>Company: </strong>Apple Inc. (AAPL)</p>
+    <p><strong>Current Stock Price (closing price): </strong><span id="close"></span></p>
+    <p><strong>High Price: </strong><span id="high"></span></p>
+    <p><strong>Low Price: </strong><span id="low"></span></p>
+    <p><strong>Date: </strong><span id="date"></span></p>
+    
     <script>
-        const apiKey = 'YOUR_ACCESS_KEY';
+        const apiKey = 'b8a60f0e82518bbb915a535dcbd156c7';
         const url = `https://api.marketstack.com/v1/eod?access_key=${apiKey}&symbols=AAPL`;
 
         fetch(url)
