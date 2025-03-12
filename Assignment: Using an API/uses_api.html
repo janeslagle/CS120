@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>API Call</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <h1>Stock Price Tracker</h1>
+    <p><strong>Company:</strong> Apple Inc. (AAPL)</p>
+    <p><strong>Current Price:</strong> <span id="price"></span></p>
+
+    <script>
+        const apiKey = 'YOUR_ACCESS_KEY';
+        const url = `https://api.marketstack.com/v1/eod?access_key=${apiKey}&symbols=AAPL`;
+
+        fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const price = data.data[0].close;
+            document.getElementById('price').textContent = `$${price}`;
+        })
+        .catch(error => console.error('Error:', error));
+    </script>
+    
+</body>
+</html>
