@@ -13,22 +13,18 @@
     <p><strong>High Price: </strong><span id="high"></span></p>
     <p><strong>Low Price: </strong><span id="low"></span></p>
     <p><strong>Date: </strong><span id="date"></span></p>
-    
-    <script>
-        const apiKey = 'b8a60f0e82518bbb915a535dcbd156c7';
-        const url = `https://api.marketstack.com/v1/eod?access_key=${apiKey}&symbols=AAPL`;
 
-        fetch(url)
+    <script>
+        fetch(`https://api.marketstack.com/v1/eod?access_key=${'b8a60f0e82518bbb915a535dcbd156c7'}&symbols=AAPL`)
         .then(response => response.json())
         .then(data => {
-            const latestData = data.data[0]; // Get the most recent data
-            document.getElementById('close').textContent = `$${latestData.close}`;
-            document.getElementById('high').textContent = `$${latestData.high}`;
-            document.getElementById('low').textContent = `$${latestData.low}`;
-            document.getElementById('date').textContent = latestData.date.split('T')[0];
+            const mostRecentData = data.data[0];
+            document.getElementById('close').textContent = `$${mostRecentData.close}`;
+            document.getElementById('high').textContent = `$${mostRecentData.high}`;
+            document.getElementById('low').textContent = `$${mostRecentData.low}`;
+            document.getElementById('date').textContent = mostRecentData.date.split('T')[0];
         })
         .catch(error => console.error('Error:', error));
     </script>
-    
 </body>
 </html>
