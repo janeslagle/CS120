@@ -22,10 +22,9 @@
         .then(response => response.json())
         .then(data => {
             const latestData = data.data[0]; // Get the most recent data
-            document.getElementById('price').textContent = `$${latestData.close}`;
+            document.getElementById('close').textContent = `$${latestData.close}`;
             document.getElementById('high').textContent = `$${latestData.high}`;
             document.getElementById('low').textContent = `$${latestData.low}`;
-            document.getElementById('volume').textContent = latestData.volume.toLocaleString();
             document.getElementById('date').textContent = latestData.date.split('T')[0];
         })
         .catch(error => console.error('Error:', error));
