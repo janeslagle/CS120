@@ -9,7 +9,7 @@ const possible_answers = [
 ];
 
 // Get random word out from dict array of possible answers to use as answer each time play game
-const random_word = Math.floor(Math.random() * possible_answers.length);
+let random_word = Math.floor(Math.random() * possible_answers.length);
 
 // Now get the actual word out
 let answer_to_use = possible_answers[random_word].toUpperCase();
@@ -62,7 +62,7 @@ new_game = () => {
 
     // Start the new game with a new answer
     // Get random word out from dict array of possible answers to use as answer each time play game
-    const random_word = Math.floor(Math.random() * possible_answers.length);
+    let random_word = Math.floor(Math.random() * possible_answers.length);
 
     // Now get the actual word out
     answer_to_use = possible_answers[random_word].toUpperCase();
@@ -87,8 +87,8 @@ show_new_game_button = () => {
     // Add event listener to reset the game when clicked by calling function here that does so
     new_game_button.addEventListener("click", new_game);
 
-    // Want the new game button in the user_input div so add it here!
-    document.getElementById("user_input").appendChild(new_game_button);
+    // Want the new game button in the user_guess div so add it here!
+    document.getElementById("user_guess ").appendChild(new_game_button);
 };
 
 // API call to check if guess inputted by user is a valid word or not
