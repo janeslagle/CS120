@@ -18,7 +18,7 @@ const create_row = (curr_row) => {
 
         // Add 2 CSS classes to each cell: (1) style each cell + (2) identify position of each cell
         // Position of each cell = given by row, col so put that as the position of each
-        cell.classList.add("each_cell", `position:${curr_row}${j}`);
+        cell.classList.add("each_cell", `position_${curr_row}_${j}`);
 
          // Actually add each cell into the row div
         row.appendChild(cell);
