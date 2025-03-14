@@ -61,7 +61,7 @@ h1 {
 
 #user_input::placeholder {
     text-align: center;
-    padding-right: 15px;
+    padding-right: 12px;
 }
 
 #guess_button {
