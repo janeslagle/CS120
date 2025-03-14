@@ -1,6 +1,6 @@
     // Create the board
     // Get the board out by it's div id so that can populate it here
-    const board = document.getElementById('board');
+    // const board = document.getElementById('board');
 
     // Create a function to create all words (rows) of board at once --> one word is one row so create all 6 words (all 6 rows)
     // curr_row input param represents the row that we are creating (have 6 total rows so this is a num from 0 to 5)
