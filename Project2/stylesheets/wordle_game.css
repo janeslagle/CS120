@@ -29,3 +29,8 @@ h1 {
     height: 50px;
 }
 
+.each_row {
+    display: grid; 
+    grid-template-columns: repeat(5, 50px);  /* Make sure each row actually has 5 cells in it */
+}
+
