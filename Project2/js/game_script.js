@@ -12,10 +12,10 @@ const possible_answers = [
 const random_word = Math.floor(Math.random() * possible_answers.length);
 
 // Now get the actual word out
-const answer = possible_answers[random_word].toUpperCase();
+const answer_to_use = possible_answers[random_word].toUpperCase();
 
 // Display the answer each time in console of page
-console.log("The answer is: ", answer);
+console.log("The answer is: ", answer_to_use);
 
 // Follow hint 1 from spec file
 // Create function to create all words (rows) of board at once --> one word = one row so create all 6 words (all 6 rows)
@@ -73,7 +73,7 @@ document.getElementById('guess_button').addEventListener('click', function() {
     }
 
     // Add words to board as user still has guesses left (so if the word count is less than 6)
-    if (num_guessed_words < 6) {
+    if (num_guessed_words =< 6) {
         // Get the row out from board for current word guess are on
         const current_row = document.getElementsByClassName("each_row")[num_guessed_words].children;
 
