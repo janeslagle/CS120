@@ -115,13 +115,15 @@ document.getElementById('guess_button').addEventListener('click', async function
             current_row[i].style.fontWeight = "bold";
         });
 
-        // Check if the guessed word is correct
+        // Check if the word just guessed is the answer word
         if (guessed_word.toUpperCase() === answer_to_use) {
-            // Show a success message and add the reset button
-            alert("Congratulations! You guessed the correct word.");
-            return;
-        }
+            // Then show an alert with the answer word in it
+            alert(`Yippee yahoo - you guessed the correct word, "${answer_to_use}"! \n Reset the game to challenge yourself again!`);
 
+            // Return because means game is over!
+            return; 
+        }
+        
         // Clear input text box for users next guess
         document.getElementById("user_input").value = "";
 
@@ -131,6 +133,6 @@ document.getElementById('guess_button').addEventListener('click', async function
 
     // After 6th word, display game over in an alert
     if (num_guessed_words === 6) {
-        alert(`Game Over! \n You've used all available six guesses without guessing the correct word, which was "${answer_to_use}". \n Reset the game to play again!`);
+        alert(`Game Over! \n You've used all available six guesses without guessing the correct word, which was "${answer_to_use}". \n Reset the game to challenge yourself again!`);
     }
 });
