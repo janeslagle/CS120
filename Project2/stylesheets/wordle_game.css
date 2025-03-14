@@ -31,7 +31,6 @@ h1 {
     margin: 4px;
     height: 52px;
     width: 52px;
-    
 }
 
 .each_row {
@@ -40,8 +39,8 @@ h1 {
 
 #user_guess {
     font-size: 19.5px; 
-    margin-top: 20px;
-    padding: 5px;
+    margin-top: 25px;
+    padding: 15px;
 }
 
 #user_input, #guess_button {
@@ -49,5 +48,5 @@ h1 {
 }
 
 #guess_button {
-    border-radius: 8px;
+    border-radius: 10px;
 }
