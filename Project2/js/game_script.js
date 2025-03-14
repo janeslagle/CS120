@@ -75,7 +75,14 @@ new_game = () => {
 };
 
 // Function to create the new game button for when the game ends, to show it on page
+// Make it so that when the game is finished, the only thing in user_guess div is the new game button, remove everything else
 show_new_game_button = () => {
+    // Get the user_guess div
+    const user_guess_div = document.getElementById("user_guess");
+
+    // Remove everything from the existing child elements from user_guess div
+    user_guess_div.innerHTML = "";
+    
     // Create the button element
     const new_game_button = document.createElement("button");
     new_game_button.id = "new_game_button";
