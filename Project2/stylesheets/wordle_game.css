@@ -1,1 +1,9 @@
 /* CSS Stylesheet for wordle_game.html */
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Bungee", serif;
+}
