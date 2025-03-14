@@ -56,7 +56,7 @@ create_rows();
 check_guess_valid = async (user_guess) => {
     try {
         // Use fetch to make the API call
-        const api_response = await fetch((`https://api.dictionaryapi.dev/api/v2/entries/en/${user_guess}`);
+        const api_response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${user_guess}`);
 
         // Return if the API call was successful or not
         return response.ok;
