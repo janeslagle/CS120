@@ -55,6 +55,7 @@ h1 {
 #user_input {
     padding: 10px 5px;
     text-align: left;
+    padding-left: 10px;
 }
 
 #user_input::placeholder {
