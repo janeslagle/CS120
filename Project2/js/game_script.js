@@ -32,19 +32,21 @@
     //     }
     // };
 
-create_rows = () => {
-    const board = document.getElementById('board');
-        for (let i = 0; i < 6; i++) {
-            const row = document.createElement('div');
-            row.className = 'each_row';
-            for (let j = 0; j < 5; j++) {
-                const cell = document.createElement('div');
-                cell.className = 'each_cell';
-                row.appendChild(cell);
-            }
-            board.appendChild(row);
+function initBoard() {
+    let board = document.getElementById("game-board");
+
+    for (let i = 0; i < 6; i++) {
+        let row = document.createElement("div")
+        row.className = "each_row"
+
+        for (let j = 0; j < 5; j++) {
+            let cell = document.createElement("div")
+            cell.className = "each_cell"
+            row.appendChild(cell)
         }
+
+        board.appendChild(row)
+    }
 }
 
-
-    create_rows();
+initBoard()
