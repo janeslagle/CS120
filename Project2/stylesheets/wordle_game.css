@@ -37,3 +37,7 @@ h1 {
 .each_row {
     display: flex;
 }
+
+.user_guess {
+    font-size: 24px;
+}
