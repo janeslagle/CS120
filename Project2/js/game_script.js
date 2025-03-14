@@ -45,5 +45,25 @@ document.getElementById('guess_button').addEventListener('click', function() {
     if (guessed_word.length < 5) {
         alert(`Invalid guess entered: "${guessed_word}" \n Guessed a word less than 5 letters long, please try again by entering a 5 letter guess!`);
         document.getElementById("user_input").value = "";
+
+        // If this happens, then return bc otherwise, want to place the guessed word in the 1st row of the board
+        return;
     }
+
+    // Place the guessed word in the 1st row of the board
+    // So get the 1st row out, all of the cells in the 1st row
+    const row_one_cells = document.querySelectorAll(".each_row:first-child .each_cell");
+
+    // Convert the guessed word into an array so that can use .forEach here + use the .forEach to fill in all of the cells in the 1st row
+    // w/ the guessed word
+    guessed_word.split("").forEach((word_letter, i) => {
+        // Make sure stay within the length of the row
+        if (i < row_one_cells.length) {
+            // Then fill in each cell of the row with the guessed letters of the inputted word!
+            row_one_cells[i].textContent = word_letter.toUpperCase();
+        }
+    });
+
+    // Clear the guess field for the user's next guess
+    document.getElementById("user_input").value = "";
 });
