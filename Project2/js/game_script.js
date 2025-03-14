@@ -1,9 +1,3 @@
-
-
-
-
-
-
 // Create answer dict = 30 words
 const possible_answers = [
     "abide", "avail", "budge", "begot", "beset", 
@@ -57,16 +51,20 @@ create_rows = () => {
 // Now actually call the function so that the board is created on page
 create_rows();
 
-// Function to check if a guessed word is valid using the provided dictionary API
-const checkValidWord = async (word) => {
+// API call to check if guess inputted by user is a valid word or not
+// Use the dictionary API because it's super duper easy to use
+check_guess_valid = async (user_guess) => {
     try {
-        // Make an API call to check the word from the provided dictionary API
-        const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+        // Use fetch to make the API call
+        const api_response = await fetch((`https://api.dictionaryapi.dev/api/v2/entries/en/${user_guess}`);
 
+        // Return if the API call was successful or not
         return response.ok;
     } catch (error) {
-        console.error("Error validating word:", error);
-        return false; // Return false if there's an error with the API request
+        console.error("Could not validate inputted guess due to: ", error);
+
+        // If have error, then something wrong with API request so return false
+        return false;
     }
 };
 
@@ -91,12 +89,14 @@ document.getElementById('guess_button').addEventListener('click', async function
         return;
     }
 
-    // Check if the word is valid using the API
-    const isValidWord = await checkValidWord(guessed_word.toLowerCase());
-    
-    // If the word is not valid, show an error
-    if (!isValidWord) {
-        alert(`Invalid word entered: "${guessed_word}" \n This is not a valid word. Please try again with a valid 5-letter word!`);
+    // Check if the guessed word is even valid using API
+    const is_valid_guess = await check_guess_valid(guessed_word.toLowerCase());
+
+    // If word is not valid, then display alert that says so (just like the invalid words less than 5 letters so the game has uniformity)
+    if (!is_valid_guess) {
+        alert(`Invalid guess entered: "${guessed_word}" \n Guessed a word not found in the English dictionary, please try again by entering a valid 5 letter guess!`);
+
+        // Reset the text input box to be empty so user can guess again
         document.getElementById("user_input").value = "";
         return;
     }
