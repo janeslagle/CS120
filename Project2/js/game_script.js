@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
 // Create the board
 // Get the board out by it's div id so that can populate it here
 const board = document.getElementById('board');
@@ -13,13 +12,13 @@ const create_row = (curr_row) => {
     row.classList.add("each_row");
 
     // Loop through 5 times and create all 5 cells in each row
-    for (let j=0; j<5; j++) {
+    for (let i=0; i<5; i++) {
         // Create div for each cell = (b) in hints of specs
         const cell = document.createElement("div");
 
         // Add 2 CSS classes to each cell: (1) style each cell + (2) identify position of each cell
         // Position of each cell = given by row, col so put that as the position of each
-        cell.classList.add("each_cell", `position_${curr_row}_${j}`);
+        cell.classList.add("each_cell", `position_${curr_row}_${i}`);
 
          // Actually add each cell into the row div
         row.appendChild(cell);
@@ -33,4 +32,3 @@ const create_row = (curr_row) => {
 for (let i=0; i<6; i++) {
   create_row(i);
 }
-});
