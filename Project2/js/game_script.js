@@ -31,3 +31,19 @@ create_rows = () => {
 
 // Now actually call the function so that the board is created on page
 create_rows();
+
+// Follow hint 2 from spec
+// If user inputs a guess that is less than 5 letters long then display an alert with a message saying that it's an error
+// Also reset the text box to be empty when close the alert so that the user can try guessing again
+// Use an event handler to do this as told in hints from spec!
+// So add an event listener to the guess button when the user clicks on the button
+document.getElementById('guess_button').addEventListener('click', function() {
+    // Get the inputted guess out from the div storing it
+    const guessed_word = document.getElementById("user_input").value;
+
+    // Check if the guessed word is less than 5 letters long 
+    if (guessed_word.length < 5) {
+        alert("Invalid guess entered, guessed a word less than 5 letters long. Please try again by entering a 5 letter guess.");
+        document.getElementById("user_input").value = "";
+    }
+});
