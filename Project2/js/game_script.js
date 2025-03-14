@@ -51,6 +51,29 @@ create_rows = () => {
 // Now actually call the function so that the board is created on page
 create_rows();
 
+// Function to check if a guessed word is valid using the provided dictionary API
+const checkValidWord = async (word) => {
+    try {
+        // Make an API call to check the word from the provided dictionary API
+        const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+        
+        // If the word exists in the dictionary, the API will return a 200 status
+        if (response.ok) {
+            return true;
+        } else {
+            // Parse the response to check if the word exists
+            const data = await response.json();
+            if (data.message === "Sorry pal, we couldn't find definitions for the word you were looking for.") {
+                return false; // Word is invalid
+            }
+            return true; // Return true if it's a valid word (in case of other unexpected responses)
+        }
+    } catch (error) {
+        console.error("Error checking word:", error);
+        return false; // Return false if there's an error with the API request
+    }
+};
+
 // Define variable to keep track of the number of words the user has guessed
 let num_guessed_words = 0;
 
@@ -69,6 +92,16 @@ document.getElementById('guess_button').addEventListener('click', function() {
         document.getElementById("user_input").value = "";
 
         // If this happens, then return bc otherwise, want to place the guessed word in the latest row of the board
+        return;
+    }
+
+    // Check if the word is valid using the API
+    const isValidWord = await checkValidWord(guessed_word.toLowerCase());
+    
+    // If the word is not valid, show an error
+    if (!isValidWord) {
+        alert(`Invalid word entered: "${guessed_word}" \n This is not a valid word. Please try again with a valid 5-letter word!`);
+        document.getElementById("user_input").value = "";
         return;
     }
 
