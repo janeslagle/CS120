@@ -59,7 +59,7 @@ check_guess_valid = async (user_guess) => {
         const api_response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${user_guess}`);
 
         // Return if the API call was successful or not
-        return response.ok;
+        return api_response.ok;
     } catch (error) {
         console.error("Could not validate inputted guess due to: ", error);
 
