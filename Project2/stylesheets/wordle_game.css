@@ -41,9 +41,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px auto;
+    margin: 25px auto;
     font-size: 17px; 
-    margin-top: 25px;
     gap: 10px;
 }
 
@@ -51,6 +50,7 @@ h1 {
     font-size: 17px; 
     border-radius: 8px;
     padding: 15px 10px;
+    border: 2px solid #919191;
 }
 
 #user_input::placeholder {
