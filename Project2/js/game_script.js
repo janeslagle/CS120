@@ -1,3 +1,22 @@
+// Create answer dict = 30 words
+const possible_answers = [
+    "abide", "avail", "budge", "begot", "beset", 
+    "cargo", "craze", "deity", "ebony", "elate",
+    "farce", "fudge", "glean", "grasp", "guide",
+    "habit", "irate", "juvie", "kiosk", "lucid",
+    "lymph", "mafia", "mince", "oasis", "ousts",
+    "paint", "pulse", "rabid", "reign", "ruble"
+];
+
+// Get random word out from dict array of possible answers to use as answer each time play game
+const random_word = Math.floor(Math.random() * possible_answers.length);
+
+// Now get the actual word out
+const answer = possible_answers[random_word].toUpperCase();
+
+// Display the answer each time in console of page
+console.log("The answer is: ", answer);
+
 // Follow hint 1 from spec file
 // Create function to create all words (rows) of board at once --> one word = one row so create all 6 words (all 6 rows)
 create_rows = () => {
