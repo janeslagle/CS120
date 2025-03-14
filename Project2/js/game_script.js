@@ -32,5 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    createRows();
+    create_rows();
 });
