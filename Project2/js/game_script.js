@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Get the board out by it's div id so that can populate it here
     const board = document.getElementById('board');
 
-    // Create a function to do one word --> one word is one row so means create function to do one row
+    // Create a function to create all words (rows) of board at once --> one word is one row so create all 6 words (all 6 rows)
     // curr_row input param represents the row that we are creating (have 6 total rows so this is a num from 0 to 5)
-    const create_row = (curr_row) => {
+    const create_rows = () => {
         // Loop through 6 times and create all 6 rows of the board using function just defined for creating one single row
         for (let i=0; i<6; i++) {
             // Store each row as a div
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Add 2 CSS classes to each cell: (1) style each cell + (2) identify position of each cell
                 // Position of each cell = given by row, col so put that as the position of each
-                cell.classList.add("each_cell", `position_${curr_row}_${j}`);
+                cell.classList.add("each_cell", `position_${i}_${j}`);
 
                  // Actually add each cell into the row div
                 row.appendChild(cell);
@@ -31,4 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
             board.appendChild(row);
         }
     };
+
+    createRows();
 });
