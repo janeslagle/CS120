@@ -131,6 +131,6 @@ document.getElementById('guess_button').addEventListener('click', async function
 
     // After 6th word, display game over in an alert
     if (num_guessed_words === 6) {
-        alert("Game Over! \n You've used all available six guesses without guessing the correct word. Reset the game to play again!");
+        alert(`Game Over! \n You've used all available six guesses without guessing the correct word, which was "${answer_to_use}". \n Reset the game to play again!`);
     }
 });
