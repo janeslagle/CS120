@@ -73,7 +73,7 @@ document.getElementById('guess_button').addEventListener('click', function() {
     }
 
     // Add words to board as user still has guesses left (so if the word count is less than 6)
-    if (num_guessed_words =< 6) {
+    if (num_guessed_words <= 6) {
         // Get the row out from board for current word guess are on
         const current_row = document.getElementsByClassName("each_row")[num_guessed_words].children;
 
