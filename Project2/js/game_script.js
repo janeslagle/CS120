@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", () => {
 // Create the board
 // Get the board out by it's div id so that can populate it here
 const board = document.getElementById('board');
@@ -32,3 +33,4 @@ const create_row = (curr_row) => {
 for (let i=0; i<6; i++) {
   create_row(i);
 }
+});
