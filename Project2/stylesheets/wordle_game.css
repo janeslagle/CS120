@@ -15,9 +15,9 @@ h1 {
 }
 
 #board {
-    
-    grid-template-rows: repeat(6, 50px);
-    grid-template-columns: repeat(5, 50px);
+    display: grid;  /* Add this line to make #board a grid container */
+    grid-template-rows: repeat(6, 50px); /* 6 rows, each 50px high */
+    grid-template-columns: repeat(5, 50px); /* 5 columns, each 50px wide */
     gap: 5px;
     justify-content: center;
     margin: 20px auto;
