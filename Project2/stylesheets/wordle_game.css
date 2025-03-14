@@ -3,7 +3,7 @@
 body, html {
     font-family: "Work Sans", sans-serif;
     text-align: center;
-    background: #F8F8FF;
+    background: #F3F3FF;
 }
 
 header {
@@ -23,7 +23,7 @@ h1 {
 }
 
 .each_cell {
-  border: 2px solid #DCDCDC;
+  border: 2px solid #919191;
   border-radius: 3px;
   margin: 4px;
   font-size: 2.5rem;
