@@ -77,4 +77,10 @@ document.getElementById('guess_button').addEventListener('click', function() {
         guessed_word.split("").forEach((word_letter, i) => {
             rowCells[i].textContent = word_letter.toUpperCase();
         });
+
+        // After 6th word, display game over in an alert
+        if (num_guessed_words === 6) {
+            alert("Game Over! \n You've used all available six guesses. Try again tomorrow!");
+        }
+    }
 });
