@@ -76,6 +76,6 @@ document.getElementById('guess_button').addEventListener('click', function() {
 
     // After 6th word, display game over in an alert
     if (num_guessed_words > 6) {
-        alert("Game Over! \n You've used all available six guesses. Try playing again!");
+        alert("Game Over! \n You've used all available six guesses. Hit the reset button to play again!");
     }
 });
