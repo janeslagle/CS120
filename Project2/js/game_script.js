@@ -33,7 +33,7 @@
     // };
 
 function initBoard() {
-    let board = document.getElementById("game-board");
+    let board = document.getElementById("board");
 
     for (let i = 0; i < 6; i++) {
         let row = document.createElement("div")
