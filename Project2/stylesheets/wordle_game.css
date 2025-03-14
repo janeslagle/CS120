@@ -47,7 +47,7 @@ h1 {
     gap: 22px;
 }
 
-#user_input, #guess_button {
+#user_input, #guess_button, #new_game_button {
     font-size: 17px; 
     border-radius: 8px;
     cursor: pointer;
@@ -67,4 +67,9 @@ h1 {
 #guess_button {
     text-align: center;
     padding: 10px 12px;
+}
+
+#new_game_button {
+    text-align: center;
+    padding: 10px 10px;
 }
