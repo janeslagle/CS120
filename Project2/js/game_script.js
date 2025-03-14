@@ -12,7 +12,7 @@ const possible_answers = [
 const random_word = Math.floor(Math.random() * possible_answers.length);
 
 // Now get the actual word out
-const answer_to_use = possible_answers[random_word].toUpperCase();
+let answer_to_use = possible_answers[random_word].toUpperCase();
 
 // Display the answer each time in console of page
 console.log("The answer is: ", answer_to_use);
@@ -52,7 +52,7 @@ create_rows = () => {
 create_rows();
 
 // Function that actually resets the entire game board by clearing all cells and picking a new random word from dict to use as answer
-reset_game = () => {
+new_game = () => {
     // Reset the board by creating the rows again
     document.getElementById("board").innerHTML = "";
     create_rows();
@@ -179,6 +179,6 @@ document.getElementById('guess_button').addEventListener('click', async function
         alert(`Game Over! \n You've used all six available guesses without guessing the correct word, which was "${answer_to_use.toLowerCase()}". \n Play a new game to challenge yourself again!`);
 
         // Show the new game button now because game over
-        show_reset_button();
+        show_new_game_button();
     }
 });
