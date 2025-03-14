@@ -17,10 +17,12 @@ h1 {
 #board {
     justify-content: center;
     display: grid;
-    grid-template-rows: repeat(5, 50px);
-    grid-template-columns: repeat(6, 50px);
+    grid-template-rows: repeat(6, 50px); /* 6 rows, each 50px high */
+    grid-template-columns: repeat(5, 50px); /* 5 columns, each 50px wide */
     gap: 5px;
     margin-top: 20px;
+    height: 300px; /* Explicit height to accommodate 6 rows of 50px */
+    width: 250px; /* Explicit width to accommodate 5 columns of 50px */
 }
 
 .each_cell {
