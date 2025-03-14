@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
     // Create the board
     // Get the board out by it's div id so that can populate it here
     board = document.getElementById('board');
@@ -33,4 +32,3 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     create_rows();
-});
