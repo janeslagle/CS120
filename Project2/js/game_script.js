@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Add 2 CSS classes to each cell: (1) style each cell + (2) identify position of each cell
                 // Position of each cell = given by row, col so put that as the position of each
-                cell.classList.add("each_cell", `position_${j}_${i}`);
+                cell.classList.add("each_cell", `position_${i}_${j}`);
 
                  // Actually add each cell into the row div
                 row.appendChild(cell);
