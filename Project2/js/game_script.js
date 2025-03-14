@@ -43,7 +43,7 @@ document.getElementById('guess_button').addEventListener('click', function() {
 
     // Check if the guessed word is less than 5 letters long 
     if (guessed_word.length < 5) {
-        alert(`Invalid guess entered: "${guessed_word}". Guessed a word less than 5 letters long. Please try again by entering a 5 letter guess!`);
+        alert(`Invalid guess entered: "${guessed_word}" \n Guessed a word less than 5 letters long. Please try again by entering a 5 letter guess!`);
         document.getElementById("user_input").value = "";
     }
 });
