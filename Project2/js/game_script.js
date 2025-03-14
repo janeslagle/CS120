@@ -88,7 +88,7 @@ show_new_game_button = () => {
     new_game_button.addEventListener("click", new_game);
 
     // Want the new game button in the user_guess div so add it here!
-    document.getElementById("user_guess ").appendChild(new_game_button);
+    document.getElementById("user_guess").appendChild(new_game_button);
 };
 
 // API call to check if guess inputted by user is a valid word or not
