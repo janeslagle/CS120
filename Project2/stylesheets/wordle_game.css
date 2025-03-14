@@ -8,4 +8,5 @@ body, html {
 h1 {
   font-family: "Bungee", serif;
   margin: 0 auto;
+  margin-top: 25px;
 }
