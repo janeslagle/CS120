@@ -1,3 +1,4 @@
+// Hint 1 from spec file
 // Create function to create all words (rows) of board at once --> one word = one row so create all 6 words (all 6 rows)
 create_rows = () => {
     // Get board out by it's div id so that can populate it here
