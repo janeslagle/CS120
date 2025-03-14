@@ -56,20 +56,10 @@ const checkValidWord = (word) => {
     try {
         // Make an API call to check the word from the provided dictionary API
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
-        
-        // If the word exists in the dictionary, the API will return a 200 status
-        if (response.ok) {
-            return true;
-        } else {
-            // Parse the response to check if the word exists
-            const data = await response.json();
-            if (data.message === "Sorry pal, we couldn't find definitions for the word you were looking for.") {
-                return false; // Word is invalid
-            }
-            return true; // Return true if it's a valid word (in case of other unexpected responses)
-        }
+
+        return response.ok;
     } catch (error) {
-        console.error("Error checking word:", error);
+        console.error("Error validating word:", error);
         return false; // Return false if there's an error with the API request
     }
 };
