@@ -5,6 +5,7 @@ const board = document.getElementById('board');
 // Create a function to do one word --> one word is one row so means create function to do one row
 // curr_row input param represents the row that we are creating (have 6 total rows so this is a num from 0 to 5)
 const create_row = (curr_row) => {
+    for (let i=0; i<6; i++) {
     // Store each row as a div
     const row = document.createElement("div");
 
@@ -12,16 +13,17 @@ const create_row = (curr_row) => {
     row.classList.add("each_row");
 
     // Loop through 5 times and create all 5 cells in each row
-    for (let i=0; i<5; i++) {
+    for (let j=0; j<5; j++) {
         // Create div for each cell = (b) in hints of specs
         const cell = document.createElement("div");
 
         // Add 2 CSS classes to each cell: (1) style each cell + (2) identify position of each cell
         // Position of each cell = given by row, col so put that as the position of each
-        cell.classList.add("each_cell", `position_${curr_row}_${i}`);
+        cell.classList.add("each_cell", `position_${curr_row}_${j}`);
 
          // Actually add each cell into the row div
         row.appendChild(cell);
+    }
     }
 
     // Once out of that loop, then are done with all of the cells in each row so add the now completed row to the board
@@ -29,6 +31,6 @@ const create_row = (curr_row) => {
 };
 
 // Loop through 6 times and create all 6 rows of the board using function just defined for creating one single row
-for (let i=0; i<6; i++) {
-  create_row(i);
-}
+// for (let i=0; i<6; i++) {
+//   create_row(i);
+// }
