@@ -72,15 +72,10 @@ document.getElementById('guess_button').addEventListener('click', function() {
 
         // Increment the row currently on for next time user inputs a guess
         num_guessed_words += 1;
+    }
 
-        // Split the guessed word into individual letters and fill the row
-        guessed_word.split("").forEach((word_letter, i) => {
-            rowCells[i].textContent = word_letter.toUpperCase();
-        });
-
-        // After 6th word, display game over in an alert
-        if (num_guessed_words === 6) {
-            alert("Game Over! \n You've used all available six guesses. Try playing again!");
-        }
+    // After 6th word, display game over in an alert
+    if (num_guessed_words === 6) {
+        alert("Game Over! \n You've used all available six guesses. Try playing again!");
     }
 });
