@@ -11,7 +11,7 @@
             const row = document.createElement("div");
 
             // Step (d) in hints of spec says to add CSS class to div to be able style each row so do so
-            row.classList.add("each_row");
+            row.Name = "each_row";
 
             // Loop through 5 times and create all 5 cells in each row
             for (let j=0; j<5; j++) {
