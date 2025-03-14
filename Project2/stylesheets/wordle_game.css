@@ -47,3 +47,7 @@ h1 {
 #user_input, #guess_button {
     font-size: 19.5px; 
 }
+
+#guess_button {
+    border-radius: 8px;
+}
