@@ -40,13 +40,13 @@ h1 {
 #user_guess {
     display: flex;
     align-items: center;
-    font-size: 19.5px; 
+    font-size: 17px; 
     margin-top: 23px;
     padding: 15px;
 }
 
 #user_input, #guess_button {
-    font-size: 19.5px; 
+    font-size: 17px; 
     border-radius: 8px;
     height: 15px;
 }
