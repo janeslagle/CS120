@@ -1,3 +1,30 @@
+// Create an element for the reset button
+const createResetButton = () => {
+    const resetButton = document.createElement("button");
+    resetButton.textContent = "Restart Game";
+    resetButton.id = "reset_button";
+    resetButton.style.marginLeft = "10px"; // Add some space between the buttons
+    resetButton.addEventListener('click', restartGame);
+    return resetButton;
+};
+
+// Function to restart the game
+const restartGame = () => {
+    // Reset the game state
+    num_guessed_words = 0;
+    document.getElementById("user_input").value = "";
+
+    // Clear the board
+    const board = document.getElementById("board");
+    board.innerHTML = ""; // Clear all rows and cells
+    create_rows(); // Recreate the rows on the board
+
+    // Hide the reset button and alert box
+    document.getElementById("reset_button")?.style.display = "none";
+};
+
+
+
 // Create answer dict = 30 words
 const possible_answers = [
     "abide", "avail", "budge", "begot", "beset", 
@@ -109,6 +136,15 @@ document.getElementById('guess_button').addEventListener('click', function() {
             current_row[i].style.fontWeight = "bold";
         });
 
+        // Check if the guessed word is correct
+        if (guessed_word.toUpperCase() === answer) {
+            // Show a success message and add the reset button
+            alert("Congratulations! You guessed the correct word.");
+            const resetButton = createResetButton();
+            document.getElementById("user_input").parentNode.appendChild(resetButton); // Add the reset button to the right of the guess button
+            return;
+        }
+
         // Clear input text box for users next guess
         document.getElementById("user_input").value = "";
 
@@ -119,5 +155,7 @@ document.getElementById('guess_button').addEventListener('click', function() {
     // After 6th word, display game over in an alert
     if (num_guessed_words === 6) {
         alert("Game Over! \n You've used all available six guesses without guessing the correct word. Reset the game to play again!");
+        const resetButton = createResetButton();
+        document.getElementById("user_input").parentNode.appendChild(resetButton); // Add the reset button to the right of the guess button
     }
 });
