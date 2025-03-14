@@ -61,6 +61,9 @@ document.getElementById('guess_button').addEventListener('click', function() {
         if (i < row_one_cells.length) {
             // Then fill in each cell of the row with the guessed letters of the inputted word!
             row_one_cells[i].textContent = word_letter.toUpperCase();
+
+            // Make each letter bold so it looks better on board
+            row_one_cells[i].style.fontWeight = "bold";
         }
     });
 
