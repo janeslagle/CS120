@@ -51,6 +51,49 @@ create_rows = () => {
 // Now actually call the function so that the board is created on page
 create_rows();
 
+// Function that actually resets the entire game board by clearing all cells and picking a new random word from dict to use as answer
+reset_game = () => {
+    // Reset the board by creating the rows again
+    document.getElementById("board").innerHTML = "";
+    create_rows();
+
+    // Reset the word guess count because entirely new game now
+    num_guessed_words = 0;
+
+    // Start the new game with a new answer
+    // Get random word out from dict array of possible answers to use as answer each time play game
+    const random_word = Math.floor(Math.random() * possible_answers.length);
+
+    // Now get the actual word out
+    answer_to_use = possible_answers[random_word].toUpperCase();
+
+    // Display the answer each time in console of page
+    console.log("The answer is: ", answer_to_use);
+
+    // When actually click the new game button, want the new game button to disappear, so make sure that happens!!!
+    document.getElementById("new_game_button").remove();
+};
+
+// Function to create the new game button for when the game ends, to show it on page
+show_new_game_button = () => {
+    // Create the button element
+    const new_game_button = document.createElement("button");
+    new_game_button.id = "new_game_button";
+    new_game_button.textContent = "New Game";
+
+    // Add it's stylesheet method
+    new_game_button.className = "new_game_button"; 
+
+    // Add event listener to reset the game when clicked by calling function here that does so
+    new_game_button.addEventListener("click", new_game);
+
+    // Want the new game button in the user_input div so add it here!
+    document.getElementById("user_input").appendChild(
+
+    // Append button to user_input div so have wanted layout
+    document.getElementById("user_input").appendChild(new_game_button);
+};
+
 // API call to check if guess inputted by user is a valid word or not
 // Use the dictionary API because it's super duper easy to use
 check_guess_valid = async (user_guess) => {
@@ -118,8 +161,11 @@ document.getElementById('guess_button').addEventListener('click', async function
         // Check if the word just guessed is the answer word
         if (guessed_word.toUpperCase() === answer_to_use) {
             // Then show an alert with the answer word in it
-            alert(`Yippee yahoo - you guessed the correct word, "${answer_to_use}"! \n Reset the game to challenge yourself again!`);
+            alert(`Yippee yahoo - you guessed the correct word, "${answer_to_use}"! \n Play a new game to challenge yourself again!`);
 
+            // Want show the new game button now because game over
+            show_new_game_button();
+            
             // Return because means game is over!
             return; 
         }
@@ -133,6 +179,9 @@ document.getElementById('guess_button').addEventListener('click', async function
 
     // After 6th word, display game over in an alert
     if (num_guessed_words === 6) {
-        alert(`Game Over! \n You've used all six available guesses without guessing the correct word, which was "${answer_to_use.toLowerCase()}". \n Reset the game to challenge yourself again!`);
+        alert(`Game Over! \n You've used all six available guesses without guessing the correct word, which was "${answer_to_use.toLowerCase()}". \n Play a new game to challenge yourself again!`);
+
+        // Show the new game button now because game over
+        show_reset_button();
     }
 });
