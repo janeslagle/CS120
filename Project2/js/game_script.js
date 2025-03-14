@@ -58,7 +58,7 @@ create_rows = () => {
 create_rows();
 
 // Function to check if a guessed word is valid using the provided dictionary API
-async checkValidWord = (word) => {
+const checkValidWord = async (word) => {
     try {
         // Make an API call to check the word from the provided dictionary API
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
@@ -78,7 +78,7 @@ let num_guessed_words = 0;
 // Also reset the text box to be empty when close the alert so that the user can try guessing again
 // Use an event handler to do this as told in hints from spec!
 // So add an event listener to the guess button when the user clicks on the button
-document.getElementById('guess_button').addEventListener('click', function() {
+document.getElementById('guess_button').addEventListener('click', async function() {
     // Get the inputted guess out from the div storing it
     const guessed_word = document.getElementById("user_input").value;
 
@@ -116,7 +116,7 @@ document.getElementById('guess_button').addEventListener('click', function() {
         });
 
         // Check if the guessed word is correct
-        if (guessed_word.toUpperCase() === answer) {
+        if (guessed_word.toUpperCase() === answer_to_use) {
             // Show a success message and add the reset button
             alert("Congratulations! You guessed the correct word.");
             return;
