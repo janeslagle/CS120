@@ -32,6 +32,9 @@ create_rows = () => {
 // Now actually call the function so that the board is created on page
 create_rows();
 
+// Define variable to keep track of the number of words the user has guessed
+let num_guessed_words = 0;
+
 // Follow hint 2 from spec
 // If user inputs a guess that is less than 5 letters long then display an alert with a message saying that it's an error
 // Also reset the text box to be empty when close the alert so that the user can try guessing again
@@ -46,27 +49,32 @@ document.getElementById('guess_button').addEventListener('click', function() {
         alert(`Invalid guess entered: "${guessed_word}" \n Guessed a word less than 5 letters long, please try again by entering a 5 letter guess!`);
         document.getElementById("user_input").value = "";
 
-        // If this happens, then return bc otherwise, want to place the guessed word in the 1st row of the board
+        // If this happens, then return bc otherwise, want to place the guessed word in the latest row of the board
         return;
     }
 
-    // Place the guessed word in the 1st row of the board
-    // So get the 1st row out, all of the cells in the 1st row
-    const row_one_cells = document.querySelectorAll(".each_row:first-child .each_cell");
+    // Add words to board as user still has guesses left (so if the word count is less than 6)
+    if (num_guessed_words < 6) {
+        // Get the row out from board for current word guess are on
+        const current_row = document.getElementsByClassName("each_row")[num_guessed_words].children;
 
-    // Convert the guessed word into an array so that can use .forEach here + use the .forEach to fill in all of the cells in the 1st row
-    // w/ the guessed word
-    guessed_word.split("").forEach((word_letter, i) => {
-        // Make sure stay within the length of the row
-        if (i < row_one_cells.length) {
-            // Then fill in each cell of the row with the guessed letters of the inputted word!
-            row_one_cells[i].textContent = word_letter.toUpperCase();
+        // Convert the guessed word into an array so that can use .forEach here + use the .forEach to fill in all of the cells of row currently on
+        guessed_word.split("").forEach((word_letter, i) => {
+            // Fill in each cell of the row with the guessed letters of the inputted word!
+            current_row[i].textContent = word_letter.toUpperCase();
 
             // Make each letter bold so it looks better on board
-            row_one_cells[i].style.fontWeight = "bold";
-        }
-    });
+            current_row[i].style.fontWeight = "bold";
+        });
 
-    // Clear the guess field for the user's next guess
-    document.getElementById("user_input").value = "";
+        // Clear input text box for users next guess
+        document.getElementById("user_input").value = "";
+
+        // Increment the row currently on for next time user inputs a guess
+        num_guessed_words += 1;
+
+        // Split the guessed word into individual letters and fill the row
+        guessed_word.split("").forEach((word_letter, i) => {
+            rowCells[i].textContent = word_letter.toUpperCase();
+        });
 });
