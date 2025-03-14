@@ -58,7 +58,7 @@ create_rows = () => {
 create_rows();
 
 // Function to check if a guessed word is valid using the provided dictionary API
-const checkValidWord = (word) => {
+async checkValidWord = (word) => {
     try {
         // Make an API call to check the word from the provided dictionary API
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
