@@ -1,7 +1,8 @@
 /* CSS Stylesheet for wordle_game.html */
 
-body {
+body, html {
     font-family: "Work Sans", sans-serif;
+    text-align: center;
 }
 
 h1 {
