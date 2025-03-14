@@ -29,7 +29,3 @@ h1 {
     height: 50px;
     text-align: center;
 }
-
-.each_row {
-    display: contents; /* Let the rows behave as if they were part of the parent grid */
-}
