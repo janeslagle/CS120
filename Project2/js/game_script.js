@@ -88,9 +88,6 @@ show_new_game_button = () => {
     new_game_button.addEventListener("click", new_game);
 
     // Want the new game button in the user_input div so add it here!
-    document.getElementById("user_input").appendChild(
-
-    // Append button to user_input div so have wanted layout
     document.getElementById("user_input").appendChild(new_game_button);
 };
 
