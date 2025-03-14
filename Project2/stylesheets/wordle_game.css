@@ -38,6 +38,10 @@ h1 {
     display: flex;
 }
 
-.user_guess {
-    font-size: 32px;
+#user_guess {
+    font-size: 32px; 
+}
+
+#user_input, #guess_button {
+    font-size: 32px; 
 }
