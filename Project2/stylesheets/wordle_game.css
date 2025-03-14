@@ -14,7 +14,7 @@ h1 {
   margin: 0 auto;
 }
 
-#game-board {
+#board {
     
     grid-template-rows: repeat(6, 50px);
     grid-template-columns: repeat(5, 50px);
