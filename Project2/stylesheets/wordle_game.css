@@ -44,7 +44,7 @@ h1 {
     justify-content: center;
     margin: 28px auto;
     font-size: 17px; 
-    gap: 25px;
+    gap: 22px;
 }
 
 #user_input, #guess_button {
