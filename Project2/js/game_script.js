@@ -132,6 +132,9 @@ show_new_game_button = () => {
     new_game_button.id = "new_game_button";
     new_game_button.textContent = "New Game";
 
+    // Make it's text bold to match the check my guess button
+    new_game_button.style.fontWeight = "bold";
+
     // Add it's stylesheet method
     new_game_button.className = "new_game_button"; 
 
