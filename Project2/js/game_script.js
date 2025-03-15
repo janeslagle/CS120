@@ -25,8 +25,8 @@ game_answer = () => {
     // Get random word out from dict array of possible answers to use as answer each time play game
     let random_word = Math.floor(Math.random() * possible_answers.length);
 
-    // Now get the actual word out
-    let answer_to_use = possible_answers[random_word].toUpperCase();
+    // Now get the actual word out and assign it to variable using to store the answer for each round
+    answer_to_use = possible_answers[random_word].toUpperCase();
 
     // Display the answer each time in console of page
     console.log("The answer is: ", answer_to_use);
