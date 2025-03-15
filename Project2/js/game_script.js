@@ -261,7 +261,7 @@ play_game = async () => {
         // Check if the word just guessed is the answer word
         if (guessed_word.toUpperCase() === answer_to_use) {
             // Then show an alert with the answer word in it
-            alert(`Yippee yahoo - you guessed the correct word, "${answer_to_use}"! \n Play a new game to challenge yourself again!`);
+            alert(`Yippee yahoo - you guessed the correct word, "${answer_to_use.toLowerCase()}"! \n Play a new game to challenge yourself again!`);
 
             // Want show the new game button now because game over
             show_new_game_button();
