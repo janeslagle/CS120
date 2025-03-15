@@ -204,7 +204,7 @@ play_game = async () => {
             // Have take into consideration when the letter count hasn't been started yet
             num_each_letter[letter] = (num_each_letter[letter] || 0) + 1;
         });
-
+        
         // Loop through and check for letters in guess that are exact matches to answer word
         guessed_word.split("").forEach((word_letter, i) => {
             // Fill in each cell of the row with the guessed letters of the inputted word!
