@@ -1,3 +1,8 @@
+window.onload = () => {
+    // Add event listener for the guess button
+    document.getElementById("guess_button").addEventListener("click", guessing_words);
+};
+
 // Create answer dict = 30 words
 const possible_answers = [
     "abide", "avail", "budge", "begot", "beset", 
