@@ -221,7 +221,7 @@ play_game = async () => {
                 // Only color letters that have a count above 0
                 num_each_letter[word_letter]--;
 
-                // Go to the next letter in word to avoid weird duplicate stuff
+                // Go to the next letter so that don't enter else if statement below + replace what should be green cell w/ yellow cell in row
                 return;
             }
 
@@ -232,7 +232,7 @@ play_game = async () => {
                 // Decrement its count bc just used it up
                 num_each_letter[word_letter]--;
 
-                // Go to next letter in word to avoid duplicate weird stuff
+                // Go to next letter in word so that don't enter else statement below + re-color every cell in row to be grey!!!
                 return; 
             }
 
