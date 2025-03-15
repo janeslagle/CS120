@@ -75,16 +75,16 @@ h1 {
 }
 
 .correct_letter {
-    background-color: green;
+    background-color: #9EC59E;
     color: white;
 }
 
 .wrong_spot_letter {
-    background-color: gold;
+    background-color: #FFEF96;
     color: black;
 }
 
 .not_in_word_letter {
-    background-color: #e1e1e1;
+    background-color: #E1E1E1;
     color: white;
 }
