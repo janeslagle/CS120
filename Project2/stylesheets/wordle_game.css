@@ -1,4 +1,4 @@
-/* CSS Stylesheet for wordle_game.html */
+#fbd500/* CSS Stylesheet for wordle_game.html */
 
 body, html {
     font-family: "Work Sans", sans-serif;
@@ -82,7 +82,7 @@ h1 {
 
 .wrong_spot_letter {
     background-color: #FFEF96;
-    border: 2px solid #FFDE29;
+    border: 2px solid #FBD500;
     color: #000000;
 }
 
