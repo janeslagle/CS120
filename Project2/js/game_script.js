@@ -217,4 +217,4 @@ guessing_words = async () => {
         // Show the new game button now because game over
         show_new_game_button();
     }
-});
+};
