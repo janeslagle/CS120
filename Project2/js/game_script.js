@@ -108,6 +108,7 @@ new_game = () => {
     submitButton.addEventListener("click", guessing_words);
 
     // Append the input and submit button back to the user_guess div
+    user_guess_div.appendChild(label);
     user_guess_div.appendChild(userInput);
     user_guess_div.appendChild(submitButton);
 };
