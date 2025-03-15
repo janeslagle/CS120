@@ -196,13 +196,13 @@ guessing_words = async () => {
         //     current_row[i].style.fontWeight = "bold";
         // });
 
-        / Array to track the status of each letter in the guessed word
-        let letterStatus = ["not-in-word", "not-in-word", "not-in-word", "not-in-word", "not-in-word"];
+        // Array to track the status of each letter in the guessed word
+        let letterStatus = ["not_in_word_letter ", "not_in_word_letter ", "not_in_word_letter ", "not_in_word_letter ", "not_in_word_letter "];
         
         // Step 1: Mark correct letters in the correct position
         guessed_word.split("").forEach((word_letter, i) => {
             if (word_letter.toUpperCase() === answer_to_use[i]) {
-                letterStatus[i] = "correct-letter";
+                letterStatus[i] = "correct_letter ";
                 current_row[i].style.backgroundColor = "green"; // Green background for correct letter
                 current_row[i].style.color = "white"; // White text for visibility
             }
@@ -211,8 +211,8 @@ guessing_words = async () => {
         // Step 2: Mark correct letters in the wrong position
         guessed_word.split("").forEach((word_letter, i) => {
             // Only check if it’s not already marked as correct
-            if (letterStatus[i] !== "correct-letter" && answer_to_use.includes(word_letter.toUpperCase())) {
-                letterStatus[i] = "wrong-position";
+            if (letterStatus[i] !== "correct_letter " && answer_to_use.includes(word_letter.toUpperCase())) {
+                letterStatus[i] = "wrong_spot_letter ";
                 current_row[i].style.backgroundColor = "gold"; // Gold background for wrong position
                 current_row[i].style.color = "black"; // Black text for better contrast
             }
@@ -220,7 +220,7 @@ guessing_words = async () => {
 
         // Step 3: Mark letters not in the word
         guessed_word.split("").forEach((word_letter, i) => {
-            if (letterStatus[i] === "not-in-word") {
+            if (letterStatus[i] === "not_in_word_letter") {
                 current_row[i].style.backgroundColor = "grey"; // Grey background for wrong letters
                 current_row[i].style.color = "white"; // White text for contrast
             }
