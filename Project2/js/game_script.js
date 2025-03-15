@@ -195,23 +195,23 @@ play_game = async () => {
     if (num_guessed_words < 6) {
         // Get the row out from board for current word guess are on
         const current_row = document.getElementsByClassName("each_row")[num_guessed_words].children;
-
-        // Having trouble with counting duplicate letters when shouldn't be so create map that stores what letters + how many of each letter
-        // the answer word has to make sure aren't counting duplicates on board
-        let num_each_letter = {};
-
-        answer_to_use.split("").forEach(letter => {
-            // Have take into consideration when the letter count hasn't been started yet
-            num_each_letter[letter] = (num_each_letter[letter] || 0) + 1;
-        });
         
         // Loop through and check for letters in guess that are exact matches to answer word
-        guessed_word.split("").forEach((word_letter, i) => {
+        guessed_word.split("").forEach((word_letter, i) => {            
             // Fill in each cell of the row with the guessed letters of the inputted word!
             current_row[i].textContent = word_letter.toUpperCase();
 
             // Make each letter bold so it looks better on board
             current_row[i].style.fontWeight = "bold";
+
+            // Having trouble with counting duplicate letters when shouldn't be so create map that stores what letters + how many of each letter
+            // the answer word has to make sure aren't counting duplicates on board
+            let num_each_letter = {};
+
+            answer_to_use.split("").forEach(letter => {
+                // Have take into consideration when the letter count hasn't been started yet
+                num_each_letter[letter] = (num_each_letter[letter] || 0) + 1;
+            });
 
             // Check if letter adding is in same spot for answer, if is, then color it correct_letter shade
             if (word_letter.toUpperCase() === answer_to_use[i]) {
