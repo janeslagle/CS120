@@ -203,26 +203,25 @@ play_game = async () => {
 
             // Make each letter bold so it looks better on board
             current_row[i].style.fontWeight = "bold";
-
-               if (word_letter.toUpperCase() === answer_to_use[i]) {
+            
+            // Add all coloring to each cell!
+            // Check if adding is in correct spot for answer, if is, then color it correct_letter shade
+            if (word_letter.toUpperCase() === answer_to_use[i]) {
                 current_row[i].classList.add("correct_letter");
-            } else if (answer_to_use.includes(word_letter.toUpperCase())) {
+                return;
+            } 
+
+            // Now check if adding letter from guess that is in the answer, but in a different spot than the answer
+            // Shade it with wrong_spot_letter class
+            else if (answer_to_use.includes(word_letter.toUpperCase())) {
                 current_row[i].classList.add("wrong_spot_letter");
+                return;
+            }
+
+            else {
+                current_row[i].classList.add("not_in_word_letter");
             }
         });
-
-            // // Add all coloring to each cell!
-            // // Check if adding is in correct spot for answer, if is, then color it correct_letter shade
-            // if (word_letter.toUpperCase() === answer_to_use[i]) {
-            //     current_row[i].classList.add("correct_letter");
-            // } 
-
-            // // Now check if adding letter from guess that is in the answer, but in a different spot than the answer
-            // // Shade it with wrong_spot_letter class
-            // else if (answer_to_use.includes(word_letter.toUpperCase())) {
-            //     current_row[i].classList.add("wrong_spot_letter");
-            // }
-        // });
 
         // Check if the word just guessed is the answer word
         if (guessed_word.toUpperCase() === answer_to_use) {
