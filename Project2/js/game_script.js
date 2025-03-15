@@ -1,7 +1,9 @@
 // If don't have this, then click event handler for "check my guess" button never occurs
 // So need this to be able to click the guess button and have everything happen!
+// Also have to call generate_new_answer() here or else the game uses the very first answer generated for every single game
 window.onload = () => {
     document.getElementById("guess_button").addEventListener("click", play_game);
+    generate_new_answer();
 };
 
 // Create answer dict of 30 possible different words
@@ -14,14 +16,20 @@ const possible_answers = [
     "paint", "pulse", "rabid", "reign", "ruble"
 ];
 
-// Get random word out from dict array of possible answers to use as answer each time play game
-let random_word = Math.floor(Math.random() * possible_answers.length);
+// Define global variable for the answer
+let answer_to_use = "";
 
-// Now get the actual word out
-let answer_to_use = possible_answers[random_word].toUpperCase();
+// Function that generates a new random answer
+generate_new_answer = () => {
+    // Get random word out from dict array of possible answers to use as answer each time play game
+    let random_word = Math.floor(Math.random() * possible_answers.length);
 
-// Display the answer each time in console of page
-console.log("The answer is: ", answer_to_use);
+    // Now get the actual word out
+    answer_to_use = possible_answers[random_word].toUpperCase();
+
+    // Display the answer each time in console of page (for debugging)
+    console.log("The answer is: ", answer_to_use);
+};
 
 // Follow hint 1 from spec file
 // Create function to create all words (rows) of board at once --> one word = one row so create all 6 words (all 6 rows)
@@ -66,14 +74,7 @@ new_game = () => {
     // Reset word guess count because entirely new game now
     num_guessed_words = 0;
 
-    // Get random word out from dict array of possible answers to use as answer each time play game
-    let random_word = Math.floor(Math.random() * possible_answers.length);
-
-    // Now get the actual word out
-    let answer_to_use = possible_answers[random_word].toUpperCase();
-
-    // Display the answer each time in console of page
-    console.log("The answer is: ", answer_to_use);
+    generate_new_answer();
 
     // When click the new game button, want the new game button to disappear so remove it!
     document.getElementById("new_game_button").remove();
@@ -204,6 +205,12 @@ play_game = async () => {
             // Check if adding is in correct spot for answer, if is, then color it correct_letter shade
             if (word_letter.toUpperCase() === answer_to_use[i]) {
                 current_row[i].classList.add("correct_letter");
+            } 
+
+            // Now check if adding letter from guess that is in the answer, but in a different spot than the answer
+            // Shade it with wrong_spot_letter class
+            else if (answer_to_use.includes(word_letter.toUpperCase())) {
+                current_row[i].classList.add("wrong_spot_letter");
             }
         });
 
