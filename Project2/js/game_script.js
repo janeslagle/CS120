@@ -1,9 +1,16 @@
+// If don't have this, then click event handler for "check my guess" button never occurs
+// So need this to be able to click the guess button and have everything happen!
 window.onload = () => {
-    // Add event listener for the guess button
-    document.getElementById("guess_button").addEventListener("click", guessing_words);
+    document.getElementById("guess_button").addEventListener("click", play_game);
 };
 
-// Create answer dict = 30 words
+// Generate a random answer to be displayed to console each time play game
+generate_random_answer();
+
+// Call the function so that the board is created on page
+create_rows();
+
+// Create answer dict of 30 possible different words
 const possible_answers = [
     "abide", "avail", "budge", "begot", "beset", 
     "cargo", "craze", "deity", "ebony", "elate",
@@ -13,14 +20,16 @@ const possible_answers = [
     "paint", "pulse", "rabid", "reign", "ruble"
 ];
 
-// Get random word out from dict array of possible answers to use as answer each time play game
-let random_word = Math.floor(Math.random() * possible_answers.length);
+generate_random_answer = () => {
+    // Get random word out from dict array of possible answers to use as answer each time play game
+    let random_word = Math.floor(Math.random() * possible_answers.length);
 
-// Now get the actual word out
-let answer_to_use = possible_answers[random_word].toUpperCase();
+    // Now get the actual word out
+    let answer_to_use = possible_answers[random_word].toUpperCase();
 
-// Display the answer each time in console of page
-console.log("The answer is: ", answer_to_use);
+    // Display the answer each time in console of page
+    console.log("The answer is: ", answer_to_use);
+}
 
 // Follow hint 1 from spec file
 // Create function to create all words (rows) of board at once --> one word = one row so create all 6 words (all 6 rows)
@@ -53,66 +62,56 @@ create_rows = () => {
     }
 }
 
-// Now actually call the function so that the board is created on page
-create_rows();
-
-// Store contents of user_guess div because are going to replace it with show_new_game_button function temporarily with the new game button
-let user_guess_div_content;
-let og_guess_button;
-
-// Function that actually resets the entire game board by clearing all cells and picking a new random word from dict to use as answer
+// Function that actually resets the entire board by clearning all cells, generating new answer, and resets the user_guess div entirely
 new_game = () => {
-    // Reset the board by creating the rows again
+    // Reset board by creating the rows again
     document.getElementById("board").innerHTML = "";
     create_rows();
 
-    // Reset the word guess count because entirely new game now
+    // Reset word guess count because entirely new game now
     num_guessed_words = 0;
 
-    // Start the new game with a new answer
-    // Get random word out from dict array of possible answers to use as answer each time play game
-    let random_word = Math.floor(Math.random() * possible_answers.length);
+    // Start new game with new answer by calling function for it
+    generate_random_answer();
 
-    // Now get the actual word out
-    answer_to_use = possible_answers[random_word].toUpperCase();
-
-    // Display the answer each time in console of page
-    console.log("The new answer for this round is: ", answer_to_use);
-
-    // When actually click the new game button, want the new game button to disappear, so make sure that happens!!!
+    // When click the new game button, want the new game button to disappear so remove it!
     document.getElementById("new_game_button").remove();
 
-    // Add the OG user_guess div content back to it
+    // NOW: because replaced the OG user_guess div content with the new game gutton every time the game ends, need to now replace the new
+    // game button with the OG user_guess div content SO need to recreate the original user_guess div content: the label, text input box, and 
+    // guess button
+    // Before add back, make sure the user_guess div is blank so that don't have any weird stuff
     const user_guess_div = document.getElementById("user_guess");
     user_guess_div.innerHTML = "";
 
-    const label = document.createElement("label");
-    label.setAttribute("for", "user_input");
-    label.innerHTML = "What is your Guess?";
-    label.style.fontWeight = "bold";
-    
-    // Create the input field again
-    const userInput = document.createElement("input");
-    userInput.type = "text";
-    userInput.id = "user_input";
-    userInput.maxlength = "5";
-    userInput.placeholder = "Enter your 5 letter guess";
-    userInput.className = "user_input";
+    // Replace the text input box label
+    const input_label = document.createElement("label");
+    input_label.setAttribute("for", "user_input");
+    input_label.innerHTML = "What is your Guess?";
+    input_label.style.fontWeight = "bold";
 
-    // Create the submit button again
-    const submitButton = document.createElement("button");
-    submitButton.innerHTML = "Check my Guess";
-    submitButton.style.fontWeight = "bold";
-    submitButton.id = "guess_button";
-    submitButton.className = "guess_button";
+    // Replace input field box 
+    const user_input_box = document.createElement("input");
+    user_input_box.type = "text";
+    user_input_box.id = "user_input";
+    user_input_box.maxlength = "5";
+    user_input_box.placeholder = "Enter your 5 letter guess";
+    user_input_box.className = "user_input";
 
-    // Reattach the event listener for the submit button
-    submitButton.addEventListener("click", guessing_words);
+    // Replace check my guess button
+    const guess_button = document.createElement("button");
+    guess_button.innerHTML = "Check my Guess";
+    guess_button.style.fontWeight = "bold";
+    guess_button.id = "guess_button";
+    guess_button.className = "guess_button";
 
-    // Append the input and submit button back to the user_guess div
-    user_guess_div.appendChild(label);
-    user_guess_div.appendChild(userInput);
-    user_guess_div.appendChild(submitButton);
+    // Attach the guess button to its event handler again
+    guess_button.addEventListener("click", play_game);
+
+    // Add all 3 elements to the user_guess_div to make it the exact same as before!
+    user_guess_div.appendChild(input_label);
+    user_guess_div.appendChild(user_input_box);
+    user_guess_div.appendChild(guess_button);
 };
 
 // Function to create the new game button for when the game ends, to show it on page
@@ -121,9 +120,6 @@ show_new_game_button = () => {
     // Get the user_guess div
     const user_guess_div = document.getElementById("user_guess");
 
-    // Save OG content of user_guess div so that can put it back once hit new game button
-    user_guess_div_content = user_guess_div.innerHTML;
-    
     // Remove everything from the existing child elements from user_guess div
     user_guess_div.innerHTML = "";
     
@@ -165,13 +161,8 @@ check_guess_valid = async (user_guess) => {
 // Define variable to keep track of the number of words the user has guessed
 let num_guessed_words = 0;
 
-// Follow hint 2 from spec
-// If user inputs a guess that is less than 5 letters long then display an alert with a message saying that it's an error
-// Also reset the text box to be empty when close the alert so that the user can try guessing again
-// Use an event handler to do this as told in hints from spec!
-// So add an event listener to the guess button when the user clicks on the button
-// document.getElementById('guess_button').addEventListener('click', async function() {
-guessing_words = async () => {
+// Everything need to play the game, user guessing, everything!
+play_game = async () => {
     // Get the inputted guess out from the div storing it
     const guessed_word = document.getElementById("user_input").value;
 
