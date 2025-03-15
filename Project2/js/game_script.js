@@ -1,3 +1,9 @@
+// If don't have this, then click event handler for "check my guess" button never occurs
+// So need this to be able to click the guess button and have everything happen!
+window.onload = () => {
+    document.getElementById("guess_button").addEventListener("click", play_game);
+};
+
 // Create answer dict of 30 possible different words
 const possible_answers = [
     "abide", "avail", "budge", "begot", "beset", 
@@ -18,6 +24,9 @@ generate_random_answer = () => {
     // Display the answer each time in console of page
     console.log("The answer is: ", answer_to_use);
 }
+
+// Generate a random answer to be displayed to console each time play game
+generate_random_answer();
 
 // Follow hint 1 from spec file
 // Create function to create all words (rows) of board at once --> one word = one row so create all 6 words (all 6 rows)
@@ -49,6 +58,9 @@ create_rows = () => {
         board.appendChild(row);
     }
 }
+
+// Call the function so that the board is created on page
+create_rows();
 
 // Function that actually resets the entire board by clearning all cells, generating new answer, and resets the user_guess div entirely
 new_game = () => {
@@ -216,15 +228,3 @@ play_game = async () => {
         show_new_game_button();
     }
 };
-
-// If don't have this, then click event handler for "check my guess" button never occurs
-// So need this to be able to click the guess button and have everything happen!
-window.onload = () => {
-    document.getElementById("guess_button").addEventListener("click", play_game);
-};
-
-// Generate a random answer to be displayed to console each time play game
-generate_random_answer();
-
-// Call the function so that the board is created on page
-create_rows();
