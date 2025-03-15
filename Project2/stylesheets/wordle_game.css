@@ -8,16 +8,12 @@ body, html {
 
 header {
     margin-top: 35px;
-    color: #B8005C;
+    color: #FF55AA;
 }
 
 h1 {
   font-family: "Bungee", serif;
   margin: 0 auto;
-}
-
-label {
-    color: #B8005C;
 }
 
 #board {
@@ -62,7 +58,6 @@ label {
     padding: 10px 5px;
     padding-left: 15px;
     text-align: left;
-    border: 2px solid #B8005C;
 }
 
 #user_input::placeholder {
