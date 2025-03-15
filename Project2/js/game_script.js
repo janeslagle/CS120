@@ -201,13 +201,8 @@ play_game = async () => {
         let num_each_letter = {};
 
         answer_to_use.split("").forEach(letter => {
-            if (num_each_letter.hasOwnProperty(letter)) {
-                // If the letter already exists then add on to it
-                num_each_letter[letter] += 1;
-            } else {
-                // Otherwise have define it as 1 
-                num_each_letter[letter] = 1;
-            }
+            // Have take into consideration when the letter count hasn't been started yet
+            num_each_letter[letter] = (num_each_letter[letter] || 0) + 1;
         });
 
         // Loop through and check for letters in guess that are exact matches to answer word
@@ -225,27 +220,24 @@ play_game = async () => {
                 // Have filled in one of the letters so decrement its count in letter count map
                 // Only color letters that have a count above 0
                 num_each_letter[word_letter]--;
-            } 
-        });
 
-        // Loop through and check for letters in wrong spot + letters not in answer word at all
-        guessed_word.split("").forEach((word_letter, i) => {
-            // Check if the letter looping through has already been colored green in same row, if it has then exit bc don't want replace it
-            // with yellow cell
-            if (current_row[i].classList.contains("correct_letter")) {
+                // Go to the next letter in word to avoid weird duplicate stuff
                 return;
             }
 
-            // Check if letter in different spot in answer word + that we aren't creating a duplicate of it, make sure that the letter
-            // still has some available count left
-            if (num_each_letter[word_letter] > 0) {
-                // If here then means the letter is in the word, but it's not an exact match, which means it's a yellow cell
+            // Now check for if letters in wrong spot, only consider letters that actually have letters left to mark in row
+            else if (num_each_letter[word_letter] > 0) {
                 current_row[i].classList.add("wrong_spot_letter");
 
-                // Have used letter so decrement it to avoid duplicates
+                // Decrement its count bc just used it up
                 num_each_letter[word_letter]--;
-            } else {
-                // If have made it through here, then it means that letter not in word, so color it grey
+
+                // Go to next letter in word to avoid duplicate weird stuff
+                return; 
+            }
+
+            // If still in here and haven't exited, then know that letter in word is one not in word, so color it so
+            else {
                 current_row[i].classList.add("not_in_word_letter");
             }
         });
