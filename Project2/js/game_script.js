@@ -204,6 +204,7 @@ play_game = async () => {
             // Make each letter bold so it looks better on board
             current_row[i].style.fontWeight = "bold";
 
+            // Add all coloring to each cell!
             // Check if adding is in correct spot for answer, if is, then color it correct_letter shade
             if (word_letter.toUpperCase() === answer_to_use[i]) {
                 current_row[i].classList.add("correct_letter");
@@ -213,6 +214,11 @@ play_game = async () => {
             // Shade it with wrong_spot_letter class
             else if (answer_to_use.includes(word_letter.toUpperCase())) {
                 current_row[i].classList.add("wrong_spot_letter");
+            }
+
+            // If have made it here then means that the letter adding in cell is not in the answer word, so color the cell with not_in_word_letter class
+            else {
+                current_row[i].classList.add("not_in_word_letter");
             }
         });
 
