@@ -1,9 +1,10 @@
 // If don't have this, then click event handler for "check my guess" button never occurs
 // So need this to be able to click the guess button and have everything happen!
-// Also have to call generate_new_answer() here or else the game uses the very first answer generated for every single game
+// Also have to call game_answer() here or else the game uses the very first answer generated for every single game
+// Call it here so that it generates an answer for the first time play game before hit new game button ever
 window.onload = () => {
     document.getElementById("guess_button").addEventListener("click", play_game);
-    generate_new_answer();
+    game_answer();
 };
 
 // Create answer dict of 30 possible different words
@@ -16,18 +17,18 @@ const possible_answers = [
     "paint", "pulse", "rabid", "reign", "ruble"
 ];
 
-// Define global variable for the answer
+// Variable that stores the answer using for each round of game
 let answer_to_use = "";
 
-// Function that generates a new random answer
-generate_new_answer = () => {
+// Create an answer for each time play game
+game_answer = () => {
     // Get random word out from dict array of possible answers to use as answer each time play game
     let random_word = Math.floor(Math.random() * possible_answers.length);
 
     // Now get the actual word out
-    answer_to_use = possible_answers[random_word].toUpperCase();
+    let answer_to_use = possible_answers[random_word].toUpperCase();
 
-    // Display the answer each time in console of page (for debugging)
+    // Display the answer each time in console of page
     console.log("The answer is: ", answer_to_use);
 };
 
@@ -74,7 +75,8 @@ new_game = () => {
     // Reset word guess count because entirely new game now
     num_guessed_words = 0;
 
-    generate_new_answer();
+    // Get a new answer for the new time play game
+    game_answer();
 
     // When click the new game button, want the new game button to disappear so remove it!
     document.getElementById("new_game_button").remove();
