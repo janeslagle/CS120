@@ -197,31 +197,66 @@ play_game = async () => {
         const current_row = document.getElementsByClassName("each_row")[num_guessed_words].children;
 
         // Convert the guessed word into an array so that can use .forEach here + use the .forEach to fill in all of the cells of row currently on
-        guessed_word.split("").forEach((word_letter, i) => {
-            // Fill in each cell of the row with the guessed letters of the inputted word!
-            current_row[i].textContent = word_letter.toUpperCase();
+        // guessed_word.split("").forEach((word_letter, i) => {
+        //     // Fill in each cell of the row with the guessed letters of the inputted word!
+        //     current_row[i].textContent = word_letter.toUpperCase();
 
-            // Make each letter bold so it looks better on board
-            current_row[i].style.fontWeight = "bold";
+        //     // Make each letter bold so it looks better on board
+        //     current_row[i].style.fontWeight = "bold";
             
-            // Add all coloring to each cell!
-            // Check if adding is in correct spot for answer, if is, then color it correct_letter shade
-            if (word_letter.toUpperCase() === answer_to_use[i]) {
+        //     // Add all coloring to each cell!
+        //     // Check if adding is in correct spot for answer, if is, then color it correct_letter shade
+        //     if (word_letter.toUpperCase() === answer_to_use[i]) {
+        //         current_row[i].classList.add("correct_letter");
+        //         return;
+        //     } 
+
+            // // Now check if adding letter from guess that is in the answer, but in a different spot than the answer
+            // // Shade it with wrong_spot_letter class
+            // else if (answer_to_use.includes(word_letter.toUpperCase())) {
+            //     current_row[i].classList.add("wrong_spot_letter");
+            //     return;
+            // }
+
+            // else {
+            //     current_row[i].classList.add("not_in_word_letter");
+            // }
+        // });
+
+        // Create a map to track occurrences of letters in the answer
+        let answer_letter_counts = {};
+        answer_to_use.split("").forEach(letter => {
+            answer_letter_counts[letter] = (answer_letter_counts[letter] || 0) + 1;
+        });
+
+        // First pass: Process correct matches
+        guessed_word.split("").forEach((word_letter, i) => {
+            const upperLetter = word_letter.toUpperCase();
+            current_row[i].textContent = upperLetter;
+            current_row[i].style.fontWeight = "bold";
+
+            if (upperLetter === answer_to_use[i]) {
                 current_row[i].classList.add("correct_letter");
-                return;
-            } 
-
-            // Now check if adding letter from guess that is in the answer, but in a different spot than the answer
-            // Shade it with wrong_spot_letter class
-            else if (answer_to_use.includes(word_letter.toUpperCase())) {
-                current_row[i].classList.add("wrong_spot_letter");
-                return;
+                answer_letter_counts[upperLetter]--; // Reduce available count for this letter
             }
+        });
 
-            else {
+        // Second pass: Process misplaced letters
+        guessed_word.split("").forEach((word_letter, i) => {
+            const upperLetter = word_letter.toUpperCase();
+
+            // If already marked as correct, skip it
+            if (current_row[i].classList.contains("correct_letter")) return;
+
+            // Check if the letter exists in the answer and hasn't been fully used up
+            if (answer_letter_counts[upperLetter] > 0) {
+                current_row[i].classList.add("wrong_spot_letter");
+                answer_letter_counts[upperLetter]--; // Reduce available count for this letter
+            } else {
                 current_row[i].classList.add("not_in_word_letter");
             }
         });
+        
 
         // Check if the word just guessed is the answer word
         if (guessed_word.toUpperCase() === answer_to_use) {
