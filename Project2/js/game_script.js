@@ -217,7 +217,7 @@ play_game = async () => {
             }
 
             // If have made it here then means that the letter adding in cell is not in the answer word, so color the cell with not_in_word_letter class
-            else if (!answer_to_use.includes(word_letter.toUpperCase())) { {
+            else if (!answer_to_use.includes(word_letter.toUpperCase())) {
                 current_row[i].classList.add("not_in_word_letter");
             }
         });
