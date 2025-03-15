@@ -200,6 +200,11 @@ play_game = async () => {
 
             // Make each letter bold so it looks better on board
             current_row[i].style.fontWeight = "bold";
+
+            // Check if adding is in correct spot for answer, if is, then color it correct_letter shade
+            if (word_letter.toUpperCase() === answer_to_use[i]) {
+                current_row[i].classList.add("correct_letter");
+            }
         });
 
         // Check if the word just guessed is the answer word
