@@ -53,6 +53,7 @@ create_rows();
 
 // Store contents of user_guess div because are going to replace it with show_new_game_button function temporarily with the new game button
 let user_guess_div_content;
+let og_guess_button;
 
 // Function that actually resets the entire game board by clearing all cells and picking a new random word from dict to use as answer
 new_game = () => {
@@ -71,14 +72,35 @@ new_game = () => {
     answer_to_use = possible_answers[random_word].toUpperCase();
 
     // Display the answer each time in console of page
-    console.log("The answer is: ", answer_to_use);
+    console.log("The new answer for this round is: ", answer_to_use);
 
     // When actually click the new game button, want the new game button to disappear, so make sure that happens!!!
-    document.getElementById("new_game_button").remove();
+    // document.getElementById("new_game_button").remove();
 
     // Add the OG user_guess div content back to it
     const user_guess_div = document.getElementById("user_guess");
-    user_guess_div.innerHTML = user_guess_div_content;
+    user_guess_div.innerHTML = "";
+    // Create the input field again
+    const userInput = document.createElement("input");
+    userInput.type = "text";
+    userInput.id = "user_input";
+    userInput.placeholder = "Enter your guess";
+
+    // Create the submit button again
+    const submitButton = document.createElement("button");
+    submitButton.textContent = "Submit Guess";
+    submitButton.id = "guess_button";
+
+    // Reattach the event listener for the submit button
+    submitButton.addEventListener("click", submitGuess);
+
+    // Append the input and submit button back to the user_guess div
+    userGuessDiv.appendChild(userInput);
+    userGuessDiv.appendChild(submitButton);
+
+    // Remove the new game button
+    const newGameButton = document.querySelector(".new_game_button");
+    newGameButton.remove();
 };
 
 // Function to create the new game button for when the game ends, to show it on page
