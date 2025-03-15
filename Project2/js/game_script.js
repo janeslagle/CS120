@@ -88,7 +88,8 @@ new_game = () => {
 
     const label = document.createElement("label");
     label.setAttribute("for", "user_input");
-    label.innerHTML = "<strong>What is your Guess?</strong>";
+    label.innerHTML = "What is your Guess?";
+    label.style.fontWeight = "bold";
     
     // Create the input field again
     const userInput = document.createElement("input");
@@ -100,7 +101,8 @@ new_game = () => {
 
     // Create the submit button again
     const submitButton = document.createElement("button");
-    submitButton.textContent = "<strong>Check my Guess</strong>";
+    submitButton.textContent = "Check my Guess";
+    submitButton.style.fontWeight = "bold";
     submitButton.id = "guess_button";
     submitButton.className = "guess_button";
 
