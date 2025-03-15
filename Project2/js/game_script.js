@@ -85,16 +85,24 @@ new_game = () => {
     // Add the OG user_guess div content back to it
     const user_guess_div = document.getElementById("user_guess");
     user_guess_div.innerHTML = "";
+
+    const label = document.createElement("label");
+    label.setAttribute("for", "user_input");
+    label.innerHTML = "<strong>What is your Guess?</strong>";
+    
     // Create the input field again
     const userInput = document.createElement("input");
     userInput.type = "text";
     userInput.id = "user_input";
-    userInput.placeholder = "Enter your guess";
+    userInput.maxlength = "5";
+    userInput.placeholder = "Enter your 5 letter guess";
+    userInput.className = "user_input";
 
     // Create the submit button again
     const submitButton = document.createElement("button");
-    submitButton.textContent = "Submit Guess";
+    submitButton.textContent = "<strong>Check my Guess</strong>";
     submitButton.id = "guess_button";
+    submitButton.className = "guess_button";
 
     // Reattach the event listener for the submit button
     submitButton.addEventListener("click", guessing_words);
