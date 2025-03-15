@@ -51,6 +51,9 @@ create_rows = () => {
 // Now actually call the function so that the board is created on page
 create_rows();
 
+// Store contents of user_guess div because are going to replace it with show_new_game_button function temporarily with the new game button
+let user_guess_div_content;
+
 // Function that actually resets the entire game board by clearing all cells and picking a new random word from dict to use as answer
 new_game = () => {
     // Reset the board by creating the rows again
@@ -72,6 +75,10 @@ new_game = () => {
 
     // When actually click the new game button, want the new game button to disappear, so make sure that happens!!!
     document.getElementById("new_game_button").remove();
+
+    // Add the OG user_guess div content back to it
+    const user_guess_div = document.getElementById("user_guess");
+    user_guess_div.innerHTML = user_guess_div_content;
 };
 
 // Function to create the new game button for when the game ends, to show it on page
@@ -80,6 +87,9 @@ show_new_game_button = () => {
     // Get the user_guess div
     const user_guess_div = document.getElementById("user_guess");
 
+    // Save OG content of user_guess div so that can put it back once hit new game button
+    user_guess_div_content = user_guess_div.innerHTML;
+    
     // Remove everything from the existing child elements from user_guess div
     user_guess_div.innerHTML = "";
     
