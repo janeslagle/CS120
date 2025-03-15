@@ -69,24 +69,24 @@ h1 {
     text-align: center;
     padding: 10px 12px;
     background-color: #FF55AA;
-    border: 2px solid #D30069;
+    border: 2px solid #DD006E;
     color: #FFFFFF;
 }
 
 #guess_button:hover {
-    background-color: #D30069;
+    background-color: #DD006E;
 }
 
 #new_game_button {
     text-align: center;
     padding: 10px 12px;
     background-color: #FF55AA;
-    border: 2px solid #D30069;
+    border: 2px solid #DD006E;
     color: #FFFFFF;
 }
 
 #new_game_button:hover {
-    background-color: #D30069;
+    background-color: #DD006E;
 }
 
 .correct_letter {
