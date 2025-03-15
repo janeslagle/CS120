@@ -90,13 +90,13 @@ h1 {
 }
 
 .correct_letter {
-    background-color: #9EC59E;
+    background-color: #B1D1B1;
     color: #000000;
     border: 2px solid #6BA66B;
 }
 
 .wrong_spot_letter {
-    background-color: #FFEF96;
+    background-color: #FFF2AB;
     border: 2px solid #FBD500;
     color: #000000;
 }
