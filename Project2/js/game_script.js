@@ -1,15 +1,3 @@
-// If don't have this, then click event handler for "check my guess" button never occurs
-// So need this to be able to click the guess button and have everything happen!
-window.onload = () => {
-    document.getElementById("guess_button").addEventListener("click", play_game);
-};
-
-// Generate a random answer to be displayed to console each time play game
-generate_random_answer();
-
-// Call the function so that the board is created on page
-create_rows();
-
 // Create answer dict of 30 possible different words
 const possible_answers = [
     "abide", "avail", "budge", "begot", "beset", 
@@ -228,3 +216,15 @@ play_game = async () => {
         show_new_game_button();
     }
 };
+
+// If don't have this, then click event handler for "check my guess" button never occurs
+// So need this to be able to click the guess button and have everything happen!
+window.onload = () => {
+    document.getElementById("guess_button").addEventListener("click", play_game);
+};
+
+// Generate a random answer to be displayed to console each time play game
+generate_random_answer();
+
+// Call the function so that the board is created on page
+create_rows();
