@@ -73,3 +73,18 @@ h1 {
     text-align: center;
     padding: 10px 10px;
 }
+
+.correct_letter {
+    background-color: green;
+    color: white;
+}
+
+.wrong_spot_letter {
+    background-color: gold;
+    color: black;
+}
+
+.not_in_word_letter {
+    background-color: grey;
+    color: white;
+}
