@@ -96,7 +96,7 @@ new_game = () => {
 
     // Append the input and submit button back to the user_guess div
     user_guess_div.appendChild(userInput);
-    userGuessDiv.appendChild(submitButton);
+    user_guess_div.appendChild(submitButton);
 };
 
 // Function to create the new game button for when the game ends, to show it on page
