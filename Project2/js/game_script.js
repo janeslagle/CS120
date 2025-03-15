@@ -14,19 +14,14 @@ const possible_answers = [
     "paint", "pulse", "rabid", "reign", "ruble"
 ];
 
-generate_random_answer = () => {
-    // Get random word out from dict array of possible answers to use as answer each time play game
-    let random_word = Math.floor(Math.random() * possible_answers.length);
+// Get random word out from dict array of possible answers to use as answer each time play game
+let random_word = Math.floor(Math.random() * possible_answers.length);
 
-    // Now get the actual word out
-    let answer_to_use = possible_answers[random_word].toUpperCase();
+// Now get the actual word out
+let answer_to_use = possible_answers[random_word].toUpperCase();
 
-    // Display the answer each time in console of page
-    console.log("The answer is: ", answer_to_use);
-}
-
-// Generate a random answer to be displayed to console each time play game
-generate_random_answer();
+// Display the answer each time in console of page
+console.log("The answer is: ", answer_to_use);
 
 // Follow hint 1 from spec file
 // Create function to create all words (rows) of board at once --> one word = one row so create all 6 words (all 6 rows)
@@ -71,8 +66,14 @@ new_game = () => {
     // Reset word guess count because entirely new game now
     num_guessed_words = 0;
 
-    // Start new game with new answer by calling function for it
-    generate_random_answer();
+    // Get random word out from dict array of possible answers to use as answer each time play game
+    let random_word = Math.floor(Math.random() * possible_answers.length);
+
+    // Now get the actual word out
+    let answer_to_use = possible_answers[random_word].toUpperCase();
+
+    // Display the answer each time in console of page
+    console.log("The answer is: ", answer_to_use);
 
     // When click the new game button, want the new game button to disappear so remove it!
     document.getElementById("new_game_button").remove();
