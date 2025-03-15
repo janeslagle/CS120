@@ -230,12 +230,6 @@ play_game = async () => {
 
         // Loop through and check for letters in wrong spot + letters not in answer word at all
         guessed_word.split("").forEach((word_letter, i) => {
-            // Fill in each cell of the row with the guessed letters of the inputted word!
-            current_row[i].textContent = word_letter.toUpperCase();
-
-            // Make each letter bold so it looks better on board
-            current_row[i].style.fontWeight = "bold";
-
             // Check if the letter looping through has already been colored green in same row, if it has then exit bc don't want replace it
             // with yellow cell
             if (current_row[i].classList.contains("correct_letter")) {
