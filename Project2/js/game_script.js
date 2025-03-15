@@ -212,7 +212,7 @@ play_game = async () => {
 
             // Now check if adding letter from guess that is in the answer, but in a different spot than the answer
             // Shade it with wrong_spot_letter class
-            else if (answer_to_use.includes(word_letter.toUpperCase())) {
+            else if (!answer_to_use.includes(word_letter.toUpperCase())) {
                 current_row[i].classList.add("wrong_spot_letter");
             }
 
