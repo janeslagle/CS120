@@ -101,7 +101,7 @@ new_game = () => {
 
     // Create the submit button again
     const submitButton = document.createElement("button");
-    submitButton.textContent = "Check my Guess";
+    submitButton.innerHTML = "Check my Guess";
     submitButton.style.fontWeight = "bold";
     submitButton.id = "guess_button";
     submitButton.className = "guess_button";
