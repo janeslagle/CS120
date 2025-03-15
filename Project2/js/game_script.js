@@ -201,43 +201,77 @@ play_game = async () => {
             // Fill in each cell of the row with the guessed letters of the inputted word!
             current_row[i].textContent = word_letter.toUpperCase();
 
-            // Make each letter bold so it looks better on board
+        //     // Make each letter bold so it looks better on board
+        //     current_row[i].style.fontWeight = "bold";
+
+        //     // Having trouble with counting duplicate letters when shouldn't be so create map that stores what letters + how many of each letter
+        //     // the answer word has to make sure aren't counting duplicates on board
+        //     let num_each_letter = {};
+
+        //     answer_to_use.split("").forEach(letter => {
+        //         // Have take into consideration when the letter count hasn't been started yet
+        //         num_each_letter[letter] = (num_each_letter[letter] || 0) + 1;
+        //     });
+
+        //     // Check if letter adding is in same spot for answer, if is, then color it correct_letter shade
+        //     if (word_letter.toUpperCase() === answer_to_use[i]) {
+        //         current_row[i].classList.add("correct_letter");
+
+        //         // Have filled in one of the letters so decrement its count in letter count map
+        //         // Only color letters that have a count above 0
+        //         num_each_letter[word_letter]--;
+
+        //         // Go to the next letter so that don't enter else if statement below + replace what should be green cell w/ yellow cell in row
+        //         return;
+        //     }
+
+        //     // Now check for if letters in wrong spot, only consider letters that actually have letters left to mark in row
+        //     else if (num_each_letter[word_letter] > 0) {
+        //         current_row[i].classList.add("wrong_spot_letter");
+
+        //         // Decrement its count bc just used it up
+        //         num_each_letter[word_letter]--;
+
+        //         // Go to next letter in word so that don't enter else statement below + re-color every cell in row to be grey!!!
+        //         return; 
+        //     }
+
+        //     // If still in here and haven't exited, then know that letter in word is one not in word, so color it so
+        //     else {
+        //         current_row[i].classList.add("not_in_word_letter");
+        //     }
+        // });
+
+            // Create a map to track occurrences of letters in the answer
+        let answer_letter_counts = {};
+        answer_to_use.split("").forEach(letter => {
+            answer_letter_counts[letter] = (answer_letter_counts[letter] || 0) + 1;
+        });
+
+        // First pass: Process correct matches
+        guessed_word.split("").forEach((word_letter, i) => {
+            const upperLetter = word_letter.toUpperCase();
+            current_row[i].textContent = upperLetter;
             current_row[i].style.fontWeight = "bold";
 
-            // Having trouble with counting duplicate letters when shouldn't be so create map that stores what letters + how many of each letter
-            // the answer word has to make sure aren't counting duplicates on board
-            let num_each_letter = {};
-
-            answer_to_use.split("").forEach(letter => {
-                // Have take into consideration when the letter count hasn't been started yet
-                num_each_letter[letter] = (num_each_letter[letter] || 0) + 1;
-            });
-
-            // Check if letter adding is in same spot for answer, if is, then color it correct_letter shade
-            if (word_letter.toUpperCase() === answer_to_use[i]) {
+            if (upperLetter === answer_to_use[i]) {
                 current_row[i].classList.add("correct_letter");
-
-                // Have filled in one of the letters so decrement its count in letter count map
-                // Only color letters that have a count above 0
-                num_each_letter[word_letter]--;
-
-                // Go to the next letter so that don't enter else if statement below + replace what should be green cell w/ yellow cell in row
-                return;
+                answer_letter_counts[upperLetter]--; // Reduce available count for this letter
             }
+        });
 
-            // Now check for if letters in wrong spot, only consider letters that actually have letters left to mark in row
-            else if (num_each_letter[word_letter] > 0) {
+        // Second pass: Process misplaced letters
+        guessed_word.split("").forEach((word_letter, i) => {
+            const upperLetter = word_letter.toUpperCase();
+
+            // If already marked as correct, skip it
+            if (current_row[i].classList.contains("correct_letter")) return;
+
+            // Check if the letter exists in the answer and hasn't been fully used up
+            if (answer_letter_counts[upperLetter] > 0) {
                 current_row[i].classList.add("wrong_spot_letter");
-
-                // Decrement its count bc just used it up
-                num_each_letter[word_letter]--;
-
-                // Go to next letter in word so that don't enter else statement below + re-color every cell in row to be grey!!!
-                return; 
-            }
-
-            // If still in here and haven't exited, then know that letter in word is one not in word, so color it so
-            else {
+                answer_letter_counts[upperLetter]--; // Reduce available count for this letter
+            } else {
                 current_row[i].classList.add("not_in_word_letter");
             }
         });
