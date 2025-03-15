@@ -225,7 +225,7 @@ play_game = async () => {
 
         // Now check for if letters in wrong spot, only consider letters that actually have letters left to mark in row
         guessed_word.split("").forEach((word_letter, i) => {   
-            curr_letter = word_letter.toUpperCase();
+            let curr_letter = word_letter.toUpperCase();
 
             // Check if letter has already been marked as green bc if has, don't want to override it with yellow color
             if (current_row[i].classList.contains("correct_letter")) {
