@@ -197,9 +197,9 @@ play_game = async () => {
         const current_row = document.getElementsByClassName("each_row")[num_guessed_words].children;
         
         // Loop through and check for letters in guess that are exact matches to answer word
-        guessed_word.split("").forEach((word_letter, i) => {            
-            // Fill in each cell of the row with the guessed letters of the inputted word!
-            current_row[i].textContent = word_letter.toUpperCase();
+        // guessed_word.split("").forEach((word_letter, i) => {            
+        //     // Fill in each cell of the row with the guessed letters of the inputted word!
+        //     current_row[i].textContent = word_letter.toUpperCase();
 
         //     // Make each letter bold so it looks better on board
         //     current_row[i].style.fontWeight = "bold";
