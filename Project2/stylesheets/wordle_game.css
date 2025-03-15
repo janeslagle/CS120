@@ -1,5 +1,26 @@
 /* CSS Stylesheet for wordle_game.html */
 
+/* Need make reponsive down to 600px */
+@media (max-width: 600px) {
+    /* Make the board smaller by making cells smaller */
+    .each_cell {
+        height: 42px;
+        width: 42px;
+        font-size: 18px;
+    }
+
+    /* Make all buttons on the bottom smaller too so fit on smaller screens */
+    #user_input, #guess_button, #new_game_button {
+        font-size: 13px; 
+        padding: 5px;
+    }
+
+    /* Less space btw all buttons on bottom so that not so close to edges of screen */
+    #user_guess {
+        gap: 10px;
+    }
+}
+
 body, html {
     font-family: "Work Sans", sans-serif;
     text-align: center;
