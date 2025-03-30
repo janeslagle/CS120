@@ -68,7 +68,7 @@ $query_result = $conn->query($sql_query);
   <body>
     <h1>Select Song Genres</h1>
 
-    <form action="db2.php" method="get">
+    <form action="datab2.php" method="get">
       <?php
       // First check if any genres were pulled out of DB before try to loop through them
       if ($query_result->num_rows > 0) {
