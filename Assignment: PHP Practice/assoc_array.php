@@ -6,13 +6,14 @@
     <title>Office Hours</title>
     <style>
       h1 {
-        margin-bottom: 5px;
+        margin-bottom: 20px;
+        margin-left: 5px;
       }
       
       .office_hours {
         font-family: monospace;
         white-space: pre-wrap;
-        margin: 0;
+        margin-left: 35px;
       }
     </style>
   </head>
@@ -20,8 +21,7 @@
   <body>
   <h1>Office Hours</h1>
 
-  <div class="office_hours">
-      <?php 
+  <pre class="office_hours"><?php 
       // Create an associative arr that has OH for business where keys = days of week, values = hours like 9am-4pm, etc.
       $OH = [
         'Monday' => '9am - 5pm',
@@ -53,6 +53,6 @@
       // Call function to display hours on page
       echo display_OH($OH);
       ?>
-  </div>
+  </pre>
   </body>
 </html>
