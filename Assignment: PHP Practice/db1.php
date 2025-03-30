@@ -3,6 +3,8 @@
 // First create connection to DB from past assignment 
 // Get everything out of DB that need to connect to it
 $servername = "localhost";
+$username="uzjxte4jj5gyg";
+$password="hyfirofzudwo";
 $dbname = "dbte2fhuna2wku";
 
 // Now make the connection
