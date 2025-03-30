@@ -138,6 +138,6 @@ $conn->close();
 
   <body>
     <!-- Back button to take user back to genre selection -->
-    <button onclick="window.location.href='db1.php';">Reselect song genres</button>
+    <button onclick="window.location.href='datab1.php';">Reselect song genres</button>
   </body>
 </html>
