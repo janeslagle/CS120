@@ -47,11 +47,11 @@ if (isset($_GET['genres'])) {
     foreach ($songs_by_genre as $genre => $songs) {
       echo "<div class='genre_section'>";
       echo "<h2>" . htmlspecialchars($genre) . "</h2>"; 
-      echo "<div class='song-list'>";
+      echo "<div class='song_list'>";
       
       // Display all songs + artist for genre on
       foreach ($songs as $song) {
-        echo "<div class='song-item'>";
+        echo "<div class='song_item'>";
         echo "<h3>" . htmlspecialchars($song['song_title']) . "</h3>";
         echo "<p>Artist: " . htmlspecialchars($song['artist_name']) . "</p>";
         echo "</div>";
