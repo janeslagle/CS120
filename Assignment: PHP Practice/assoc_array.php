@@ -44,14 +44,14 @@
         // Now loop through each key, value pair (all days + their hours) and format each line 
         foreach($oh_array as $day => $hours) {
           // Pad each day name with spaces so that everything is lined up with eachother
-          $hours_output .= str_pad($day, $longest_day + 2) . $ hours . "\n";
+          $hours_output .= str_pad($day, $longest_day + 2) . $hours . "\n";
         }
       
-        return $output;
+        return $hours_output;
       }
       
       // Call function to display hours on page
-      echo display_OH($oh_array);
+      echo display_OH($OH);
       ?>
     </pre>
   </div>
