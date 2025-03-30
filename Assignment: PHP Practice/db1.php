@@ -30,38 +30,38 @@ $query_result = $conn->query($sql_query);
 
     <style>
       h1 {
-        margin-left: 10px;
+        margin-left: 15px;
       }
 
       form {
         margin-left: 35px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
 
       label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
+        display: block;
+        margin-bottom: 2px;
+        font-size: 20px;
+      }
 
-  input[type="checkbox"] {
-    margin-right: 10px;
-  }
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
 
-  button {
-    background-color: #4CAF50; /* Green background */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
+      button {
+        background-color: #FFC8E2;
+        color: #000000;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        curosr: pointer;
+        font-size: 16px;
+      }
 
-  button:hover {
-    background-color: #45a049; /* Darker green when hovered */
-  }
+      button:hover {
+        background-color: #CF3D82;
+        color: #FFFFFF;
+      }
     </style>
   </head>
 
