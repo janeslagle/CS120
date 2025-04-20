@@ -3,6 +3,18 @@
 // initialized and built on products page
 session_start();
 
+// Have connect to the DB to be able to do anything
+$host= "localhost";
+$database = "dbuolfd7bidaqc";
+$username = "uzjxte4jj5gyg";
+$password = "hyfirofzudwo";
+
+$DB_conn = new mysqli($host, $username, $password, $database);
+
+if ($DB_conn->connect_error) {
+    die("Failed to connect to dbulfd7bidaqc (Project 3) database because of the following error: " . $DB_conn->connect_error);
+}
+
 // Set up being able to remove items from the cart once they're added
 if (isset($_GET['remove'])) {
     $product_id = $_GET['remove'];
@@ -11,6 +23,31 @@ if (isset($_GET['remove'])) {
 
 // Set up variable to store the total amount of cart so can display it on page
 $cart_total = 0;
+
+if (isset($_POST['checkout'])) {
+    // Calculate total price if not already set
+    if (!isset($_SESSION['total_price'])) {
+        $_SESSION['total_price'] = $cart_total;
+    }
+
+    // Insert order into the database
+    $stmt = $DB_conn->prepare("INSERT INTO orders (order_date, items, total_price) VALUES (?, ?, ?)");
+    $order_date = date('Y-m-d H:i:s'); // current datetime
+    $items_json = json_encode($_SESSION['cart']); // convert cart to JSON
+    $total_price = $_SESSION['total_price'];
+    $stmt->bind_param("ssd", $order_date, $items_json, $total_price);
+    $stmt->execute();
+    $order_id = $stmt->insert_id; // Get the generated order ID
+    $stmt->close();
+
+    // Clear the cart after checkout
+    unset($_SESSION['cart']);
+    unset($_SESSION['total_price']);
+
+    // Redirect to the thank you page with the order ID
+    header("Location: thank_you.php?order_id=$order_id");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -92,12 +129,15 @@ $cart_total = 0;
             <!-- Put the 2 wanted buttons at the bottom of the cart -->
             <div class="cart_buttons">
                 <a href="products.php">Continue Shopping</a>
-                <a href="thankyou.php">Check Out</a>
+
+                <form action="cart.php" method="POST">
+                    <button type="submit" name="checkout">Check Out</button>
+                </form>
             </div>
 
         <?php else: ?>
             <!-- Where go if the cart has no items in it -->
-            <p class="empty_cart_message">Boo there are no books in your cart, add some now!</p>
+            <p class="empty_cart_message">Boo, there are no books in your cart, add some now and start reading!</p>
 
             <!-- Add option for user to easily get to products page to add their books in -->
             <div class="cart_buttons">
