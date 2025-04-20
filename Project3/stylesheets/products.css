@@ -96,7 +96,7 @@
     display: none;
     margin-top: 10px;
     font-size: 0.9em;
-    color: #555;
+    color: #55555;
 }
 
 select {
@@ -111,7 +111,7 @@ select {
 button {
     padding: 6px 12px;
     border: none;
-    background-color: #1e90ff;
+    background-color: #1E90FF;
     color: white;
     border-radius: 4px;
     cursor: pointer;
@@ -120,5 +120,5 @@ button {
 }
 
 button:hover {
-    background-color: #0059b0;
+    background-color: #0059B0;
 }
