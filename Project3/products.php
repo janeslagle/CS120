@@ -15,23 +15,50 @@ if ($DB_conn->connect_error) {
 }
 
 // Handle everything for the add to cart button
+// Check if add to cart button was hit and there is even a product to add to the cart
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["product_id"])) {
+    // Brab the id out so know what product are adding to cart
     $product_id = $_POST["product_id"];
+
+    // Make sure the quantity is at least 1!!!
     $quantity = max(1, intval($_POST["quantity"]));
 
+    // Check if cart already exists because if it is, then just want to add to the existing quantity for the product, don't want to create a 
+    // whole new row for it in cart
+    // So only create new section in cart for product if this is our very first time adding it to the cart
     if (!isset($_SESSION["cart"])) {
         $_SESSION["cart"] = [];
     }
 
+    // If already have product in cart, then just add on to its existing quantity to make it like a real life website!!!
     if (isset($_SESSION["cart"][$product_id])) {
-        $_SESSION["cart"][$product_id] += $quantity;
+        $_SESSION["cart"][$product_id]["quantity"] += $quantity;
     } else {
-        $_SESSION["cart"][$product_id] = $quantity;
+        // Otherwise, if this is the first time adding it to the cart then have walk through getting everything from it
+        // Fetch product details from the database
+        // Get the name, price from the product from the DB (told in spec that don't want to show the image with it)
+        $sql_stmt = $DB_conn->prepare("SELECT name, price FROM products WHERE id = ?");
+        $sql_stmt->bind_param("i", $product_id);
+        $sql_stmt->execute();
+
+        // Get the result out from doing sql statement to get the wanted info out of product adding to cart
+        $sql_result = $sql_stmt->get_result();
+        $product_adding = $sql_result->fetch_assoc();
+
+        // Now make session variable with the product info just got out of DB using sql statement
+        $_SESSION["cart"][$product_id] = [
+            "name" => $product_adding["name"],
+            "price" => $product_adding["price"],
+            "quantity" => $quantity,
+        ];
+        
+        $sql_stmt->close();
     }
 
+    // Send it to the cart page when hit the add to cart button
     header("Location: cart.php");
     exit();
-}
+} 
 ?>
 
 <!DOCTYPE html>
