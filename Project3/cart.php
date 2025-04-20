@@ -43,7 +43,7 @@ if (isset($_POST['checkout']) && !empty($_SESSION['cart'])) {
     // Make SQL statement to insert everything for the order into the orders DB 
     $sql_stmt = $DB_conn->prepare("INSERT INTO orders (order_date, items, total_price) VALUES (?, ?, ?)");
     $sql_stmt->bind_param("ssd", $order_date, $items_json, $total_price);
-    sql_stmt->execute();
+    $sql_stmt->execute();
     $order_id = $sql_stmt->insert_id;
     $sql_stmt->close();
 
