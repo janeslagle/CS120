@@ -17,7 +17,7 @@ if ($DB_conn->connect_error) {
 // Handle everything for the add to cart button
 // Check if add to cart button was hit and there is even a product to add to the cart
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["product_id"])) {
-    // Brab the id out so know what product are adding to cart
+    // Grab the id out so know what product are adding to cart
     $product_id = $_POST["product_id"];
 
     // Make sure the quantity is at least 1!!!
