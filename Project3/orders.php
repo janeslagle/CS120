@@ -8,18 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="stylesheets/orders.css">
-
-    <script>
-        // For when click the more button for each product
-        function showBookDescription(id) {
-            // Feed the row id to this function
-            // Using that, create a unique id for each book so that grab the right one for each description display
-            const book_description = document.getElementById("description-" + id);
-
-            // Set it initially as none and then when click the more button, shows the block and then can click it again to make it go away, etc.
-            book_description.style.display = book_description.style.display === "none" ? "block" : "none";
-        }
-    </script>
 </head>
 
 <body>
@@ -37,48 +25,5 @@
             <a href="orders.php">Orders</a>
         </div>
     </div>
-
-    <!-- Now display all products on the page -->
-    <div class="indiv_product_box">
-        <?php
-        // Connect to the DB and display all of the products!
-        $sql_DB = "SELECT * FROM products";
-        $result = $DB_conn->query($sql_DB);
-
-        // Loop through and display everything for each product
-        while ($DB_row = $result->fetch_assoc()) {
-            // Identify each row with its unique id from the DB
-            $id = $DB_row["id"];
-
-            // Display in this order: image, name, price, qty, add to cart, more buttons
-            echo '<div class="indiv_product">';
-            echo '<img src="' . $DB_row["image_url"] . '" alt="' . $DB_row["name"] . '">';
-            echo '<h3>' . $DB_row["name"] . '</h3>';
-            echo '<p>$' . number_format($DB_row["price"], 2) . '</p>';
-            echo '<form method="POST" class="product_buttons">';
-            echo '<input type="hidden" name="product_id" value="' . $id . '">';
-
-            // Make the available quantity up to 5
-            echo '<label>Qty: <select name="quantity">';
-            for ($i = 1; $i <= 5; $i++) {
-                echo "<option value=\"$i\">$i</option>";
-            }
-
-            echo '</select></label><br><br>';
-            echo '<button type="submit">Add to Cart</button>';
-
-            // Call function wrote for more button when create the more button
-            echo '<button type="button" onclick="showBookDescription(' . $id . ')">More</button>';
-            echo '</form>';
-
-            // Have make initial display none otherwise have double click more button for the description to actually show
-            echo '<div class="description" id="description-' . $id . '" style="display:none;">' . $DB_row["description"] . '</div>';
-            echo '</div>';
-    }
-
-    // At this point, don't need anything else from the DB so close the connection to it
-    $DB_conn->close();
-    ?>
-</div>
 </body>
 </html>
