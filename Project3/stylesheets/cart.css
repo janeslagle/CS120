@@ -11,8 +11,8 @@
     
  body {
     font-family: "Work Sans", sans-serif;
+    padding-top: 105px;
     margin: 0;
-    padding: 0;
 }
 
 .nav_bar {
@@ -68,6 +68,10 @@
     color: #1E90FF;
 }
 
+.cart_box {
+    padding: 20px;
+}
+
 button {
     padding: 6px 12px;
     border: none;
@@ -84,15 +88,8 @@ button:hover {
     background-color: #0059B0;
 }
 
-        /* Ensure content below the navigation bar */
-        body {
-            padding-top: 100px; /* Adjust based on your nav bar height */
-            font-family: 'Work Sans', sans-serif;
-        }
 
-        .cart-container {
-            padding: 20px;
-        }
+
 
         table {
             width: 100%;
@@ -109,6 +106,6 @@ button:hover {
             background-color: #f4f4f4;
         }
 
-        .cart-container p {
+        .cart_box p {
             font-size: 18px;
         }
