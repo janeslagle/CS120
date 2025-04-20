@@ -9,9 +9,9 @@
     }
 }
     
- body {
+body {
     font-family: "Work Sans", sans-serif;
-    padding-top: 105px;
+    padding-top: 110px;
     margin: 0;
 }
 
@@ -60,7 +60,7 @@
     font-weight: bold;
 }
 
-.nav_bar_items a[href="products.php"] {
+.nav_bar_items a[href="cart.php"] {
     color: #1E90FF; 
 }
 
@@ -68,44 +68,79 @@
     color: #1E90FF;
 }
 
-.cart_box {
+.cart_table {
+    padding: 50px;
+    max-width: 800px;
+    margin: 0 auto;    <!-- Center it on page -->
+}
+
+.cart_table p {
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+    border-radius: 5px;
+    border-collapse: separate;
+}
+
+th {
+    padding: 10px;
+    text-align: left;
+    border-radius: 5px;
+    background-color: #F4F4F4;
+    border: 1px solid #1E90FF;
+}
+
+td {
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(244, 249, 255, 0.8);
     padding: 20px;
 }
 
-button {
-    padding: 6px 12px;
-    border: none;
-    background-color: #1E90FF;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    margin: 5px;
-    font-family: inherit;
-    font-size: 15px;
+tr:last-child td {
+    text-align: left; 
 }
 
-button:hover {
+.remove_button {
+    padding: 6px 12px;
+    color: #ED3E61;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.remove_button:hover {
+    background-color: #FDE9ED;
+}
+
+.cart_buttons {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.cart_buttons a {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 0 10px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #1E90FF;
+    border-radius: 6px;
+}
+
+.cart_buttons a:hover {
     background-color: #0059B0;
 }
 
-
-
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #f4f4f4;
-        }
-
-        .cart_box p {
-            font-size: 18px;
-        }
+.empty_cart_message {
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 50px;
+    color: #0059B0;
+}
