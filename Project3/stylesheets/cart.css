@@ -83,3 +83,32 @@ button {
 button:hover {
     background-color: #0059B0;
 }
+
+        /* Ensure content below the navigation bar */
+        body {
+            padding-top: 100px; /* Adjust based on your nav bar height */
+            font-family: 'Work Sans', sans-serif;
+        }
+
+        .cart-container {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .cart-container p {
+            font-size: 18px;
+        }
