@@ -27,7 +27,7 @@
     padding: 0 40px;
     box-sizing: border-box;
     z-index: 1000;
-    background-color: rgba(244, 249, 255, 0.8);   /* set background color to #C7E3FF color with 80% opacity */
+    background-color: rgba(244, 249, 255, 0.8);   /* Set background color to #C7E3FF color with 80% opacity */
     border-bottom: 1px solid #1E90FF;
 }
 
@@ -61,10 +61,63 @@
     font-weight: bold;
 }
 
-.nav_bar_items a[href="products.php"] {
-    color: #1E90FF; 
+.nav_bar_items a:hover {
+    color: #1E90FF;
 }
 
-.nav_bar_items a:hover {
+.thank_you_message {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 15px;
+    color: #0059B0;
+}
+
+.thank_you_buttons {
+    text-align: center;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.thank_you_buttons a,
+.thank_you_buttons button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 0 10px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #1E90FF;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;   /* Have to have this or checkout form button doesn't have same font as continue shopping button */
+    font-weight: bold;
+}
+
+.thank_you_buttons a:hover,
+.thank_you_buttons button:hover {
+    background-color: #0059B0;
+}
+
+.more_space_div {
+    margin-top: 15px;
+}
+
+.thank_you_message p {
+    margin-top: 20px;   
+    font-size: 18px; 
+}
+
+.thank_you_message h1 {
+    margin-bottom: 50px;
+}
+
+.thank_you_message .smaller_note {
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 55px;
     color: #1E90FF;
 }
