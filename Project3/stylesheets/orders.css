@@ -68,7 +68,6 @@ body {
     color: #1E90FF;
 }
 
-/* New wrapper to center content horizontally */
 .center_page {
     display: flex;
     justify-content: center;
@@ -80,7 +79,6 @@ body {
     width: 100%;
 }
 
-/* Optional styling for empty orders message and cart button */
 .empty_orders_message {
     margin-top: 30px;
     font-size: 18px;
@@ -138,5 +136,5 @@ body {
 }
 
 .order_items td {
-    padding: 10px 15px; /* Adjust these values as needed */
+    padding: 10px 15px; 
 }
