@@ -83,6 +83,8 @@ body {
     margin-top: 30px;
     font-size: 18px;
     text-align: center;
+    color: #1E90FF;
+    margin-bottom: 40px;
 }
 
 .cart_buttons {
@@ -98,6 +100,10 @@ body {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+}
+
+.cart_buttons a:hover {
+    background-color: #0059B0;
 }
 
 .orders_section h1 {
