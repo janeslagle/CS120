@@ -26,7 +26,7 @@ body {
     padding: 0 40px;
     box-sizing: border-box;
     z-index: 1000;
-    background-color: rgba(244, 249, 255, 0.8);   /* Set background color to #C7E3FF color with 80% opacity */
+    background-color: rgba(244, 249, 255, 0.8);
     border-bottom: 1px solid #1E90FF;
 }
 
@@ -60,10 +60,83 @@ body {
     font-weight: bold;
 }
 
-.nav_bar_items a[href="cart.php"] {
+.nav_bar_items a[href="orders.php"] {
     color: #1E90FF; 
 }
 
 .nav_bar_items a:hover {
     color: #1E90FF;
+}
+
+/* New wrapper to center content horizontally */
+.center_page {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.orders_container {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Optional styling for empty orders message and cart button */
+.empty_orders_message {
+    margin-top: 30px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.cart_buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cart_buttons a {
+    background-color: #1E90FF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.orders_section h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 45px;
+    color: #0059B0;
+    margin-top: 30px;
+}
+
+.orders_section h2 {
+    text-align: center;
+    margin: 0 auto;
+    color: #0059B0;
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+.center_this {
+    text-align: center;
+    margin: 0 auto;
+    color: #1E90FF;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.order_items {
+    text-align: center;
+    margin: 0 auto;
+    color: #0059B0;
+    margin-top: 15px;
+    margin-bottom: 45px;
+}
+
+.order_items td {
+    padding: 10px 15px; /* Adjust these values as needed */
 }
