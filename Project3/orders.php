@@ -61,7 +61,7 @@ if (!$result) {
             <?php if ($result->num_rows > 0): ?>
                 <!-- Loop through all orders until have gone through them all -->
                 <?php while ($order = $result->fetch_assoc()): ?>
-                    <div class="order_row">
+                    <div>
                         <h2>
                             <!-- Display order num, date, order total -->
                             Order #<?= $order['id'] ?> — <?= date("F j, Y", strtotime($order['order_date'])) ?>, 
